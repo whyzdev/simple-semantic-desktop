@@ -1,0 +1,120 @@
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+
+public class POSCluster{
+
+    static HashMap<String,ArrayList<String>> posTable;
+    static ArrayList<HashMap<String,int[]>> posCounts;
+
+    public static void main(String[] args){
+	String inDir = args[0];
+	String outDir = args[1];
+	posTable = new HashMap<String,ArrayList<String>>();
+	posCounts = new ArrayList<HashMap<String,int[]>>();	
+
+	//Populate the Part of Speech matrices for each document in passed directory
+
+	//lingpipe the POS tags from inDir to outDir
+	useLingPipePOS(inDir,outDir + "/temp_pos");
+
+
+	//Loop through set of documents	
+	File tagged_directory = new File(outDir + "/temp_pos");
+	String[] docs = tagged_directory.list();
+	if (docs != null){	    
+	    for (int i=0;i<docs.length;i++){				
+		NodeList n = getTokenNodeList(docs[i]);
+		HashMap<String,int[]> pos_counts_vector = new HashMap<String,int[]>;
+		
+
+		//loop through all tokens in document
+		for(int j=0;j<n.getLength();j++){
+		    Node fstNode = nodeLst.item(s);
+		    String cpos= fstNode.getAttributes().item(0).getNodeValue(); //get part of speech
+		    String ctoken = fstNode.getFirstChild().getNodeValue();		    
+		    
+		    if (!cpos.equals("nil")){		    
+			int r=-1;			
+			//make sure this POS has an entry in the posTable
+			if (!posTable.containsKey(cpos))			   
+			    posTable.put(cpos,new ArrayList<String>());
+			ArrayList<String> wordlist = posTable.get(cpos);
+
+			//make sure this word has an entry in the pos's wordlist
+			// and get its index as r
+			r=wordlist.indexOf(ctoken);
+			if (r==-1){
+			    r = wordlist.size();
+			    wordlist.add(ctoken);
+			}
+
+			
+			//Increment this document's this part of speech's count[r]
+			int[] pos_countvector = (int[])posCounts[i].get(cpos);
+			pos_countvector[r]++;
+
+			if (   pos_counts_vector
+
+		    }
+
+		}
+		
+		posCounts.add();
+
+
+		
+	    }	   
+	}
+
+	System.out.println(posCounts);
+	System.out.println(posTable);
+
+			
+	//Create Clusters based on Part of Speech Matrices       
+
+    }
+
+    public static void useLingPipePOS(String inDir, String outDir){
+	
+	try {
+	ProcessBuilder pb = new ProcessBuilder( "./cmd_pos_en_general_brown.sh", "-inDir=" + inDir, "-outDir=" + outDir);
+	pb.directory(new File("/scratch/sinko/lingpipe/demos/generic/bin"));
+	Process p = pb.start();
+	FileOutputStream fos = new FileOutputStream("lpout");
+	StreamGobbler outputGobbler = new 
+	    StreamGobbler(p.getInputStream(), "OUTPUT", fos);
+            outputGobbler.start();
+	    int exitVal=p.waitFor();
+	}
+	catch(Exception e){
+	    System.err.println("ERROR:Error executing lingpipe POS tagger");
+	    e.printStackTrace();
+	}
+    }
+
+    private static NodeList  getTokenNodeList(String filename){
+	NodeList nodeLst;
+	try {
+	    File file = new File(filename);
+	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder db = dbf.newDocumentBuilder();
+	    Document doc = db.parse(file);
+	    doc.getDocumentElement().normalize();
+	    nodeLst = doc.getElementsByTagName("token");
+	}
+	catch (Exception e) {
+	    System.err.println("ERROR: error reading XML file <" + filename + ">");
+	    e.printStackTrace();
+	}	           
+	return nodeLst;   
+    }
+
+}

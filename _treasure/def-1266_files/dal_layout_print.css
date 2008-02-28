@@ -1,0 +1,41 @@
+/***********************************************/
+/* Table-less layout and stylesheet            */
+/* courtesy of Dal Faculty of Computer Science */
+/***********************************************/
+
+/* Hide most layout pieces */
+.back_full, .back_center, .faculty_title, .blue_head_center, .water, .search_badge, .sidebar, .blue_foot_center, .green_foot_center {
+    display: none;
+}
+
+a {
+    text-decoration: underline;
+}
+
+div {
+    text-align: left;
+}
+
+.black_head_full {
+    display:inline;
+    background-color:white;
+}
+
+.dal_logo {
+    display:inline;
+}
+
+.content {
+    display:inline;
+    font-family: Times New Roman, serif;
+}
+
+
+/* Remove the min-height code. */
+.main_center {
+    padding-top:0px;
+}
+
+.content {
+    margin-top:0px;
+}

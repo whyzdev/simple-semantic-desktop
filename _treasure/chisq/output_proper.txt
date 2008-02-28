@@ -1,0 +1,245 @@
+Frequencies:
+-
+
+machine:118, 
+machines:54, digital:35, game:29, man:27, 
+argument:27, question:26, computer:26, make:25, 
+computers:25, number:24, interrogator:21, answer:20, 
+discretestate:20, part:19, human:19, behaviour:19, 
+machines.:18, rules:18, imitation:17, storage:17, 
+form:16, system:16, mind:15, give:15, 
+machine.:15, view:15, capacity:15, questions:14, 
+fact:14, method:14, instance:14, idea:14, 
+kind:13, random:13, time:12, state:12, 
+child:12, put:11, suppose:11, answers:11, 
+.:11, process:11, made:11, thinking:10, 
+find:10, states:10, it.:10, laws:10, 
+problem:9, point:9, subject:9, constructed:9, 
+operations:9, store:9, instruction:9, important:9, 
+logical:9, scientific:9, teaching:9, short:8, 
+objection:8, effect:8, case:8, means:8, 
+result:8, programme:8, sense:8, mathematical:8, 
+predict:8, day:8, learning:8, teacher:8, 
+difficult:7, game.:7, wrong:7, things:7, 
+similar:7, man.:7, produce:7, one.:7, 
+play:7, suitable:7, present:7, information:7, 
+small:7, reader:7, speed:7, mechanical:7, 
+sufficiently:7, moment:7, provided:7, errors:7, 
+sort:7, education:7, terms:6, expressed:6, 
+order:6, set:6, write:6, possibility:6, 
+called:6, computer.:6, appears:6, attempt:6, 
+working:6, experiment:6, mentioned:6, table:6, 
+digits:6, mimic:6, making:6, manchester:6, 
+nervous:6, general:6, expect:6, type:6, 
+describe:6, induction.:6, definitions:5, meaning:5, 
+object:5, end:5, decide:5, provide:5, 
+concerned:5, natural:5, operation:5, largely:5, 
+men:5, satisfy:5, satisfactory:5, complete:5, 
+good:5, book:5, paper:5, instructions:5, 
+stored:5, position:5, accept:5, do.:5, 
+special:5, analytical:5, engine:5, thought:5, 
+signal:5, difference:5, property:5, fall:5, 
+adequate:5, quoted:5, wellestablished:5, brain:5, 
+circumstances:5, arguments:5, results:5, due:5, 
+apply:5, winters:5, lady:5, conduct:5, 
+punishments:5, rewards:5, homework:5, normal:4, 
+words:4, definition:4, call:4, played:4, 
+people:4, woman:4, alternatively:4, add:4, 
+original:4, intellectual:4, feel:4, shown:4, 
+sonnet:4, conditions:4, disabilities:4, satisfactorily:4, 
+playing:4, possibly:4, definite:4, technique:4, 
+skin:4, regard:4, electronic:4, show:4, 
+unable:4, asked:4, light:4, regarded:4, 
+store.:4, correspond:4, 
+
+--
+Co-Occurences:
+-
+ |a  |b  |c  |d  |e  |f  |g  |h  |i  |j  |k  |l  |m  |n  |o  |p  |q  |r  |s  |t  |u  |v  |w  |x  |y  |z  |
+a|0|505|471|526|412|49|473|205|271|294|140|407|492|121|140|198|9|135|5|506|100|291|9|196|135|0|
+b|505|0|460|531|421|49|478|188|271|287|138|412|488|121|137|180|9|135|5|507|100|287|9|196|135|0|
+c|471|460|0|471|386|49|420|194|271|283|140|362|466|117|140|190|9|135|5|471|100|288|9|196|134|0|
+d|526|531|471|0|431|49|509|205|271|299|140|433|506|121|140|198|9|135|5|528|100|291|9|196|135|0|
+e|412|421|386|431|0|49|380|160|229|230|126|312|407|111|138|155|9|97|5|427|100|249|9|154|93|0|
+f|49|49|49|49|49|0|29|25|46|18|0|38|49|0|23|4|0|19|0|49|20|49|0|25|12|0|
+g|473|478|420|509|380|29|0|170|222|265|128|419|454|107|100|194|9|102|5|477|97|242|9|152|129|0|
+h|205|188|194|205|160|25|170|0|77|114|87|126|200|26|51|91|0|43|0|205|15|109|0|38|46|0|
+i|271|271|271|271|229|46|222|77|0|159|65|216|271|107|106|89|9|127|5|271|88|225|9|196|104|0|
+j|294|287|283|299|230|18|265|114|159|0|69|221|294|86|101|156|0|79|5|299|58|162|0|150|110|0|
+k|140|138|140|140|126|0|128|87|65|69|0|86|139|33|46|82|3|26|0|140|2|75|3|51|24|0|
+l|407|412|362|433|312|38|419|126|216|221|86|0|395|98|86|156|9|97|5|404|100|223|9|155|100|0|
+m|492|488|466|506|407|49|454|200|271|294|139|395|0|120|139|198|9|135|5|503|100|286|9|196|131|0|
+n|121|121|117|121|111|0|107|26|107|86|33|98|120|0|50|51|9|49|5|121|45|83|9|107|50|0|
+o|140|137|140|140|138|23|100|51|106|101|46|86|139|50|0|52|0|57|2|140|24|75|0|102|26|0|
+p|198|180|190|198|155|4|194|91|89|156|82|156|198|51|52|0|0|30|3|198|30|105|0|79|62|0|
+q|9|9|9|9|9|0|9|0|9|0|3|9|9|9|0|0|0|0|0|9|0|0|9|9|0|0|
+r|135|135|135|135|97|19|102|43|127|79|26|97|135|49|57|30|0|0|0|135|28|130|0|106|60|0|
+s|5|5|5|5|5|0|5|0|5|5|0|5|5|5|2|3|0|0|0|5|3|3|0|5|3|0|
+t|506|507|471|528|427|49|477|205|271|299|140|404|503|121|140|198|9|135|5|0|100|291|9|196|135|0|
+u|100|100|100|100|100|20|97|15|88|58|2|100|100|45|24|30|0|28|3|100|0|73|0|47|29|0|
+v|291|287|288|291|249|49|242|109|225|162|75|223|286|83|75|105|0|130|3|291|73|0|0|155|113|0|
+w|9|9|9|9|9|0|9|0|9|0|3|9|9|9|0|0|9|0|0|9|0|0|0|9|0|0|
+x|196|196|196|196|154|25|152|38|196|150|51|155|196|107|102|79|9|106|5|196|47|155|9|0|90|0|
+y|135|135|134|135|93|12|129|46|104|110|24|100|131|50|26|62|0|60|3|135|29|113|0|90|0|0|
+z|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|
+a:machine
+b:machines
+c:digital
+d:game
+e:man
+f:argument
+g:question
+h:computer
+i:make
+j:computers
+k:number
+l:interrogator
+m:answer
+n:discretestate
+o:part
+p:human
+q:behaviour
+r:machines.
+s:rules
+t:imitation
+u:storage
+v:form
+w:system
+x:mind
+y:give
+z:machine.
+
+
+
+--
+Chi-Squares:
+-
+terms:139296.81274132128, 
+words:115055.19380341143, meaning:112122.15467088732, problem:107166.22838459717, 
+put:93201.3292100707, imitation:70913.13909296542, definitions:68312.747474748, 
+answers:63389.30036801153, answer:58047.644624861954, game.:48260.12824218284, 
+wrong:46848.26023674726, interrogator:46466.268678897264, form:45336.20182438402, 
+question:43675.80196564142, game:42924.529780162, machine:42012.5211388495, 
+man:36987.97082631115, mind:35006.972970411436, short:34693.460334662705, 
+digital:33231.82787106502, suppose:30878.964131739842, thinking:30491.630976621032, 
+machines:29541.768984246468, computers:28926.519150833592, time:28244.621996900296, 
+make:27398.76305782305, human:26370.60623617033, point:26289.352851797594, 
+give:25084.434953179923, questions:22746.13384303483, instruction:22361.323271154848, 
+machines.:20207.962787165252, computer:19847.994395855563, view:19645.26508933642, 
+part:18736.125484109536, objection:17242.59118920724, storage:16531.333709052215, 
+difficult:16344.86872136758, discretestate:16126.301551494618, number:14615.359871372002, 
+fact:12679.20114012374, .:10680.851685221944, kind:7002.632092718894, 
+instance:6096.18246457338, argument:5427.4908895927665, states:4953.988537091309, 
+subject:4822.180343589511, called:4078.270055574904, normal:4010.8766685845594, 
+idea:3014.327197887371, system:2061.6381807278503, behaviour:1721.2740757579738, 
+operations:1685.9050490843779, rules:942.0559135660332, method:552.1297057372942, 
+machine.:0.0, capacity:0.0, random:0.0, 
+state:0.0, child:0.0, process:0.0, 
+made:0.0, find:0.0, it.:0.0, 
+laws:0.0, constructed:0.0, store:0.0, 
+important:0.0, logical:0.0, scientific:0.0, 
+teaching:0.0, effect:0.0, case:0.0, 
+means:0.0, result:0.0, programme:0.0, 
+sense:0.0, mathematical:0.0, predict:0.0, 
+day:0.0, learning:0.0, teacher:0.0, 
+things:0.0, similar:0.0, man.:0.0, 
+produce:0.0, one.:0.0, play:0.0, 
+suitable:0.0, present:0.0, information:0.0, 
+small:0.0, reader:0.0, speed:0.0, 
+mechanical:0.0, sufficiently:0.0, moment:0.0, 
+provided:0.0, errors:0.0, sort:0.0, 
+education:0.0, expressed:0.0, order:0.0, 
+set:0.0, write:0.0, possibility:0.0, 
+computer.:0.0, appears:0.0, attempt:0.0, 
+working:0.0, experiment:0.0, mentioned:0.0, 
+table:0.0, digits:0.0, mimic:0.0, 
+making:0.0, manchester:0.0, nervous:0.0, 
+general:0.0, expect:0.0, type:0.0, 
+describe:0.0, induction.:0.0, object:0.0, 
+end:0.0, decide:0.0, provide:0.0, 
+concerned:0.0, natural:0.0, operation:0.0, 
+largely:0.0, men:0.0, satisfy:0.0, 
+satisfactory:0.0, complete:0.0, good:0.0, 
+book:0.0, paper:0.0, instructions:0.0, 
+stored:0.0, position:0.0, accept:0.0, 
+do.:0.0, special:0.0, analytical:0.0, 
+engine:0.0, thought:0.0, signal:0.0, 
+difference:0.0, property:0.0, fall:0.0, 
+adequate:0.0, quoted:0.0, wellestablished:0.0, 
+brain:0.0, circumstances:0.0, arguments:0.0, 
+results:0.0, due:0.0, apply:0.0, 
+winters:0.0, lady:0.0, conduct:0.0, 
+punishments:0.0, rewards:0.0, homework:0.0, 
+definition:0.0, call:0.0, played:0.0, 
+people:0.0, woman:0.0, alternatively:0.0, 
+add:0.0, original:0.0, intellectual:0.0, 
+feel:0.0, shown:0.0, sonnet:0.0, 
+conditions:0.0, disabilities:0.0, satisfactorily:0.0, 
+playing:0.0, possibly:0.0, definite:0.0, 
+technique:0.0, skin:0.0, regard:0.0, 
+electronic:0.0, show:0.0, unable:0.0, 
+asked:0.0, light:0.0, regarded:0.0, 
+store.:0.0, correspond:0.0, 
+
+
+--
+Final Results :
+----------------------------------------
+Term	Chi^2	Frequency----------------------------
+terms	139296.81274132128	6
+ words	115055.19380341143	4
+ meaning	112122.15467088732	5
+ problem	107166.22838459717	9
+ put	93201.3292100707	11
+ imitation	70913.13909296542	17
+ definitions	68312.747474748	5
+ answers	63389.30036801153	11
+ answer	58047.644624861954	20
+ game.	48260.12824218284	7
+ wrong	46848.26023674726	7
+ interrogator	46466.268678897264	21
+ form	45336.20182438402	16
+ question	43675.80196564142	26
+ game	42924.529780162	29
+ machine	42012.5211388495	118
+ man	36987.97082631115	27
+ mind	35006.972970411436	15
+ short	34693.460334662705	8
+ digital	33231.82787106502	35
+ suppose	30878.964131739842	11
+ thinking	30491.630976621032	10
+ machines	29541.768984246468	54
+ computers	28926.519150833592	25
+ time	28244.621996900296	12
+ make	27398.76305782305	25
+ human	26370.60623617033	19
+ point	26289.352851797594	9
+ give	25084.434953179923	15
+ questions	22746.13384303483	14
+ instruction	22361.323271154848	9
+ machines.	20207.962787165252	18
+ computer	19847.994395855563	26
+ view	19645.26508933642	15
+ part	18736.125484109536	19
+ objection	17242.59118920724	8
+ storage	16531.333709052215	17
+ difficult	16344.86872136758	7
+ discretestate	16126.301551494618	20
+ number	14615.359871372002	24
+ fact	12679.20114012374	14
+ .	10680.851685221944	11
+ kind	7002.632092718894	13
+ instance	6096.18246457338	14
+ argument	5427.4908895927665	27
+ states	4953.988537091309	10
+ subject	4822.180343589511	9
+ called	4078.270055574904	6
+ normal	4010.8766685845594	4
+ idea	3014.327197887371	14
+ system	2061.6381807278503	16
+ behaviour	1721.2740757579738	19
+ operations	1685.9050490843779	9
+ rules	942.0559135660332	18
+ method	552.1297057372942	14
+ machine.	0.0	15
+ 

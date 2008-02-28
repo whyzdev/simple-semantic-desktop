@@ -1,0 +1,229 @@
+#!/usr/bin/perl
+
+# html2txt
+#
+# Copyright (c) 2002 Matti J. Kärki <mjk@iki.fi>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+#
+#
+# HTML to text converter.
+#
+# This Perl script converts an HTML string from file/socket/stdin
+# to stdout as a plain text.
+
+use FileHandle;
+use Socket;
+use strict;
+use warnings;
+
+# html2text(string)
+#
+# string is a html string.
+# Function returns a formatted text string.
+#
+sub html2text {
+	my $str = shift(@_);
+
+	$str =~ s/HTTP.*?\n//sg;# Remove all HTTP headers.
+	$str =~ s/\n/ /sg;	# Remove all obsolete newlines.
+
+	# Link:
+	$str =~ s/<a[ ]+.*?>(.+)<\/a>/$1/ig;
+
+	# Script:
+	$str =~ s/<script>(.+)<\/script>/$1/ig;
+
+	# Comment:
+	$str =~ s/<!--.*?-->/ /ig;
+
+	# Title:
+	$str =~ s/<\/title>/\n\n/ig;
+
+	# Line break:
+	$str =~ s/<br>/\n/ig;
+
+	# Horizontal line:
+	$str =~ s/<hr>/\n---*-*-*---\n/ig;
+
+	# Paragraph:
+	$str =~ s/<\/?p[ ]*.*?>/\n\n/ig;
+
+	# Headings:
+	$str =~ s/<\/?h[1-6][ ]*.*?>/\n\n/ig;
+
+	# List items:
+	$str =~ s/<\/?li[ ]*.*?>/\n/ig;
+
+	# Table:
+	$str =~ s/<\/?table[ ]*.*?>/\n/ig;
+	$str =~ s/<td[ ]*.*?>/\t/ig;
+	$str =~ s/<tr[ ]*.*?>/\n/ig;
+
+	# Cleaning up:
+	$str =~ s/<.*?>//sg;		# Remove all tags.
+	$str =~ s/\n[ ]+\n/\n\n/sg;	# Remove all obsolete spaces.
+	$str =~ s/\n[ ]+/\n/sg;
+	$str =~ s/\n{2,}/\n\n/sg;	# Remove all obsolete newlines.
+	$str =~ s/^[ ]*/ /g;		# Remove all leading spaces (again).
+	$str =~ s/[ ]+/ /g;		# Remove all duplicate spaces (again).
+
+	# Decode some commonly used special characters:
+	$str =~ s/&nbsp;/ /g;		# Non-breaking space
+	$str =~ s/&shy;/-/g;		# Hyphen
+	$str =~ s/&lt;/</g;		# <
+	$str =~ s/&gt;/>/g;		# >
+	$str =~ s/&amp;/&/g;		# &
+	$str =~ s/&quot;/\"/g;		# "
+	$str =~ s/&copy;/(c)/g;		# Copyright
+	$str =~ s/&reg;/(r)/g;		# Reg.tm.
+	$str =~ s/&aring;/å/g;		# å
+	$str =~ s/&auml;/ä/g;		# ä
+	$str =~ s/&ouml;/ö/g;		# ö
+	$str =~ s/&Aring;/Å/g;		# Å
+	$str =~ s/&Auml;/Ä/g;		# Ä
+	$str =~ s/&Ouml;/Ö/g;		# Ö
+
+	return $str;
+}
+
+# geturl(string)
+#
+# string is an url or file path.
+# Function returns a list where the first argument is a host name and
+# the second argument is a path.
+#
+sub geturl {
+	my $str = shift(@_);
+	my $url = "";
+	my $path = "/";
+
+	if ($str =~ /http:/) {
+		if ($str =~ /\/\/(.+?)\//) {
+			$url = $1;
+		}
+		if ($str =~ /\/\/.+?(\/.+)/) {
+			$path = $1;
+		}
+	}
+	elsif ($str =~ /file:/) {
+		if ($str =~ /\/\/(.+)/) {
+			$url = "file";
+			$path = $1;
+		}
+	}
+
+	return ($url, $path);
+}
+
+# geturlhandle(url, path)
+#
+# Function returns a handle.
+#
+sub geturlhandle {
+	my $url = shift(@_);
+	my $path = shift(@_);
+
+	my $proto = getprotobyname('tcp');
+	socket(my $HANDLE, PF_INET, SOCK_STREAM, $proto);
+	my $iaddr = gethostbyname($url);
+	my $port = getservbyname('http', 'tcp');
+	my $in = sockaddr_in($port, $iaddr);
+	connect($HANDLE, $in);
+
+	$HANDLE->autoflush(1);
+	print $HANDLE "GET $path HTTP/1.0\r\nhost: $url\r\n\r\n";
+
+	return $HANDLE;
+}
+
+# getfilehandle(filename)
+#
+# Function returns a handle.
+#
+sub getfilehandle {
+	my $name = shift(@_);
+
+	open my $HANDLE, $name or die "Getfilehandle: $!";
+
+	return $HANDLE;
+}
+
+# fetchpage(handle)
+#
+# Function reads everything from the handle and returns a string.
+#
+sub fetchpage {
+	my $handle = shift(@_);
+	my $doc = "";
+	my $line = "";
+
+	while ($line = <$handle>) {
+		$line =~ s/\r/ /g;	# Remove all \r characters.
+		chomp($line);		# Remove all newlines.
+		($line = "\n") if (length($line) == 0);	# A dirty hack.
+		$line =~ s/\t/ /g;	# Remove all tabs.
+		$line =~ s/[ ]+/ /g;	# Remove all duplicate spaces.
+		$line =~ s/^[ ]*/ /g;	# Remove all leading spaces.
+		$line =~ s/[ ]*$/ /g;	# Remove all trailing spaces.
+		$doc .= " $line";
+	}
+	close $handle;
+
+	return $doc;
+}
+
+# Main function.
+#
+sub main {
+	my $argc = shift(@_);
+	my @argv = shift(@_);
+
+	if ($argc > 0) {
+		my @url = geturl($argv[0]);
+		if ($url[0] eq "") {
+			print	"Syntax:\n\n" .
+				"From file:" .
+				"\thtml2txt file://fullpath.txt\n" .
+				"From web:" .
+				"\thtml2txt http://www.foo.xy/\n" .
+				"From stdin:" .
+				"\thtml2txt\n";
+		}
+		elsif ($url[0] eq "file") {
+			my $doc = fetchpage(getfilehandle($url[1]));
+			print((html2text $doc) . "\n");
+		}
+		else {
+			my $doc = fetchpage(geturlhandle($url[0], $url[1]));
+			print((html2text $doc) . "\n");
+		}
+	}
+	else {
+		my $string = join('', <STDIN>);
+		print ((html2text $string) . "\n");
+	}
+}
+
+# This calls the main function.
+#
+main($#ARGV + 1, @ARGV);
+
+# EOF
+

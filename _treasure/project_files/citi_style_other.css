@@ -1,0 +1,373 @@
+/* Style sheet for CITI website  */
+/* David Tavares Sousa */
+/* All Browsers except IE */
+
+html {
+	height: 100%;
+}
+
+body { 
+	font-family: sans-serif;
+	font-size: small;
+	margin-left: 4px;
+	margin-top: 4px;
+	background: #FFFFFF;
+	color: #000000;
+	height: 99%;
+}
+
+/* Page Container and Footer */
+
+#pagecontainer {
+	/*border: 1px solid #000000;*/
+	position: relative;
+	width: 760px;
+	min-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+* html #pagecontainer {
+	height: 100%;
+}
+
+#footer {
+	width: 760px;
+	height: 24px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	margin-top: -2.2em;
+	background-image: url(../images/footer.gif);
+	background-repeat: no-repeat;
+}
+
+.top760 {
+	background-image: url(../images/index_top_760.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+}
+
+.top370 {
+	background-image: url(../images/index_top_370.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+}
+
+.toptext {
+	font-weight: bold;
+	color: #FFFFFF;
+	margin-left: 15px;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+#table_intro {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #EFEFEF;
+	border: 2px solid #DDDDDD;
+}
+
+/* Text Properties */
+
+td,tr,th {
+	font-family: sans-serif;
+	font-size: small;
+	color: #000000;
+}
+
+a { color: #000000; }
+a:hover { color: #003366; }
+
+p {
+	color: #000000;
+	text-align: justify;
+	text-indent: 20px;
+ 	line-height: 20px;
+}
+
+.indent_block {
+	margin-left: 30px;
+}
+
+.spaced_li {
+	margin-bottom: 12px;
+}
+
+.list_intro {
+	text-align: justify;
+	margin: 4px 4px 4px 4px;
+	font-size: 12px;
+	color: #222222;
+}
+
+
+/* title of each page */
+.pagetitle { 
+		font-family: sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		color: #003366;
+		margin: 10px 0px 10px 0px;
+		text-align: left;
+		letter-spacing: 1px;
+}
+
+.filetitle {
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0px 0px 10px 0px;
+}
+
+.filetitle2 {
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0px 0px 10px 0px;
+}
+
+.filetitle3 {
+		font-size: 13px;
+		font-weight: bold;
+		font-style: italic;
+		color: #222222;
+		margin: 0px 0px 10px 0px;
+		letter-spacing: 1px;
+}
+
+#infoblock p {
+	text-align: justify;
+	text-indent: 0px;
+	margin: 0px 0px 4px 0px;
+}
+
+.file_table {
+	background-image: url(../images/file_bg.gif);
+}
+
+
+/* login error message (red) */
+.loginerror {
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #b22222;
+}
+
+/* not sure were it's being used! */
+.darkred {
+	font-family: sans-serif;
+	color: #640909;
+}
+
+.highlight {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #8b3626;
+}
+
+/* news date in index news box */
+.newsdate { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2f4f4f;
+}
+
+/* management interfaces link comment */
+.managecom { 
+	font-size: 12px;
+	font-style: italic;
+	color:#111111;
+}
+
+/* font used in footer */
+a.foot {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a.foot:hover {
+	text-decoration: underline;
+}
+
+/* activities lists in member and research stream pages */
+a.memberact{
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #474747;
+	text-decoration: none;
+}
+
+a.memberact:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+a.memberactsel {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+a.memberactsel:hover {
+	text-decoration: underline;
+}
+
+/* font for object names in listing (seminars, projects, publications, etc.. titles) blue one */
+a.pubname {
+	color: #003366;
+	text-decoration: underline;
+}
+
+a.pubname:hover {
+	color: #222222;
+}
+
+a.memblist {
+	color: #222222;
+	text-decoration: underline;
+}
+
+a.memblist:hover {
+	color: #000000;
+}
+
+a.actlist {
+	color: #333333;
+	text-decoration: none;
+}
+
+a.actlist:hover {
+	color: #003366;
+	text-decoration: underline;
+}
+
+.filtersel {
+	color: #990000;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+a.filter {
+	color: #222222;
+	text-decoration: none;
+}
+
+a.filter:hover {
+	color: #990000;
+	text-decoration: underline;
+}
+
+
+/* vivid blue for classic links (page numbers, etc...) */
+a.listpage {
+	color: #336699;
+	text-decoration: underline;
+}
+
+a.listpage:hover {
+	color: #003366;
+}
+
+/* Header & Menu */
+
+/* bar over menu */
+
+a.upper {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 2px 0px 2px 0px;
+}
+
+a.upper:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.uppermenu {
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	padding: 2px 0px 2px 0px;
+}
+
+/* CSS Menu */
+
+#menu, #menu ul { /* all lists */
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	position: relative;
+	top:0px; left:0px;
+	width: 700px;
+}
+
+#menu a {
+	display: block;
+	width: 165px;
+	padding: 6px 0px 6px 8px;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	background: #336699;
+	text-decoration: none;
+	border-left: 2px solid #003366;
+}
+
+#menu a:hover {
+	background: #003366;
+	cursor: default;
+}
+
+#menu li ul a {
+	border-style: none;
+	background: #003366;
+	padding: 6px 0px 6px 15px;
+	width: 158px;
+}
+
+#menu li ul a:hover {
+	background: #CC6633;
+	cursor: pointer;
+}
+
+#menu li { /* all list items */
+	float: left;
+	width: 175px; /* width needed or else Opera goes nuts */
+}
+
+#menu li ul { /* second-level lists */
+	border: solid 2px #CC6633;
+	position: absolute;
+	width: 173px;
+	left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+}
+
+#menu li#sub1:hover ul, #menu li#sub1.sfhover ul { /* lists nested under hovered list items */
+	position: absolute;
+	left: 0px;  /* hard-coded offsets for each submenu */
+	top:auto;
+}
+
+#menu li#sub2:hover ul, #menu li#sub2.sfhover ul {
+	position: absolute;
+	left: 175px;
+	top:auto;
+}
+
+#menu li#sub3:hover ul, #menu li#sub3.sfhover ul {
+	position: absolute;
+	left: 350px;
+	top:auto;
+}
+
+#menu li#sub4:hover ul, #menu li#sub4.sfhover ul {
+	position: absolute;
+	left: 525px;
+	top:auto;
+}
+

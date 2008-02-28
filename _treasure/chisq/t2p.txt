@@ -1,0 +1,10 @@
+data transformation. Lecture Notes in Artificial Intelligence
+(Progress in Artificial Intelligence), 2258:74–87, 2001.
+[11] P. Warren, C. Boldyreff, and M. Munro. The evolution of
+websites. In Proc. of the International Workshop on Pro-
+gram Comprehension, pages 178–185, Pittsburgh, PA, USA,
+May 1999.
+[12] T. Wiggerts. Using clustering algorithms in legacy systems
+remodularization. In Proc. of the 4th Working Conference
+on Reverse Engineering (WCRE), pages 33–43. IEEE Com-
+puter Society, 1997.

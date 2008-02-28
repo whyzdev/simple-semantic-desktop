@@ -1,0 +1,1254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+  <link rel="Stylesheet" href="Natural%20Language%20Processing%20_%20Information%20Retrieval%20Software%20Repository_files/rpnlpir.css"><title>Natural Language Processing / Information Retrieval Software Repository</title></head><body>
+<h1>Natural Language Processing / Information Retrieval Software
+Repository</h1>
+
+<!-- Search Google -->
+<form method="get" action="http://www.google.com/search">
+<p class="search">
+<input name="domains" value="www.comp.nus.edu.sg" type="hidden">
+<input name="sitesearch" value="www.comp.nus.edu.sg" type="hidden">
+Search SoC (via Google): <input name="q" size="10" maxlength="255" type="text">
+</p>
+</form>
+<!-- Search Google -->
+
+<h2>Solaris 5.8 version</h2>
+
+<p>The <a href="http://aye.comp.nus.edu.sg/portal/RPNLPIR/">Linux
+2.4.22 version (aye) is here</a>.</p>
+
+<p>Last updated: 
+
+$Id: README.html,v 1.14 2005/06/30 02:11:40 rpnlpir Exp rpnlpir $
+
+</p>
+<p>This directory and account holds centralized software and tools for
+natural language processing (NLP) and information retrieval (IR)
+research and teaching at the School of Computing at the National
+University of Singapore. The account is hosted off of sf3 such that
+students and researchers will be able to get at these tools. Access
+is granted to all, however, if you'd like to provide and/or install
+tools, you must first email the administrators (rpnlpir@comp...).
+</p>
+<p>The tools here are compiled for Solaris (5.8). Installers, please
+keep the list of tools up to date, by checking the <a href="#guidelines">guidelines</a>. Thank you. This file will also be
+available from the web, so if you are checking to see whether a
+certain package is installed locally here, you can do a find in your
+browser window on this webpage.
+</p>
+<p>If you're looking for other pages of this sort you might try the
+listing of related <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/nlp-ir-related-sites.html">NLP/IR software
+sites</a>. We are also considering making versions of these tools
+readily installable from a single CD, where licensing is not an issue.
+Please <a href="mailto:rpnlpir@comp.nus.edu.sg">contact us</a> if you
+are interested in the availability of this software.  
+</p>
+<p>This site and listing is supervised by <a href="http://www.comp.nus.edu.sg/%7Ekanmy/">Min-Yen Kan</a>.  
+</p>
+<p>Table of contents:
+</p>
+<ul>
+  <li><b><a href="#guidelines">Tool usage and installation best
+practice guidelines</a></b> - Please follow these rules if you are
+going to use any of the resources here or plan to install new tools.
+    <p> </p>
+    <p> </p>
+  </li>
+  <li><a href="#c">Corpora</a> - written, spoken, transcribed data for
+natural language analysis and use. </li>
+  <li><a href="#p">Proceedings</a> - proceedings and workshop notes
+from previous research congresses in IR and NLP. </li>
+  <li><a href="#g">Grammars</a> - hand crafted grammars for analysis
+and generation </li>
+  <li><a href="#l">Lexicons</a> - lexicons and ontologies for word
+senses, word relations and conflation </li>
+  <li><a href="#t">Tools</a> - a large list of language analysis and
+generation tools, including parsers, chunkers, part-of-speech taggers,
+etc.
+  </li><li><a href="#lib">Libraries</a> - customized libraries to link software to. </li>
+    <p> </p>
+    <p> </p>
+  
+  <li> Local installations - see the (authorized
+users only) <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/localInstallations.html">localInstallations</a>
+file. </li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="c">
+<h2>Corpora</h2>
+</a>
+<ul>
+  <li> <b>Microsoft Research Paraphrase Corpus</b> [Installed Thu
+Sep 29 17:04:34 GMT-8 2005 by qiul under
+corpora/text-corpora/MSRParaphraseCorpus Maintained by qiul] This
+dataset consists of 5801 pairs of sentences gleaned over a period of 18
+months fro
+m thousands of news sources on the web. Accompanying each pair is
+judgment reflecting whether multiple human annotators considered the
+two sentences to be close enough in meaning to be considered close
+paraphrases. For more information, please visit <a href="http://research.microsoft.com/research/nlp/msr_paraphrase.htm"> Microsoft Research Paraphrase Corpus web site </a>. <i>Status: protected under Microsoft Research Shared Source license agreement ("MSR-SSLA"). </i> <p></p></li> 
+  <li><b>PASCAL Entailment Datasets </b>[Installed
+Sat Sep 24 22:58:34 GMT-8 2005 by qiul under
+corpora/text-corpora/Pascal Maintained by qiul ] These are the
+Development Set, Test Set and Annotated Test Set of the first and
+second <a href="http://www.pascal-network.org/">PASCAL </a> <a href="http://www.pascal-network.org/Challenges/RTE/"> Recognising Textual Entailment Challenge </a><a>. <i>Status: freely available for all to use. </i></a><p></p></li>
+<a>  </a><li><a><b>DBLP XML records </b> [Installed Tue Jul 19 10:35:21 GMT-8
+2005 by kanmy under corpora/metadata/dblp (English) Maintained by
+kanmy ] These are the XML records of the entire </a><a href="http://www.informatik.uni-trier.de/%7Eley/db/">DBLP</a> database.
+They are available from <a href="http://dblp.uni-trier.de/xml/">http://dblp.uni-trier.de/xml/</a>.
+The copy here is dated from 2005 Jul 18.  <i>Status: freely available
+for all to use.</i> <p></p></li>
+
+  <li><b>NTU OPAC query logs</b> [Installed Thu Jun 30 10:04:45 GMT-8
+2005 by kanmy under corpora/queries/ntuOPAC (mostly English)
+Maintained by kanmy ] This is a list of about ~700K online public
+access catalog queries collected by the Nanyang Technological
+University (NTU) OPAC server in 2002.  <i>Status: for research staff
+only.  Not for re-distribution or commericial use.  Contact the
+maintainer for details.</i> <p></p></li>
+
+  <li><b>Topic Detection &amp; Tracking</b> [Installed Wed 
+Jun 22 17:19:36 GMT-8 2005 by zhangya under /corpora/text-corpora/TDT
+(English&amp;Chinese) Maintained by zhangya ] The TDT dataset is used for 
+Topic Detection &amp; Tracking (TDT) research. Currently, TDT2, used for 
+1998 TDT test; TDT3, used for 1999 ~ 2001 TDT tests; and TDT4, used 
+for 2002 ~ 2003 TDT tests are installed. Please refer to 
+<a href="http://www.nist.gov/speech/tests/tdt/index.htm"> http://www.nist.gov/speech/tests/tdt/index.htm </a>for details of TDT research. <i>Status:
+Only NUS members can access this corpus, as per LDC's
+policies.</i><p></p>
+  </li>
+
+  <li><b>Surname List </b> [Installed Fri May 6 19:14:59 GMT-8 2005 by
+kanmy under corpora/gazetteers/surnames/ (English) Maintained by kanmy
+] A list of 23K+ English surnames compiled from the rootsweb mailing
+list list.  See the local README file for more information.
+<i>Status: Available on the web, locally post-processed for use.</i>
+<p></p></li>
+
+  <li><b> Argumentative Zoning Corpus (pre-distribution) </b>
+[Installed Sat Apr 9 13:27:36 GMT-8 2005 by kanmy under
+corpora/text-corpora/zoning (symlinked to corpora/metadata/zoning)
+(English) Maintained by kanmy ] This is a mostly cleaned corpus of 80
+computational linguistic articles that have been marked up for
+argumentative zoning relations.  You can learn more about this from <a href="http://www.cl.cam.ac.uk/users/sht25/az.html">Simone's home
+page</a> or from <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/localInstallation.html">Yee Seng Chan's</a>
+(search for "zoning") Digital Library course project.  <i>Status: this
+is a pre-distribution copy from Simone Teufel.  It is not for public
+use.  Contact the maintainer if you would like to use this
+resource.</i> <p></p></li>
+
+<li><b> OPUS Parallel corpus (v0.2)</b> [Installed Sat Feb 5 10:22:52
+GMT-8 2005 by kanmy under corpora/text-corpora/parallel/opus-v0.2
+(Many) Maintained by kanmy ] OPUS is an attempt to collect translated
+texts from the web, to convert and align the entire collection, to add
+linguistic data, and to provide the community with a publicly
+available parallel corpus. OPUS is based on open source products and
+is also delivered as an open source package. We used several tools to
+compile the current corpus. (Manual corrections have not been made.)
+See the home page for more details and for their online search
+interface: <a href="http://logos.uio.no/opus/">http://logos.uio.no/opus/</a>
+<i>Status: Openly available from the web page.</i> <p></p></li>
+
+  <li><b> ISL Meeting transcripts</b> [Installed Thu Jun 3 15:14:36
+GMT-8 2004 by kanmy under
+corpora/text-corpora/meeting-transcripts/isl_meeting_transcripts
+(English) Maintained by kanmy ] The ISL Meeting Corpus Part 1 is a
+first subset of the ISL Meeting Corpus (112 meetings). It contains 18
+meetings collected at the Interactive Systems Laboratories at Carnegie
+Mellon University in Pittsburgh, PA during the years 2000-2001. The
+recorded meetings were either natural meetings where participants
+needed to meet in the real world, or artificial meetings, which were
+designed explicitly for the purposes of data collection but still had
+real topics and tasks. The duration of the meetings in this corpus
+ranges from 8 to 64 minutes and averages at 34 minutes. The audio
+files are available as ISL Meeting Speech Part 1.  See the home page
+for the corpus at: <a href="http://wave.ldc.upenn.edu/Catalog/docs/LDC2004T10/">http://wave.ldc.upenn.edu/Catalog/docs/LDC2004T10/</a>.
+       <i>Status: An LDC corpus.  Use restricted to LDC members.</i>
+       <p></p></li>
+
+  <li><b>MovieLens Collaborative Filtering dataset </b> [Installed Tue
+Jun 1 16:26:29 GMT-8 2004 by kanmy under
+corpora/relevance-judgments/collab-filtering/movielens (N/A)
+Maintained by kanmy ] Two datasets used for collaborative filtering
+research. The first one consists of 100,000 ratings for 1682 movies by
+943 users. The second one consists of approximately 1 million ratings
+for 3900 movies by 6040 users. Before using these datasets, please
+review the included readme files for the usage license. More
+information is avaliable from the GroupLens webpage: <a href="http://www.grouplens.org/">http://www.grouplens.org/</a>
+<i>Status: Publicly available from their web site.</i><p></p></li>
+  <li><b>Cora datasets</b> [Installed Tue May 11 17:29:20
+GMT-8 2004 by kanmy under corpora/text-corpora/cora (English)
+Maintained by kanmy ] This is the data from Andrew McCallum's home
+page on the scientific search engine CORA.  It includes the citation
+matching, research paper classification and information extraction
+datasets.  <i>Status: publicly available from Andrew McCallum's
+home page at <a href="http://www.cs.umass.edu/%7Emccallum/code-data.html">http://www.cs.umass.edu/~mccallum/code-data.html</a>.</i>
+ <p></p></li>
+  <li><b>British National Corpus, World Edition</b> [Installed Tue May
+11 15:29:05 GMT-8 2004 by kanmy under corpora/text-corpora/BNC-World
+(English) Maintained by kanmy/leews ] The British National Corpus
+(BNC) is a 100 million word collection of samples of written and
+spoken language from a wide range of sources, designed to represent a
+wide cross-section of current British English, both spoken and
+written. See the home page of the BNC at <a href="http://www.natcorp.ox.ac.uk/">http://www.natcorp.ox.ac.uk/</a> for
+more details.  We have a five year license for this product.  <i>Status:
+Limited for research purposes, see the maintainers for details if you
+wish to utilize this corpus.  The texts and documentation are installed but the SARA utility has not been compiled nor set up.</i><p></p></li>
+
+  <li><b>Short messages service corpus (SMS Corpus)</b> [Installed Wed
+Apr 28 13:50:39 GMT-8 2004 by kanmy under corpora/text-corpora/sms/
+((mostly) English) Maintained by kanmy ] Collection of about 10.1K
+messages of SMS service corpus collected by How Yijue as part of her
+honors year thesis work.  Please see How Yijue's thesis for more
+documentation.  <i>Status: open to all under a license similar to the
+Open Directory Project license.  See the corpus home page at <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/downloads/corpora/smsCorpus/">http://www.comp.nus.edu.sg/~rpnlpir/downloads/corpora/smsCorpus/</a>.
+</i><p></p></li>
+
+  <li><b>Chinese Treebank </b> [Installed Wed Apr 21 10:59:56 GMT-8
+2004 by kanmy under corpora/languages/chinese/text-corpora/treebank (Chinese)
+Maintained by kanmy ] The Penn Chinese Treebank is an ongoing project, that started in the
+summer of 1998. The goal of the project is to create of a 500,000-word
+corpus of Chinese text with syntactic bracketing. Chinese Treebank 1.0
+was first published in 2000, and it was later corrected and released
+in 2001 as Chinese Treebank 2.0. More information about the project is
+available on the Penn Chinese Treebank website at:
+<a href="http://www.cis.upenn.edu/%7Echinese/">http://www.cis.upenn.edu/%7Echinese/</a>.
+<i>Status: restricted access to researchers (as per LDC policy).</i><p></p></li>
+  <li><b>MPQA Corpus of Opinion Annotations (Version 1.1)</b> [Installed Fri Mar 
+	5 12:00:00 GMT-8 2004 by cuihang under corpora/text-corpora/MPQA/ maintained 
+	by cuihang] This corpus contains 530 news articles manually annotated using 
+	an annotation scheme for opinions and other private states (e.g., beliefs, 
+	emotions, sentiment, speculation, etc.). The annotation of the corpus was 
+	performed by 5 trained annotators over a period of about 15 months. <i>
+	Status: restricted access.<br>
+&nbsp;</i></li>
+	<li><b>Hong Kong News Parallel Text</b> [Installed Mon Dec 15
+10:24:32 GMT-8 2003 by kanmy under corpora/text-corpora/hksar_news
+(English/Chinese) Maintained by kanmy ] This FTP publication contains
+the Hong Kong News Parallel Text, produced by the Linguistic Data
+Consortium (LDC), catalog number LDC2000T46, isbn 1-58563-169-8. The
+Hong Kong News Parallel Text was created when the LDC collected
+parallel Cantonese - English news articles from the Information
+Services Department of Hong Kong Special Administrative Region (HKSAR)
+of the People's Republic of China.<p></p></li>
+
+  <li><b>Summbank </b> [Installed Mon Dec 15 10:20:53 GMT-8 2003 by
+kanmy under corpora/text-corpora/summbank (English/Chinese) Maintained
+by kanmy ] Summary corpus linked to the HKSAR news corpus.  Produced
+and studied extensively by one of the JHU Workshops in 2001.  More
+information about the corpus is at: <a href="http://www.summarization.com/summbank/">http://www.summarization.com/summbank/"</a>.
+<i>Status: Restricted to LDC members, is open only for general
+academic research.</i> <p></p></li>
+
+  <li><b>TREC 2003 QA Main Task Questions and Judgments </b> [Installed Fri Nov 21
+  10:35:00 GMT-8 2003 by cuihang under corpora/queries/trec12.questions Maintained by 
+  cuihang ] Questions used in TREC 2003 QA main task, including factoid, list 
+  and definition questions, as well as their judgments.<p></p></li>
+
+  <li><b>LDC English Gigaword Corpus </b> [Installed Fri Nov 21
+09:15:08 GMT-8 2003 by kanmy under corpora/text-corpora/gigaword
+(English) Maintained by kanmy ] A large newspaper article corpus from
+the LDC, overlaps with WSJ and the AQUAINT corpora.  Here's a link to
+its description from the LDC: <a href="http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2003T05">http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC2003T05</a>. <i>Status:
+restricted access within the department only, as per LDC's
+policy</i>.<p></p></li>
+
+  <li><b>William Hersh's MEDLINE corpus as used for the TREC 9
+filtering task</b> [Installed Fri Nov 7 12:08:58 GMT-8 2003 by kanmy
+under corpora/text-corpora/trec/ohsu-trec/ Maintained by
+kanmy ] The OHSUMED test collection is a set of 348,566 references
+from MEDLINE, the on-line medical information database, consisting of
+titles and/or abstracts from 270 medical journals over a five-year
+period (1987-1991). The available fields are title, abstract, MeSH
+indexing terms, author, source, and publication type.  For more
+information, consult the TREC data home page, <a href="http://trec.nist.gov/data.html">http://trec.nist.gov/data.html</a>.
+<i>Status: open for all to use, as publicly available for download
+from NIST's web site</i>.
+       <p> </p></li>
+  <li><b>MUC 6 co-reference data</b> [Installed Wed Oct 1 10:13:28 GMT-8 2003 by kanmy
+under corpora/text-corpora/muc6 (English) Maintained by kanmy ]
+Message Understanding Conference 6 data, from the <a href="http://www.ldc.upenn.edu/">Linguistic Data Consortium</a>.  See
+the README file in the source directory for details.  <i>Status:
+restricted to research use only, as per LDC policy.</i>
+       <p> </p></li>
+
+  <li><b>DUC 2001-2007 data </b> [Updated Fri Oct  5 15:13:59 SGT 2007 
+ by qiul under corpora/text-corpora/duc/ (English) Maintained by
+ kanmy ] Data (mostly testing data) from the Document Understanding
+ Conference for the years 2001-2007.  This is a summarization
+ competition, held by NIST of the USA.  You might also check out the
+ DUC-processed files, see <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/localInstallations.html">localInstallations.html</a>.  See the
+ <a href="http://duc.nist.gov/">DUC web site</a> for
+ details. <i>Status: restricted to academic research.  You have to
+ sign an individual agreement with NIST before the data can be
+ released to you.  See the maintainer for details.</i> <p> </p>
+
+  </li>
+  <li><b>PropBank </b>[Installed Fri Aug 22 10:44:00 GMT-8 2003 by
+cuihang under corpora/text-corpora/PropBank (English) Maintained by
+cuihang ] The PropBank project is creating a corpus of text annotated
+with information about basic semantic propositions. Predicate-argument
+relations are being added to the syntactic trees of the <a href="http://www.cis.upenn.edu/%7Etreebank/">Penn Treebank</a>. See <a href="http://www.cis.upenn.edu/%7Eace/">http://www.cis.upenn.edu/~ace/</a>
+for details. <i>Status: restricted.</i><br>
+    <p> </p>
+  </li>
+  <li><b>Web corpora wt10g and wt2g </b> [Installed Fri Aug 8 16:44:43
+GMT-8 2003 by kanmy under corpora/text-corpora/wt[10|2]g (English) Maintained by
+kanmy ] These are two 10 GB and 2 GB corpora used by the TREC web
+track. Compiled by CSIRO. See the directory for more information. <i>Status:
+Restricted access. More details on the corpus can be found on the <a href="http://trec.nist.gov/">TREC</a> website and at the <a href="http://www.csiro.au/">CSIRO website</a> Anyone wishing to use
+this corpus <b>must</b> sign an individual license agreement
+before proceeding.</i>
+    <p> </p>
+  </li>
+  <li><b>Bank Search Dataset </b> [Installed Thu Aug 7 13:35:30 GMT-8
+2003 by kanmy under corpora/text-corpora/banksearchdataset (Any)
+Maintained by kanmy ] A web document clustering dataset, provided free
+of charge from the University of Reading. <i>Status: Freely
+downloadable from the web. See: <a href="http://www.pedal.rdg.ac.uk/banksearchdataset/">http://www.pedal.rdg.ac.uk/banksearchdataset/</a>
+for details.</i>
+    <p> </p>
+  </li>
+  <li><b>Moby corpus' complete works of Shakespeare </b> [Installed
+Thu Jul 3 23:43:15 GMT-8 2003 by kanmy under
+text-corpora/mobyShakespeare (English) Maintained by kanmy ] The Moby
+corpus' version of the unabridged works of William Shakespeare. <i>Status:
+in the public domain, do with it as you please</i>. The Moby project
+has a number of other lexica, see below and at the source home page: <a href="http://www.dcs.shef.ac.uk/research/ilash/Moby/">http://www.dcs.shef.ac.uk/research/ilash/Moby/</a>.
+    <p> </p>
+  </li>
+  <li><b>Web Pages of Biographies</b> [Installed Thu Jun 19 10:50:02
+GMT-8 2003 by cuihang under corpora/biographies/ Maintained by cuihang
+] Crawled web pages of biographies. <i>Status: restricted.</i>
+    <p> </p>
+  </li>
+  <li><b>WebBase statistics</b> [Installed Fri Jun 6 14:50:02 GMT-8
+2003 by kanmy under corpora/text-statistics/webBase/ (Any) Maintained
+by kanmy ] Statistics on the Stanford WebBase corpus as compiled by UC
+Berkeley. Scripts and files that compute the IDF value of words over
+133 M web pages are included. Big file! <i>Status: open to all.</i>
+    <p> </p>
+  </li>
+  <li><b>4 Stopword lists </b> [Installed Wed May 28 10:53:28 GMT-8
+2003 by kanmy under corpora/text-corpora/stopwordLists/ (English)
+Maintained by kanmy ] Four downloaded stoplists available from the web.
+See the README.html file in the directory for more information. Status:
+restricted.
+    <p> </p>
+  </li>
+  <li><b>Academic Web Link Databases </b> [Installed Wed May 14
+14:36:11 GMT-8 2003 by kanmy under
+corpora/link-databases/academicWebLink/ (N/A) Maintained by kanmy ]
+Link structure of Spanish, U.K., Taiwanese and Australian Universities.
+See the local copy of the original description HTML file (<a href="http://cybermetrics.wlv.ac.uk/database/">http://cybermetrics.wlv.ac.uk/database/</a>
+from Wolverhampton. Status: Free of charge, open to all.
+    <p> </p>
+  </li>
+  <li><b>AQUAINT (TREC) QA evaluation corpus</b> [Installed Tue May 6
+17:44:21 GMT-8 2003 by kanmy under corpora/text-corpora/aquaint
+(English) Maintained by kanmy ] TREC QA (AQUAINT) Data for 2002/2003.
+A corpus comprising of data from the New York Times, Xinhua news
+service and the Associated Press. See the index.html file in the
+directory for more details. Status: Access is restricted to TREC
+participants only.
+    <p> </p>
+  </li>
+  <li><b>ILP learning dataset </b> [Installed Mon Apr 14 23:12:44
+GMT-8 2003 by kanmy under corpora/learning-datasets/ilp (English)
+Maintained by kanmy ] Another subset of the WebKB text classification
+corpus as used in the ILP 98 paper. See the root directory README for
+more details.  <p> </p>
+  </li>
+  <li><b> Cotraining Web KB Data</b> [Installed Mon Apr 14 20:01:25
+GMT-8 2003 by kanmy under corpora/learning-datasets/course-cotrain-data
+(symlinked to corpora/text-corpora/course-cotrain-data) (English)
+Maintained by kanmy ] This is a subsection of the WebKB text
+classification corpus containing both hyperlink and the documents with
+judgments on the webpages into two categories, course and non-course.
+The relevant web page has been downloaded into root directory and is
+also found on the WWW at <a href="http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/theo-51/www/co-training/data/">http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/theo-51/www/co-training/data/</a>
+(as of Mon Apr 14 20:03:52 GMT-8 2003).
+    <p> </p>
+  </li>
+  <li><b>WebKB webpages and judgments </b> [Installed Mon Apr 14
+19:58:13 GMT-8 2003 by kanmy under corpora/learning-datasets/webkb
+(symlinked to corpora/text-corpora/webkb) (English) Maintained by kanmy
+] This is the WebKB text classification corpus. The relevant home page
+is in the root directory and can be found at <a href="http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/theo-11/www/wwkb/">http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/theo-11/www/wwkb/</a>
+(as of Mon Apr 14 19:59:38 GMT-8 2003). It contains a corpus of 4000+
+web pages and their classification into 7 categories.
+    <p> </p>
+  </li>
+  <li><b>NUS Libraries query logs</b> [Installed Thu Apr 10 10:53:30
+GMT-8 2003 by kanmy under corpora/queries/nusInnopac/ (English)
+Maintained by kanmy ] About 800 K queries from the simple keyword
+interface for the LINC online catalog system of NUS. On-going
+collection of queries likely. Provided by NUS Libraries. For research
+purposes only.  Description updated: Fri Nov 21 09:13:43 GMT-8 2003.
+    <p> </p>
+  </li>
+  <li><b>Excite Query Logs</b> [Installed Fri Feb 7 15:43:39 GMT-8 2003
+by kanmy under corpora/queries/excite/ (English) Maintained by kanmy ]
+The 2.477 million queries for Excite on Dec 20, 1999. For research
+purposes only. Anyone connected to corporate research may <i>not</i>
+use this research. Access is restricted.
+    <p> </p>
+  </li>
+  <li><b>Open Directory Project web page data </b> [Installed Fri Jan
+3 14:16:44 GMT-8 2003 by kanmy under corpora/metadata/odp (English)
+Maintained by kanmy ] The ODP is a large, open-source, human-edited
+directory similar to Yahoo!. The data is distributed under GNU GPL and
+is provided here for IR research purposes. See their <a href="http://www.dmoz.org/">web page</a> for more details.
+    <p> </p>
+  </li>
+  <li><b>Text Retrieval Conference (TREC) English Queries </b>
+[Installed Thu Jan 9 15:36:55 GMT-8 2003 by kanmy under
+corpora/queries/trec* (English) Maintained by kanmy ] The Text
+Retrieval Conference (TREC) has been held for numerous years. The
+queries for the competition are housed here. The TREC English queries
+home page is at: <a href="http://trec.nist.gov/data/topics_eng/index.html">http://trec.nist.gov/data/topics_eng/index.html</a>.
+Status: Currently available for research purposes, cleared by TREC
+administrators by TREC maintainers.
+    <p> </p>
+  </li>
+  <li><b>20 newsgroups</b> [Installed Mon Jan 13 14:17:32 GMT-8 2003 by
+kanmy under corpora/text-corpora/20_newsgroups/ (English) Maintained by
+kanmy ] The twenty newsgroup collection is often used for machine
+learning benchmarks. It was installed locally at SoC to test the <code>bow</code>
+machine learning package.
+    <p> </p>
+  </li>
+  <li><b>Penn Treebank </b> [Installed Tue Jan 21 17:45:57 GMT-8 2003
+by kanmy under corpora/text-corpora/treebank (English) Maintained by
+kanmy ] The Penn Treebank contains Wall Street Journal text that has
+been tagged, parsed by both machine and linguists. It is a benchmark
+corpus for parsing and part-of-speech tagging tasks. Contains binaries
+for grepping on tree nodes (e.g., <code>tgrep</code>). <i>Status:
+Only NUS members can access this corpus, as per LDC's policies</i>.
+    <p> </p>
+  </li>
+  <li><b>Reuters 21578 Classic text categorization corpus </b>
+[Installed Sun Jan 19 11:44:04 GMT-8 2003 by kanmy under
+corpora/learning-datasets/reuters21578 (English) Maintained by kanmy ]
+The classic text categorization corpus. Found from <a href="http://www.daviddlewis.com/resources/testcollections/reuters21578/">http://www.daviddlewis.com/resources/testcollections/reuters21578/</a>.
+    <p> </p>
+  </li>
+  <li><b>North American News Text Corpus </b> [Installed Tue Jan 21
+18:20:13 GMT-8 2003 by kanmy under corpora/text-corpora/nantc (English)
+Maintained by kanmy ] Contains text from the Wall Street Journal,
+Reuters, New York Times and the LA Times-Washington Post News Service. <i>Status:
+Only NUS members can access this corpus, as per LDC's policies.</i>
+    <p> </p>
+  </li>
+  <li><b>Tipster Text Research Collection, Vol 1-3. </b> [Installed Tue
+Jan 21 18:43:01 GMT-8 2003 by kanmy under corpora/text-corpora/tipster
+(English) Maintained by kanmy ] The TIPSTER Text research collections
+were used extensively for the Text Retrieval Conferences (TREC). Still
+a good source of text corpora for the research community. <i>Status:
+Only NUS members can access this corpus, as per LDC's
+policies.</i><p></p>
+  </li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="p">
+<h2>Proceedings</h2>
+</a>
+<p>These proceedings are available to SoC staff and members through
+the URL: <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/proceedings/">http://www.comp.nus.edu.sg/~rpnlpir/proceedings/</a>.
+Also, check out the <a href="http://www.aclweb.org/anthology">ACL
+Anthology</a>, which has the collection of all ACL related
+publication.
+</p>
+<ul>
+  <li><b>COLING-ACL 2006 </b> [Installed time: Wed Jul 26 13:28:40
+GMT-8 2006 by qiul under proceedings/coling-acl-2006 Maintained by:
+qiul] Proceedings of the 21st International Conference on Computational
+Linguistics and 44th Annual Meeting of the Association for
+Computational Linguistics. Sydney, Australia, from 17th-21st July 2006.
+<p></p></li>
+  <li><b>EMNLP 2006 </b> [Installed time: Wed Jul 26
+13:33:47 GMT-8 2006 by qiul under proceedings/emnlp-2006 Maintained by:
+qiul] Proceedings of the 2006 Conference on Empirical Methods in
+Natural Language Processing. Sydney, Australia, from 22nd-23rd July
+2006. <p></p></li>
+  <li><b>EACL 2006 </b> [Installed time: 2006-04-11
+23:11:00 by kanmy under proceedings/eacl-2006 Maintained by: kanmy]
+Proceedings of the 11th European Association for Computational
+Linguistics 2006 meeting and associated workshops. Trento Italy, April
+3-7 2006. <p></p></li>
+<p> </p>
+  <li><b>EMNLP-HLT 2005 </b> [Installed Sun Oct 16 15:52:40 GMT-8 2005 by
+qiul under proceedings/EMNLP_HLT-2005 (N/A) Maintained by qiul ]
+Human Language Technology Conference /
+Conference on Empirical Methods in Natural Language Processing,
+held in Vancouver, B.C., Canada,
+October 6-8, 2005.
+</li>
+    <p> </p>
+
+
+  <li><b>HCII 2005 </b> [Installed Fri Jul 29 13:44:59 GMT-8 2005 by kanmy under proceedings/HCII-2005 (N/A) Maintained
+by kanmy ] These are the proceedings of the HCI International
+    conference held in Caesar's Palace, Las Vegas, USA on July 22-27,
+    2005.  HCII is formed of 7 different meetings that are colocated:
+    * Symposium on Human Interface (Japan) 2005 * 6th International
+    Conference on Engineering Psychology &amp; Cognitive Ergonomics * 3rd
+    International Conference on Universal Access in Human-Computer
+    Interaction * 1st International Conference on Virtual Reality *
+    1st International Conference on Usability and Internationalization
+    * 1st International Conference on Online Communities and Social
+    Computing * 1st International Conference on Augmented Cognition.
+ <p></p></li>
+  <li><b>LREC 2004 </b> [Installed Thu Jun 03 21:52:13 GMT-8 2004 by
+qiul under proceedings/lrec-2004 (N/A) Maintained by qiul ] The
+proceedings of the Language Resources and Evaluation Conference, held
+in Lisbon, Portugal, in May 2004. Contains workshop and poster
+session papers as well. </li>
+    <p> </p>
+  <li><b>WWW 2004</b> [Installed Mon May 31 11:24:16 GMT-8 2004 by
+kanmy under proceedings/WWW-2004 (N/A) Maintained by kanmy ] The
+Thirteenth International World Wide Web Conference (WWW-2004) - New York,
+USA, 17-22 May 2004.
+    <p> </p>
+  </li><li><b>HLT/NAACL 2004</b> [Installed Mon May 31 11:24:16 GMT-8 2004
+by kanmy under proceedings/HLT-NAACL-2004 (N/A) Maintained by kanmy ]
+The Human Language Technology Conference of the North American Chapter
+of the Association for Computational Linguistics (HLT/NAACL-2004) -
+Boston, USA, 2-7 May 2004.
+    <p> </p>
+  </li><li><b>Multimedia Data Mining 2002</b> [Installed Sat Aug 23 13:41:27
+GMT-8 2003 by kanmy under proceedings/mdm02.pdf (N/A) Maintained by
+kanmy ] Proceedings of the KDD 02 workshop </li>
+    <p> </p>
+  
+  <li><b>Multimedia Data Mining 2001</b> [Installed Sat Aug 23 13:41:27
+GMT-8 2003 by kanmy under proceedings/mdm01.pdf (N/A) Maintained by
+kanmy ] Proceedings of the KDD 01 workshop </li>
+    <p> </p>
+  
+  <li><b>ACL 2003</b> [Installed Mon Jul 21 11:08:14 GMT-8 2003 by
+kanmy under proceedings/acl-2003 (N/A) Maintained by kanmy ]
+Proceedings of the 41st Annual Meeting for the Association for
+Computational Linguistics (ACL-2003) Sapporo Conventional Center,
+Sapporo, Japan, 7-12 July 2003.
+    <p> </p>
+  </li>
+  <li><b>ACM Multimedia - 2002</b> [Installed Mon May 26 18:29:20 GMT-8
+2003 by cuihang under proceedings/ACM Multimedia-2002 (N/A) Maintained
+by kanmy ] Proceedings of the 10th ACM International Conference on
+Multimedia (MM2002) - Juan-les-Pins, France, December 1 - 6 2002.
+    <p> </p>
+  </li>
+  <li><b>WWW 2003</b> [Installed Mon May 26 16:35:20 GMT-8 2003 by
+cuihang under proceedings/WWW-2003 (N/A) Maintained by kanmy ] The
+Twelfth International World Wide Web Conference (WWW-2003) - Budapest,
+HUNGARY, 20-24 May 2003. The proceedings contain 77 referred papers,
+207 posters and 38 alternate track papers.
+    <p> </p>
+  </li>
+  <li><b>NAACL 2001</b> [Installed Fri Jan 3 14:33:20 GMT-8 2003 by
+kanmy under proceedings/naacl-2001 (N/A) Maintained by kanmy ] The
+Second Meeting of the North American Chapter of the Association for
+Computational Linguistics (NAACL 2001) - Carnegie Mellon University -
+Pittsburgh, PA USA 2-7 June 2001.
+    <p> </p>
+  </li>
+  <li><b>ACL-EACL 2001</b> [Installed Fri Jan 3 14:33:20 GMT-8 2003 by
+kanmy under proceedings/aclEacl-2001 (N/A) Maintained by kanmy ]
+Proceedings of the ACL-EACL Conference, Student Research Workshop,
+Workshops and local information.
+    <p> </p>
+  </li>
+  <li><b>LREC 2002 </b> [Installed Tue Jan 21 17:52:25 GMT-8 2003 by
+kanmy under proceedings/lrec-2002 (N/A) Maintained by kanmy ] The
+proceedings for the Language Resources and Evaluation Conference, held
+in the Canary Islands, Spain, in May 2002. Contains workshop and poster
+session papers as well. </li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="g">
+<h2>Grammars</h2>
+</a>
+<ul>
+  <li><b>Surge 2.2 </b> [Installed Sat Dec 28 18:00:07 GMT-8 2002 by
+kanmy under grammars/surge-2.2 (English) Maintained by kanmy]. A
+comprehensive unification grammar for the English language generation.
+Widely used with FUF. Developed by Jacques Robin from Brazil. Home
+page: <a href="http://www.cs.bgu.ac.il/research/projects/surge/index.htm">http://www.cs.bgu.ac.il/research/projects/surge/index.htm</a>.
+  </li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="l">
+<h2>Lexicons</h2>
+</a>
+<ul>
+  <li><b>Beth Levin's English Verb Classes and Alternations (EVCA)
+</b> [Installed Sat May 29 16:09:44 GMT-8 2004 by kanmy under
+lexicons/evca (English) Maintained by kanmy ] Files that describe the
+verb classes from Levin's seminal work on verb classification by their
+case frames and alternations.  Flat text files.  <i>Status: open to
+all (was made available on the LINGUIST LIST), copyright for the
+material is held by the University of Chicago Press,
+1993.</i>.<p></p></li>
+  <li><b>Extended WordNet 2.0</b> [Installed Mon Dec 29 19:19:12 GMT-8
+2003 by kanmy under lexicons/XWN (English) Maintained by kanmy ] In
+the eXtended WordNet the WordNet glosses are syntactically parsed,
+transformed into logic forms and content words are semantically
+disambiguated.  Makes this data available in XML form.  I have only
+installed the version that tracks WordNet 2.0.  This is work by
+Moldovan et al. at U Texas.  See their home page at: <a href="http://xwn.hlt.utdallas.edu/index.html">http://xwn.hlt.utdallas.edu/index.html</a>.<i>Status:
+open to all, see license at <a href="http://xwn.hlt.utdallas.edu/downloads.html">http://xwn.hlt.utdallas.edu/downloads.html</a>.</i><p></p></li>
+  <li><b>CMU Pronunciation Dictionary </b> [Installed Tue Dec 9
+  10:41:04 GMT-8 2003 by kanmy under lexicons/cmudict-0.6/ (English)
+  Maintained by kanmy ] The Carnegie Mellon University Pronouncing
+  Dictionary is a machine-readable pronunciation dictionary for North
+  American English that contains over 125,000 words and their
+  transcriptions. This format is particularly useful for speech
+  recognition and synthesis, as it has mappings from words to their
+  pronunciations in the given phoneme set. The current phoneme set
+  contains 39 phonemes, for which the vowels may carry lexical
+  stress. See <a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">http://www.speech.cs.cmu.edu/cgi-bin/cmudict</a>.
+  See the README in the directory for more details.  <i>Status: open
+  for all to access</i>. <p></p></li> <li><b>Moby Lexica </b>
+  [Installed Thu Jul 3 23:46:21 GMT-8 2003 by kanmy under
+  lexicons/moby/ (mostly English; but French, German, Japanese, and
+  Italian also present) Maintained by kanmy ] The Moby lexicons
+  containing: Hyphenator - 185,000 entries fully hyphenated.  Moby
+  Language - Word lists in five of the world's great languages. Moby
+  Part-of-Speech - 230,000 entries fully described by part(s) of
+  speech, listed in priority order. Moby Pronunciator - 175,000
+  entries fully International Phonetic Alphabet coded. Moby Thesaurus
+  - 30,000 root words, 2.5 million synonyms and related words. Moby
+  Words - 610,000+ words and phrases. The largest word list in the
+  world. The source Moby website is at: <a href="http://www.dcs.shef.ac.uk/research/ilash/Moby/">University of
+  Sheffield</a> <i>Status: public domain, do what you will with
+  it.</i> <p> </p>
+  </li>
+  <li><b>WordNet log likelihood statistics </b> [Installed Fri Jun 6
+16:45:09 GMT-8 2003 by kanmy under lexicon/lexicon-statistics/
+(English) Maintained by kanmy ] Negative log likelihood statistics for
+WordNet 1.6 synsets. Can be coupled to compute (or partially compute)
+semantic similarity of words, similar to lexical chaining. See the
+directory's README file for more information. <i>Status: open to the
+public.</i>
+  <p></p></li>
+  <li><b>WordNet 1.7.1</b> [Installed Sat Dec 28 17:52:54 GMT-8 2002 by
+kanmy under lexicons/WordNet-1.7.1 (English) Maintained by kanmy].
+Probably the most famous lexical ontology. Home page at <a href="http://wordnet.princeton.edu/">http://wordnet.princeton.edu/</a>.
+Documentation and papers available from its home page.
+  <p><i>Usage notes:</i> Make sure either $WNHOME is properly set to
+/home/rsch/rpnlpir/lexicons/WordNet-1.7.1 or $WNSEARCHDIR is properly
+set to /home/rsch/rpnlpir/lexicons/WordNet-1.7.1/dict.</p>
+  <p></p></li>
+  <li><b>WordNet 2.0</b> [Installed Thu Sep 25 12:39:49 GMT-8 2003 by
+kanmy under lexicons/WordNet-2.0 (English) Maintained by kanmy]. An
+update to 1.7.1 featuring quite a lot of changes. Documentation and
+papers available from its home page. The change log can be found
+<a href="http://wordnet.princeton.edu/2.0/CHANGES">here</a>.<p></p>
+  <p><i>Usage notes:</i> Make sure either $WNHOME is properly set to
+/home/rsch/rpnlpir/lexicons/WordNet-2.0 or $WNSEARCHDIR is properly
+set to /home/rsch/rpnlpir/lexicons/WordNet-2.0/dict.</p>
+  <p></p></li>
+  <li><b>WordNet 2.1</b> [Installed Sun Jul 24 15:57:56 GMT-8 2005 by
+tanyeefa under lexicons/WordNet-2.1 (English) Maintained by tanyeefa]. An
+update to 2.0 featuring quite a lot of changes. Documentation and
+papers available from its home page. The change log can be found
+<a href="http://wordnet.princeton.edu/2.1/CHANGES">here</a>.<p></p>
+  <p><i>Usage notes:</i> Make sure either $WNHOME is properly set to
+/home/rsch/rpnlpir/lexicons/WordNet-2.1 or $WNSEARCHDIR is properly
+set to /home/rsch/rpnlpir/lexicons/WordNet-2.1/dict.</p>
+  <p>Note that Tcl/Tk must be installed before WordNet 2.1 can be
+installed. There is no such requirement for the previous versions of
+WordNet.</p>
+  <p></p></li>
+  <li><b>Java WordNet Library (JWNL) 1.3 RC3</b> [Installed Mon Jun 20 02:55:49 GMT-8 2005
+  by tanyeefa under lexicons/jwnl (English) Maintained by tanyeefa].
+  JWNL is a Java API for accessing the WordNet relational dictionary.
+  WordNet is widely used for developing NLP applications, and a Java
+  API such as JWNL will allow developers to more easily use Java for
+  building NLP applications. Home page at
+  <a href="http://jwordnet.sourceforge.net/">http://jwordnet.sourceforge.net/</a>.
+  <i>Status: Installed and working. BSD license.</i>
+  <p><i>Usage notes:</i> Please refer to the README-SOC.TXT file for some usage notes.</p>
+  <p></p></li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="t">
+<h2>Tools</h2>
+</a>
+<ul>
+  <li><b>SecondString (20030401)</b> [Installed Sat Aug 27 17:05:09 GMT-8 2005
+by tanyeefa under tools/citationTools/secondstring (N/A) Maintained by tanyeefa]
+An open-source Java package containing implementations for approximate
+string-matching techniques, such as Jaccard, Jaro and TF-IDF. Home page:
+<a href="http://secondstring.sourceforge.net/">http://secondstring.sourceforge.net/</a>
+  <p><i>Status: This software was released under the
+University of Illinois/NCSA Open Source License.</i></p>
+  <p></p></li>
+  <li><b>Tcl/Tk 8.4.11</b> [Installed Sun Jul 24 15:57:56 GMT-8 2005
+by tanyeefa under tools/languages/programming/tcltk (N/A) Maintained by tanyeefa]
+A software system providing a simple command language, and a set of widgets
+for use in building GUIs. Home page:
+<a href="http://www.tcl.tk/">http://www.tcl.tk/</a><p></p>
+  <p>The only reason for installing Tcl/Tk is because WordNet 2.1 requires
+Tcl/Tk to install, and only Tcl is found on sf3 (but not Tk).</p>
+  <p><i>Status: Installed and untested. You may use Tcl/Tk in any way
+you wish, even in commercial applications.</i></p>
+  <p></p></li>
+  <li><b>Duke University's Autobib </b> [Installed Wed Jul 13 22:50:26
+GMT-8 2005 by kanmy under tools/internetTools/autobib (English)
+Maintained by kanmy ] The Autobib project proposes and implements a
+framework of extracting and integrating bibliographic information on
+the Web automatically using Hidden Markov Models. Here, you will find
+code and documentations related to this project, and you can also
+browse the experimental bibliographic data and check for its quality.
+This project is done in the Computer Science Department at Duke
+University, under the supervision of Prof. Jun Yang.  <i>Status:
+freely available data from <a href="http://www.cs.duke.edu/dbgroup/autobib/">http://www.cs.duke.edu/dbgroup/autobib/</a></i>
+  <p></p></li>
+  <li><b>nlparser (2005 May 26)</b> [Installed Fri Jun 17 17:43:51 SGT 2005
+by tanyeefa under tools/parsers/nlparser (English) Maintained by tanyeefa]
+A natural language parser for English and Chinese. See the README file for
+more information. Home page: <a href="http://www.cs.brown.edu/software/">
+http://www.cs.brown.edu/software/</a> <i>Status: Currently installed and
+working. Free for use for any non-commercial purposes.</i>
+  <p></p></li>
+  <li><b>ROUGE 1.5.5, 1.5.4 and 1.4.2 </b> [Installed Wed Sep 21 11:31:12
+GMT-8 2005 by kanmy under tools/evalTools/rouge (N/A) Maintained by
+kanmy ] ROUGE is an automated summarization evaluation program used by
+NIST in the DUC conferences to evaluate summarization systems.  It is
+based on the BLEU machine translation scoring metric.  See <a href="http://www.isi.edu/%7Ecyl/ROUGE/">http://www.isi.edu/~cyl/ROUGE/</a>
+for more information.  <i>Status: open to the research community.</i>
+  <p></p></li>
+  <li><b>Weka 3.4.5</b> [Installed Tue Jul 5 21:24:24 GMT-8 2005 by
+tanyeefa under tools/learners/weka (English) Maintained by tanyeefa]
+A collection of machine learning algorithms for data mining tasks.
+Home page: <a href="http://www.cs.waikato.ac.nz/ml/weka/">http://www.cs.waikato.ac.nz/ml/weka/</a>.
+<i>Status: Currently installed and working. Released under
+GPL, free for public use.</i>
+  <p></p></li>
+  <li><b>SWI-Prolog 5.4.7 </b> [Installed Thu Mar 10 13:22:11 GMT-8
+2005 by kanmy under tools/languages/programming/pl (N/A) Maintained by
+kanmy ] SWI-Prolog offers a comprehensive Free Software Prolog
+environment.  See its home page at: <a href="http://www.swi-prolog.org/">http://www.swi-prolog.org/</a>.
+<i>Status: LGPL.  Free for use.</i>
+  <p></p></li>
+  <li><b>Hidden Markov Model Tookit (HTK) 3.2.1
+</b> [Installed Sat Jan 22 11:05:45 GMT-8 2005 by kanmy under
+tools/frameworks/htk/ (N/A) Maintained by kanmy ] The Hidden Markov
+Model Toolkit (HTK) is a portable toolkit for building and
+manipulating hidden Markov models. HTK is primarily used for speech
+recognition research although it has been used for numerous other
+applications including research into speech synthesis, character
+recognition and DNA sequencing. HTK is in use at hundreds of sites
+worldwide.  HTK consists of a set of library modules and tools
+available in C source form. The tools provide sophisticated facilities
+for speech analysis, HMM training, testing and results analysis. The
+software supports HMMs using both continuous density mixture Gaussians
+and discrete distributions and can be used to build complex HMM
+systems. The HTK release contains extensive documentation and
+examples.  See <a href="http://htk.eng.cam.ac.uk/">http://htk.eng.cam.ac.uk/</a> for
+more information. <i>Status: restricted use, you have to be a
+registered user on the <a href="http://htk.eng.cam.ac.uk/">HTK
+site</a> in order to use this software.  Please abide by the usage
+agreements before using this software.</i><p></p></li>
+
+<li><b>Ant 1.6.2 </b> [Installed Mon Dec 20 17:24:01 GMT-8 2004 by
+kanmy under tools/buildTools/apache-ant-1.6.2/ (Ant) Maintained by
+kanmy ] The build utility for java projects.  From <a href="http://ant.apache.org/">http://ant.apache.org/</a>.  You may
+need to unset your CLASSPATH to get this tool running
+properly.<i>Status: Open source available software.</i><p></p></li>
+<li><b>Morpha/Morphg English morphological analysis tools</b>
+[Installed Tue Jun 15 10:30:51 GMT-8 2004 by kanmy under
+tools/morphers/morph/ (English) Maintained by kanmy ] Tools for
+inflectional morphological analysis and generation, and for
+determining the orthography of the indefinite article are now
+available.  Written by John Carroll of the University of Sussex.  See
+the <a href="http://www.informatics.susx.ac.uk/research/nlp/carroll/morph.html">home
+page</a> for more information.  <i>Status: free for academic and
+research purposes from Carroll's tool home page.</i><p></p></li>
+<li><b>KLEX Finite-State Lexical Transducer for Korean </b> [Installed
+Wed Apr 21 11:05:34 GMT-8 2004 by kanmy under
+tools/languages/korean/morphologyTools/klex (Korean) Maintained by
+kanmy ] Klex is a finite-state lexical transducer for the Korean
+language, with the lexical string on the upper side and the inflected
+surface string on the lower side. Klex was developed on the XFST
+(Xerox Finite State Tool) software platform.  Developed by Na-Rae Han.
+Homepage at: <a href="http://www.cis.upenn.edu/%7Enrh/klex.html">http://www.cis.upenn.edu/~nrh/klex.html</a>
+<i>Status: restricted access to researchers (as per LDC
+policy).</i><p></p></li>
+
+  <li><b>Sentence-level PArsing for DiscoursE (SPADE)</b> [Installed Tue Feb 17 
+	22:36:00 GMT-8
+2003 by cuihang under tools/parsers/SPADE Maintained by cuihang ] SPADE is a discourse 
+	parser at sentence level written by Radu Soricut at USC/ISI. You can find 
+	details about the approach implemented by SPADE in the paper: Radu Soricut 
+	and Daniel Marcu (2003).
+	<a href="http://www.isi.edu/licensed-sw/spade/Papers/HLT_NAACL03/sentLevelDP.pdf">
+	Sentence Level Discourse Parsing using Syntactic and Lexical Information</a>. 
+	See details and license in Daniel Marcu's web page
+	<a href="http://www.isi.edu/licensed-sw/spade/">
+	http://www.isi.edu/licensed-sw/spade/</a>.<i>Status: works well, but it 
+	requires running under bash shell instead of C-Shell.<br>
+&nbsp;</i></li>
+	<li><b>LinkIT 1.0</b> [Installed Sat Dec 6 08:56:17 GMT-8 2003 by
+  kanmy under tools/chunkers/LinkIT (N/A) Maintained by kanmy ] This
+  is a chunker and statistical for simplex noun phrases (SNP).  We
+  present a linguistically-motivated technique for the recognition and
+  grouping of simplex noun phrases (SNPs) called LinkIT. Our system
+  has two key features: (1) we efficiently gather minimal NPs,
+  i.e. SNPs, as precisely and linguistically defined and motivated in
+  our paper ; (2) we apply a refined set of postprocessing rules to
+  these SNPs to link them within a document. The identification of
+  SNPs is performed using a finite state machine compiled from a
+  regular expression grammar, and the process of ranking the candidate
+  significant topics uses frequency information that is gathered in a
+  single pass through the document.  The paper <i>Document Processing
+  with LinkIT </i>, was published in RIAO 2000.  Also mentioned in <a href="http://doi.acm.org/10.1145/379437.379468">Automatic
+  identification and organization of index terms for interactive
+  browsing</a> <i>Status: restricted to academic use</i>.
+  <p></p></li>
+
+  <li><b>MITRE's Alembic Workbench 4.40</b> [Installed Fri Nov 7
+  16:31:40 GMT-8 2003 by kanmy under tools/frameworks/awb/ (N/A)
+  Maintained by kanmy ] A tool to help in the development of tagged
+  corpora.  Uses a Tcl interface.  See the AWB home page for more
+  details at <a href="http://www.mitre.org/tech/alembic-workbench/">http://www.mitre.org/tech/alembic-workbench/</a>.
+  <i>Status: For research purposes only.  Cannot be used for
+  commercial development. Usage notes: go to the directory and source
+  the awb.cshrc or awb.bashrc file before running the awb
+  utility.</i><p></p>
+  </li>
+
+  <li><b>AT&amp;T's Graphviz graph visualization tool</b> [Installed
+  Fri Nov 7 15:53:19 GMT-8 2003 by kanmy under
+  tools/drawingTools/graphviz/ (N/A) Maintained by kanmy ] Utility to
+  draw finite state tranducers, acceptors, and machines.  See their
+  homepage at <a href="http://www.research.att.com/sw/tools/graphviz/">http://www.research.att.com/sw/tools/graphviz/</a>.
+  <i>Status: installed, untested.  Installation notes: really a pain
+  to install, requires gd library package and a working jpeg lib (had
+  to install jpeg 6b patch).</i><p></p></li> 
+
+  <li><b>YamCha Chunker v 0.27</b> [Installed Fri Nov 7 16:36:23 GMT-8
+  2003 by kanmy under tools/chunkers/yamcha/ (N/A) Maintained by kanmy
+  ] YamCha is a generic, customizable, and open source text chunker
+  oriented toward a lot of NLP tasks, such as POS tagging, Named
+  Entity Recognition, base NP chunking, and Text Chunking. YamCha is
+  using a state-of-the-art machine learning algorithm called Support
+  Vector Machines (SVMs), first introduced by Vapnik in 1995.
+  Installed from <a href="http://cl.aist-nara.ac.jp/%7Etaku-ku/software/yamcha/">http://cl.aist-nara.ac.jp/~taku-ku/software/yamcha/</a>. <i>Status:
+  installed, compiled, tested.  For public use, under GNU
+  LGPL.</i><p></p>
+
+</li><li><b>Tiny SVM 0.09</b> [Installed Fri Nov 7 12:47:41 GMT-8 2003 by
+  kanmy under tools/learners/TinySVM (N/A) Maintained by kanmy ]
+  TinySVM is an implementation of Support Vector Machines (SVMs)
+  [Vapnik 95], [Vapnik 98] for the problem of pattern recognition.
+  This installation includes the shared library under the lib/
+  subdirectory.  <a href="http://cl.aist-nara.ac.jp/%7Etaku-ku/software/TinySVM/">Details
+  from Taku Kudoh's web page</a>
+  (http://cl.aist-nara.ac.jp/~taku-ku/software/TinySVM/) and the
+  doc/index.html file for more information on his tool.  <i>Status:
+  installed, compiled, tested.  For public use, under GNU LGPL.  Usage
+  notes: as TinySVM's binaries are named the exact same as those
+  created by SVM light, the executables are not included in the
+  rpnlpir group account's path.</i><p></p>
+</li>
+  <li><b>Porter's Stemmer </b> [Installed Fri Sep 19 12:22:22 GMT-8
+2003 by qiul under tools/stemmers/Porter (English) Maintained by qiul]
+The Porter stemming algorithm (or &#8216;Porter stemmer&#8217;) is a
+process for removing the commoner morphological and inflexional
+endings from words in English. Its main use is as part of a term
+normalisation process that is usually done when setting up Information
+Retrieval systems. Detailed description and a host of downloadable
+versions of it in different languages can be found at <a href="http://www.tartarus.org/%7Emartin/PorterStemmer/">Porter Stemming
+Algorithm</a>. <i> Status: ANSI C thread-safe version installed and
+working.</i> <p></p>
+</li>
+  <li><b>Lovins' Stemmer </b> [Installed Thu Sep 18 14:01:01 GMT-8
+2003 by kanmy under Thu Sep 18 14:01:14 GMT-8 2003 (English)
+Maintained by kanmy ] Three different implementations of the stemmer
+are available from <a href="http://www.cs.waikato.ac.nz/%7Eeibe/stemmers/index.html">Frank
+Eibe's home page on the Lovins stemmer</a>
+(http://www.cs.waikato.ac.nz/~eibe/stemmers/index.html).  The software
+is downloadable from Sourceforge.  <i>Status: GNU GPL: perl, Java
+versions installed and working, C version downloaded, but doesn't
+currently compile.</i>
+       <p></p>
+       </li>
+  <li><b>KEA 2.0 </b> [Installed Thu Sep 18 13:43:33 GMT-8 2003 by
+kanmy under tools/chunkers/KEA-2.0 (English) Maintained by kanmy ] The
+KEA Keyphrase extractor.  Meant to build keywords from a document,
+much like the keywords used in the indexing terms for scientific
+papers.  Uses the Lovins stemmer.  Described in more detail at <a href="http://www.nzdl.org/Kea/">http://www.nzdl.org/Kea/</a>.
+<i>Status: Installed but not tested.  Distributed under GNU GPL by the
+New Zealand DL group.</i>
+       <p></p>
+       </li>
+  <li><b>umdhmm-v1.02 </b>[Installed Mon Sep 15 10:50:45 GMT-8 2003
+by cuihang under tools/learner/HMM/ Maintained by cuihang ] A HMM tool
+from <a href="http://www.cfar.umd.edu/%7Ekanungo/"><span style="text-decoration: underline;">Tapas Tanungo</span></a>'s <a href="http://www.cfar.umd.edu/%7Ekanungo/software/software.html">software
+page</a>. Implementation of Forward-Backward,
+Viterbi, and Baum-Welch algorithms. <i>Status: works well.</i> </li>
+    <p> </p>
+  
+  <li><b>OpenNLP Maximum Entropy Toolkit 2.3.0, 2.1, and 2.0 </b>
+[Installed Aug 2004 by kanmy under tools/learners/maxent (N/A)
+Maintained by kanmy ] The opennlp.maxent package is a mature Java
+package for training and using maximum entropy models.  The
+documentation has some details about maximum entropy and using the
+opennlp.maxent package. It is updated only periodically, so check out
+the Sourceforge page for Maxent for the latest news. You can also ask
+questions and join in discussions on the forums.  <i>Status: publicly
+available from sourceforge at: <a href="http://maxent.sourceforge.net/">http://maxent.sourceforge.net/</a></i>.
+<p></p></li>
+  <li><b>c2html-0.9.5-1 </b> [Installed Sat Aug 2 14:55:45 GMT-8 2003
+by kanmy under tools/htmlTools/c2html/ (Any) Maintained by kanmy ] From
+    <a href="http://packages.qa.debian.org/c/c2html.html">Ashley Clark</a>'s
+debian linux package. Compiles fine on Solaris. A converter for C code
+to colorize and write markup in .HTML. <i>Status: GNU GPL</i> </li>
+    <p> </p>
+  
+  <li><b>Segmenter 1.10 </b> [Installed Mon Jul 21 21:27:42 GMT-8 2003
+by kanmy under tools/segmenters/segmenter/ (Any languages with word
+delimiters) Maintained by kanmy ] Min-Yen Kan's linear topical
+segmentation program, as described in Coling-ACL 1998. <i>Status:
+working, available for research use only.</i> </li>
+    <p> </p>
+  
+  <li><b>Maximum Entropy Part of Speech (POS) Tagger and sentence
+splitter (MXPOST and MXTERMINATOR) </b> [Installed Thu Jul 3 22:47:45
+GMT-8 2003 by kanmy under tools/taggers/mxTag (English) Maintained by
+kanmy ] Adwait Ratnaparkhi's Maximum-Entropy based tagger, as per his
+1997 ACL paper. This tools outputs the format expected by Collins'
+parser (also locally installed). <i>Status: Restricted to research,
+educational and academic use only. Currently works without any
+problems. Note that you have to use standard input to pass the input
+texts in.</i>
+    <p> </p>
+  </li>
+  <li><b>GATE 2.1 </b> [Installed Thu Jul 3 22:18:09 GMT-8 2003 by
+kanmy under tools/frameworks/gate-2.1 (Any) Maintained by kanmy ] The
+General Architecture for Text Engineering from <a href="http://gate.ac.uk/">University of Sheffield</a>'s NLP group
+there. Has a GUI for tools that do named entity tagging, part of speech
+tagging, co-reference, and other things, all in a nice GUI. Is a bit
+slow; is implemented in java. You will want to see the online
+documentation at their site. The information extraction system, ANNIE
+(A Newly-New Information Extraction) comes with part of the
+installation. <i>Status: Is under GPL, so it is free for all. Works
+fine.</i>
+    <p> </p>
+  </li>
+  <li><b>Prescript </b> [Installed Wed Jun 25 18:27:13 GMT-8 2003 by
+kanmy under tools/formatTools/ (Any) Maintained by kanmy ] Versions 0.1
+and 2.2 are installed. This is a Postscript to text converter,
+developed by the NZDL group. I believe this is the converter used by
+Google for PDF files too. <i>Status: Currently installed but <b>NOT</b>
+working</i>.
+    <p> </p>
+  </li>
+  <li><b>SNoW POS Tagger </b> [Installed Thu Jun 19 10:45:00 GMT-8
+2003 by cuihang under tools/taggers/SNOW_UIUC (English) Maintained by
+cuihang ] A POS tagger from UIUC, can be found at <a href="http://l2r.cs.uiuc.edu/%7Ecogcomp/eoh/pos.html">http://l2r.cs.uiuc.edu/~cogcomp/eoh/pos.html</a>
+    <i>Status: Currently installed and working.</i>
+    <p> </p>
+  </li>
+  <li><b>CRUNCH HTML Content Extractor Proxy </b> [Installed Tue Jun 3
+21:45:17 GMT-8 2003 by kanmy under tools/htmlTools/proxy (N/A)
+Maintained by kanmy ] Described in Gupta et al.'s paper in WWW 2003.
+<i>Status: Restricted license for research purposes only, contact the
+maintainer for access to this tool.</i>    <p> </p>
+  </li>
+  <li><b>Tidy 4 (Aug 00 distribution) </b> [Installed Tue Jun 3
+09:38:05 GMT-8 2003 by kanmy under htmlTools/tidy (N/A) Maintained by
+kanmy ] A tool to change non conformant HTML to compliant HTML code.
+From Sourceforge, based on the original version from Dave Raggett.
+    <p> </p>
+  </li>
+  <li><b>Python 2.3 </b> [Installed Mon Sep 8 17:21:22 GMT-8 2003 by
+kanmy under tools/languages/programming/python (N/A) Maintained by
+kanmy ] The python programming language. An older version central to
+sf3/sunfire can be found at /opt/sfw/bin/python. <i>Status:
+Public-domain, downloaded from Sourceforge.</i><p></p></li>
+  <li><b>Perl 5.8.2 </b> [Installed Tue Dec 23 16:41:04 GMT-8 2003 by
+kanmy under tools/languages/programming/perl (N/A) Maintained by kanmy
+] Perl version 5.8.2. Have downloaded and quickinstalled a slew of
+modules for NLP/IR research, mostly mirroring the 5.8.0
+installation. See the <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/currentPerlModules-5.8.2.txt">complete
+listings of installed modules here</a>. See the documentation on
+installing new Perl modules at the end of this file; email the
+maintainer for more information on installing the files.  See also
+notes for Perl 5.8.0 below.
+    <p> </p>
+  </li><li><b>Perl 5.8.0 </b> [Installed Mon Jun 2 16:03:24 GMT-8 2003 by
+kanmy under tools/languages/programming/perl-5.8.0 (N/A) Maintained by kanmy
+] Perl version 5.8.0. Was installed because I couldn't find it on sf3.
+Have downloaded and quickinstalled a slew of modules for NLP/IR
+research. See the <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/currentPerlModules-5.8.0.txt">complete
+listings of installed modules here</a>. See the documentation on
+installing new Perl modules at the end of this file; email the
+maintainer for more information on installing the files.
+    <p> Modules of particular interest to NLP/IR people include the
+WordNet::QueryData, WordNet::Similarity modules. </p>
+    <p> </p>
+  </li>
+  <li><b>Google Web API</b> [Installed Fri Jan 10 12:02:46 GMT-8 2003
+by kanmy under tools/internetTools/googleapi (Any) Maintained by
+kanmy].  API for accessing the Google search results, preferable to
+screen / page scraping.  Home page at: <a href="http://www.google.com/apis/">http://www.google.com/apis/</a>
+<i>Currently tested, okay on the local system.</i> N.B. - You need to
+register with Google in order to use this service. They require
+individual registration.  <p> </p>
+  </li>
+  <li><b>FUF 5.3 </b> [Installed Sat Dec 28 18:05:31 GMT-8 2002 by
+kanmy under tools/generators/fuf-5.3 (Any) Maintained by kanmy].
+Functional unification based natural language generation system
+developed by Michael Elhadad. Home page at: <a href="http://www.cs.bgu.ac.il/research/projects/surge/index.htm">http://www.cs.bgu.ac.il/research/projects/surge/index.htm</a>.<i>Currently
+untested on the local system.</i> Runs in LISP.
+    <p> </p>
+  </li>
+  <li><b>Transformation Based part of speech tagger (Eric Brill's
+tagger; a.k.a. Brill tagger) </b> [Installed Sat Dec 28 18:16:11 GMT-8
+2002 by kanmy under tools/taggers/RULE_BASED_TAGGER_V1.14 (English)
+Maintained by kanmy] Brill's part-of-speech tagger, generating Penn
+treebank tags. Home page at: <a href="http://www.cs.jhu.edu/%7Ebrill/">http://www.cs.jhu.edu/~brill/</a>.
+    <p> </p>
+  </li>
+  <li><b>HMM Tagger (Xerox tagger) </b> [Installed Mon Dec 30 08:14:22
+GMT-8 2002 by kanmy under tools/taggers/xpost-1.2 (English) Maintained
+by kanmy] Xerox part-of-speech tagger. XPOST is a hidden Markov model
+based part-of-speech tagger. Given a sentence, each token is assigned a
+part-of-speech ambiguity class from a lexicon (e.g. "package" is in the
+ambiguity class {noun,verb}). Words not in the lexicon are subjected to
+suffix analysis. A probabilistic model that assesses the likelihood of
+particular part-of-speech assignments based on word order is then
+applied to disambiguate the available choices. The final output is a
+sentence with each word tagged with the most likely part-of-speech tag.
+XPOST can process all the languages for which word order predicts
+part-of-speech tag. FTP site at: <a href="ftp://ftp.parc.xerox.com/pub/tagger/">ftp://ftp.parc.xerox.com/pub/tagger/</a>.
+    <i>Status: currently tested and working.</i> Use within Common
+LISP.
+    <p> </p>
+  </li>
+  <li><b>BOW machine learning toolkit </b> [Installed Mon Dec 30
+08:48:28 GMT-8 2002 kanmy under tools/learners/bow-20020213 (Any)
+Maintained by kanmy ] Bow (or libbow) is a library of C code useful for
+writing statistical text analysis, language modeling and information
+retrieval programs. The current distribution includes the library, as
+well as front-ends for document classification (rainbow), document
+retrieval (arrow) and document clustering (crossbow). The library and
+its front-ends were designed and written by Andrew McCallum, with some
+contributions from several graduate and undergraduate students. The
+library provides facilities for: Recursively descending directories,
+finding text files. Finding `document' boundaries when there are
+multiple documents per file. Tokenizing a text file, according to
+several different methods. Including N-grams among the tokens. Mapping
+strings to integers and back again, very efficiently. Building a sparse
+matrix of document/token counts. Pruning vocabulary by word counts or
+by information gain. Building and manipulating word vectors. Setting
+word vector weights according to Naive Bayes, TFIDF, and several other
+methods. Smoothing word probabilities according to Laplace (Dirichlet
+uniform), M-estimates, Witten-Bell, and Good-Turning. Scoring queries
+for retrieval or classification. Writing all data structures to disk in
+a compact format. Reading the document/token matrix from disk in an
+efficient, sparse fashion. Performing test/train splits, and automatic
+classification tests. Operating in server mode, receiving and answering
+queries over a socket. The code conforms to the GNU coding standards.
+It is released under the Library GNU Public License (LGPL). Home Page: <a href="http://www-2.cs.cmu.edu/%7Emccallum/bow">http://www-2.cs.cmu.edu/~mccallum/bow</a>.
+    <i>Current status (as of Mon Jan 13 17:29:56 GMT-8 2003): installed
+but currently broken on the local system.</i>
+    <p> </p>
+  </li>
+  <li><b>SVM-light </b> [Installed Mon Dec 30 08:55:55 GMT-8 2002 by
+kanmy under tools/learners/svmLight-5.0 (Any) Maintained by kanmy ]
+SVMlight is an implementation of Vapnik's Support Vector Machine
+[Vapnik, 1995] for the problem of pattern recognition, for the problem
+of regression, and for the problem of learning a ranking function. The
+optimization algorithms used in SVMlight are described in [Joachims,
+2002a ]. [Joachims, 1999a]. The algorithm has scalable memory
+requirements and can handle problems with many thousands of support
+vectors efficiently. Home page: <a href="http://svmlight.joachims.org/">http://svmlight.joachims.org/</a>
+    <i>Current status: Works.</i>
+    <p> </p>
+  </li>
+  <li><b>C4.5 decision tree learner </b> [Installed Sun Jan 19
+11:46:34 GMT-8 2003 by kanmy under tools/learners/c4.5 (Any) Maintained
+by kanmy ] The classic decision tree learner by Quinlan. Superceded by
+his 5.0 commericial product. Handles numerical and categorical
+features. More information from <a href="http://www.cse.unsw.edu.au/%7Equinlan/">http://www.cse.unsw.edu.au/~quinlan/</a>.
+    <i>Current status: installed and tested. Works fine.</i>
+    <p> </p>
+  </li>
+  <li><b>BoosTexter </b> [Installed Sun Jan 19 12:42:40 GMT-8 2003 by
+kanmy under tools/leaners/BoosTexter (Any) Maintained by kanmy ]
+BoosTexter is a machine learning algorithm that computes a classifier
+from simple single level decision trees (a.k.a. decision stumps) via
+boosting. <i>Status: installed, not tested. Use restricted to research
+only.</i>
+    <p> </p>
+  </li>
+  <li><b>Daemonized Collins Parser </b> [Installed Mon Aug 4 11:41:58
+GMT-8 2003 by kanmy under tools/parsers/daemonCollins (English)
+Maintained by kanmy ] The modified Collins parser as made available by
+Min-Yen Kan of NUS. Modified to allow the parser to load the hash tables
+once and stay resident (as a background daemon process) so that parser
+can parse multiple files, without having to re-load the hash tables
+each time. See the on-line <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/daemonCollins">README</a> for
+details. <i>Status: Currently installed and working. See also in this
+file the original version of the Collins parser</i>
+    <p> </p>
+  </li>
+  <li><b>Collins Parser </b> [Installed Mon Dec 30 09:07:38 GMT-8 2002
+by kanmy under tools/parsers/collinsParser (English) Maintained by
+kanmy ] The Collins parser as made available by Michael Collins of MIT.
+Michael Collins' home page: <a href="http://www.ai.mit.edu/people/mcollins/">http://www.ai.mit.edu/people/mcollins/</a>.
+    <i>Status: Currently installed and working. See also in this file
+the daemonized version of the Collins parser</i>
+    <p> </p>
+  </li>
+  <li><b>Charniak Parser </b> [Installed Mon Dec 30 15:19:48 GMT-8
+2002 by kanmy under tools/parsers/charniakParser (English) Maintained
+by kanmy ] Eugene Charniak's parser, as made available from his Brown
+homepage, at <a href="http://www.cs.brown.edu/people/ec/#software">http://www.cs.brown.edu/people/ec/#software</a>
+    <i>Status: Currently installed and working.</i> </li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="lib">
+<h2>Libraries</h2>
+</a>
+<ul>
+  <li><b>LibWWW 5.4.0</b> [Installed Sat Nov 29 12:12:45 GMT-8 2003 by
+kanmy under lib/libwww and tools/internetTools/lib/libwww@ (N/A)
+Maintained by kanmy ] Libwww is a highly modular, general-purpose
+client side Web API written in C for Unix and Windows (Win32). It's
+well suited for both small and large applications, like
+browser/editors, robots, batch tools, etc. Pluggable modules provided
+with libwww include complete HTTP/1.1 (with caching, pipelining, PUT,
+POST, Digest Authentication, deflate, etc), MySQL logging, FTP,
+HTML/4, XML (expat), RDF (SiRPAC), WebDAV, and much more. The purpose
+of libwww is to serve as a testbed for protocol experiments.  See the
+home page at <a href="http://www.w3.org/Library/">http://www.w3.org/Library/</a>.
+<i>Status: installed, untested.  Configured with zlib, md5 and regexp
+support.  See installation notes for more details. GPL code.</i>
+<p></p></li>
+</ul>
+<hr>
+<!-- ------------------------------------------------------------ -->
+<a name="guidelines">
+<h2>Usage / Installation Guidelines</h2>
+</a>
+<p>(Last updated : Thu Jan 9 10:10:02 GMT-8 2003
+</p>
+<p>If you are <b>planning to use tools here</b>, and the tool doesn't
+work straight off, here are a couple things that you want to check
+before sending mail to the tool's administrator (listed in the square
+brackets in the tool description): Are you using the tool with the
+right arguments? The right operating system? Did you set the right
+environment variables? Check the tool's status in the description, is
+it listed as okay to use? Any usage notes given? If it is installed
+and permissions are not given for you to use it, check to see whether
+it is a private tool (links and entries to private tools are
+encouraged for networking purposes but that doesn't mean you can use
+it without permission). Finally, check to see whether there is a
+<code>usage-soc.html</code> file in the tool's local home that was
+provided by the installer or maintainer. If all these things don't
+help you solve you problem, THEN try contacting the administrator.
+</p>
+<p>If you are <b>installing a new tool</b>, please observe these
+guidelines to ensure that the tool is properly used and can be easily
+found by others. There are a number of rules to follow to ensure that
+this shared directory does not get mangled and unmanageable.
+</p>
+<ol>
+  <li>Install to the proper directory (*note about libraries, see step
+#2 below). At the root of this account, do a "find . -type d" to see
+the directory tree hierarchy. Figure out which single place best fits
+the description of the type of tool you'd like to install. If a
+proper generic directory doesn't exist, please create it following the
+naming style. </li>
+  <li>(Libraries installation). To install shared C libraries, Java
+archives, or perl modules, etc., please install these to the "lib"
+subdirectory under the generic category. Place the library under a
+proper language header. For example, a part-of-speech library for C
+fictionally called "poslib" with version 1.2 would be installed under <code>tools/taggers/lib/c/poslib-1.2</code>.
+Use CPAN with perl
+5.8.0
+(see above) to install new perl modules. See the <a href="http://www.comp.nus.edu.sg/%7Erpnlpir/currentPerlModules-5.8.2.txt">current list of modules installed</a>
+for rpnlpir's copy of perl 5.8.2 for details. </li>
+  <li>(documentation) After the software/corpora is installed, note any
+particularities in detail in a file called <code>usage-soc.html</code>
+in its home. </li>
+  <li>(symlinking) If the package originally comes with a version
+number, include it in the actual directory. Symlink the directory to
+the package name without version number (e.g. poslib -&gt; poslib-1.2)
+so that the most up-to-date package can be always accessed by the
+generic name, but such that older versions have a stable reference to
+access the version. </li>
+  <li>(symlinking 2): If you think that this software or any generic
+directories created for it might also be well placed in other
+directories, create symlinks to the package or directory, such that
+users can find in by multiple pathways. </li>
+  <li>(documentation 2): Edit this file (~/README.html) in the root
+directory of the account and create a new entry for the package you've
+installed. Include information on the status of the tool (if it works,
+or hasn't been tested) as well as pointers to its home page and a quick
+synopsis of quirks (if there are too many to list, you might want to
+point to the more comprehesive usage-soc.html you just wrote. The
+template for the package description is below: </li>
+  <li><b>TOOL </b> [Installed WHEN by UID under DIR (LANG) Maintained
+by UID ] DESC <p></p></li>
+  <li>(running it): Finally, edit the ~/.profile file and include any
+aliases, environment variables and paths necessary to run the tool when
+a person is logged in as "rpnlpir". Create a short comment for it so
+people can copy the appropriate environment variable settings to have
+the tool run correctly. </li>
+  <li>(documentation 3): if it is a restricted access resource, update
+the <code>restrictedACL.txt</code> file and change the appropriate
+permissions. </li>
+  <li>(notify) send email to rpnlpir@comp saying what a fantastic job
+you've done! </li>
+  <li>Whew! That's it. Thanks for installing the new package! </li>
+</ol>
+<hr>
+<h5>$Id: README.html,v 1.14 2005/06/30 02:11:40 rpnlpir Exp rpnlpir $</h5>
+<span class="hidden"><!--
+  The contents of this file are printed by the pagecount program when it
+  is invoked as a server-side include.  The following directives are
+  available for including data from the statistics database:
+
+
+        Percent sign:             %
+        Anchor URL/URI:           http://www.comp.nus.edu.sg/cgi-bin/pagecount?/~rpnlpir/index.html, /cgi-bin/pagecount?/~rpnlpir/index.html
+        Current date/time:        27-Oct-07, 19:09:18 SGT
+        Total number of days:     1323rd, 1323
+        Elapsed number of days:   1664th, 1664
+        Document path/file name:  /home/rsch/rpnlpir/public_html/index.html, index.html
+        Total number of hosts:    7479th, 7479
+        Last access date/time:    27-Oct-07, 19:08:52 SGT
+        Total number of accesses: 15535th, 15535
+        Remote host/address:      132.162.144.202, 132.162.144.202
+        Start date/time:          08-Apr-03, 14:14:39 SGT
+        Accesses today:           13th, 13
+        Document URL/URI:         http://www.comp.nus.edu.sg/~rpnlpir/index.html, /~rpnlpir/index.html
+        Accesses this host:       2nd, 2
+
+  The rest of the file should contain valid HTML.
+-->
+
+This document, <i>index.html</i>, has been accessed 15535 times since 08-Apr-03 14:14:39 SGT.
+This is the 13th time it has been accessed today.
+A total of 7479 different hosts have accessed this document in the
+last 1664 days; your host, <i>132.162.144.202</i>, has accessed it 2 times.
+<a href="http://www.comp.nus.edu.sg/cgi-bin/pagecount?/%7Erpnlpir/index.html">Complete statistics</a> are also available.</span>
+
+</body></html>

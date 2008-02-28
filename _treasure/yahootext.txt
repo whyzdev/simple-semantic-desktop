@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html><head><title>Yahoo!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.icra.org/ratingsv02.html&quot; l r (cz 1 lz 1 nz 1 oz 1 vz 1) gen true for &quot;http://www.yahoo.com&quot; r (cz 1 lz 1 nz 1 oz 1 vz 1) &quot;http://www.rsac.org/ratingsv01.html&quot; l r (n 0 s 0 v 0 l 0) gen true for &quot;http://www.yahoo.com&quot; r (n 0 s 0 v 0 l 0))"/>
+<base href="http://www.yahoo.com/_ylh=X3oDMTFncTczMjdrBF9TAzI3MTYxNDkEcGlkAzExOTYzMTg3OTkEdGVzdAMwBHRtcGwDdGFibGUuaHRtbA--/" target="_top"/>
+<style type="text/css"><![CDATA[
+a{color:#16387c;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:underline;}
+]]></style>
+<style type="text/css" media="all"><![CDATA[
+#p{width:310px;}
+form{margin:0;}
+]]></style>
+</head>
+<body link="#16387c" vlink="#16387c"><center>
+
+
+
+
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#EEF3F6" width="760"><tbody><tr><td colspan="3">
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="7"><spacer type="block" width="0" height="7"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr><td width="10" height="0" rowspan="2"><spacer type="block" width="10" height="0"/>
+</td>
+<td height="56" valign="top">
+<img src="http://us.a1.yimg.com/us.yimg.com/i/ww/beta/y3.gif" width="232" height="44" alt="Yahoo!" title="Yahoo"/>
+
+</td>
+<td rowspan="2">
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#BFCFD7"><tbody><tr><td>
+<table cellpadding="20" cellspacing="0" border="0" bgcolor="#F4F6F5"><tbody><tr><td><font face="arial" size="-1">
+</font>
+<form name="sf1" action="r/sx/*-http://search.yahoo.com/search"><font face="arial" size="-1">
+<input type="hidden" name="ei" value="UTF-8"/>
+
+<input type="hidden" name="fr" value="yfp-t-501"/>
+
+<input type="hidden" name="cop" value="mss"/>
+
+</font>
+<font face="arial" size="-1">
+
+
+</font>
+<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td><font size="+0"><input type="text" name="p" id="p" size="20"/>
+</font>
+</td>
+<td><input type="image" value="Web Search" src="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/webs.gif" alt="Web Search" border="0"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</form>
+<span style="margin-top:-1em"/>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr><td>
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td width="10" height="0"><spacer type="block" width="10" height="0"/>
+</td>
+<td>
+
+
+
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td width="100%" height="1" bgcolor="#dee6e9" colspan="5"><spacer type="block" width="100%" height="1"/>
+</td>
+</tr>
+<tr><td width="1" height="100%" bgcolor="#dee6e9" nowrap="nowrap"><spacer type="block" width="1" height="100%"/>
+</td>
+<td width="5" height="1" bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif"><spacer type="block" width="5" height="1"/>
+</td>
+<td><table cellpadding="2" cellspacing="0" border="0" bgcolor="#DEE6E9"><tbody><tr><td bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif" nowrap="nowrap"><font face="arial" size="-1"><a href="r/i1">My Yahoo!</a>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="5" height="1" bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif"><spacer type="block" width="5" height="1"/>
+</td>
+<td width="1" height="100%" bgcolor="#586B7A" nowrap="nowrap"><spacer type="block" width="1" height="100%"/>
+</td>
+</tr>
+<tr><td width="100%" height="1" bgcolor="#586B7A" colspan="5" nowrap="nowrap"><spacer type="block" width="100%" height="1"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+<td width="10" height="0"><spacer type="block" width="10" height="0"/>
+</td>
+<td>
+
+
+
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td width="100%" height="1" bgcolor="#dee6e9" colspan="5"><spacer type="block" width="100%" height="1"/>
+</td>
+</tr>
+<tr><td width="1" height="100%" bgcolor="#dee6e9" nowrap="nowrap"><spacer type="block" width="1" height="100%"/>
+</td>
+<td width="5" height="1" bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif"><spacer type="block" width="5" height="1"/>
+</td>
+<td><table cellpadding="2" cellspacing="0" border="0" bgcolor="#DEE6E9"><tbody><tr><td bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif" nowrap="nowrap"><font face="arial" size="-1"><a href="r/m1">My Mail</a>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width="5" height="1" bgcolor="#dde8ea" background="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/fdbg.gif"><spacer type="block" width="5" height="1"/>
+</td>
+<td width="1" height="100%" bgcolor="#586B7A" nowrap="nowrap"><spacer type="block" width="1" height="100%"/>
+</td>
+</tr>
+<tr><td width="100%" height="1" bgcolor="#586B7A" colspan="5" nowrap="nowrap"><spacer type="block" width="100%" height="1"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+<tr><td colspan="3">
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="9"><spacer type="block" width="0" height="9"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="5"><spacer type="block" width="0" height="5"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="5"><spacer type="block" width="0" height="5"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="760"><tbody><tr><td width="292" valign="top">
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#FFCC00"><tbody><tr><td>
+
+
+<table cellpadding="5" cellspacing="0" border="0" bgcolor="#FFFBC4"><tbody><tr><td width="0" height="0"><spacer type="block" width="0" height="0"/>
+</td>
+<td><font face="arial" size="-1">
+<b>Why miss out?</b>
+<br/>
+
+To see all the new Yahoo! home page has to offer, please upgrade to a more recent browser.
+<br/>
+<br/>
+
+Supported browsers include:<br/>
+
+</font>
+<font face="arial" size="-1">
+
+
+
+
+</font>
+<table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td><font face="arial" size="-2"><a href="r/b7">Internet Explorer 7 optimized by Yahoo!</a>
+</font>
+</td>
+</tr>
+<tr><td><font face="arial" size="-2"><a href="r/bf">Firefox 2.0</a>
+</font>
+</td>
+</tr>
+<tr><td><font face="arial" size="-2"><a href="r/bg">Safari 2.0</a>
+</font>
+</td>
+</tr>
+<tr><td><font face="arial" size="-2"><a href="r/bh">Opera 9</a>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+<td width="0" height="0"><spacer type="block" width="0" height="0"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+<td width="10" height="0"><spacer type="block" width="10" height="0"/>
+</td>
+<td width="458" valign="top">
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#AFBDC6" width="100%"><tbody><tr><td width="100%" valign="top">
+<table cellpadding="10" cellspacing="0" border="0" bgcolor="#FCFDFD" width="100%"><tbody><tr><td width="100%">
+
+
+
+
+
+<table cellpadding="1" cellspacing="0" border="0" width="100%"><tbody><tr><td width="25%" valign="top"><font face="arial" size="-1"><b>
+<a href="r/3t">360°</a>
+<br/>
+
+<a href="r/6n">Answers</a>
+<br/>
+
+<a href="r/cr">Autos</a>
+<br/>
+
+<a href="r/59">Entertainment</a>
+<br/>
+
+<a href="r/sq">Finance</a>
+<br/>
+
+<a href="r/pl">Games</a>
+<br/>
+
+<a href="r/g3">Geocities</a>
+<br/>
+
+<a href="r/gp">Groups</a>
+<br/>
+
+</b>
+</font>
+</td>
+<td width="25%" valign="top"><font face="arial" size="-1"><b>
+<a href="r/wm">Health</a>
+<br/>
+
+<a href="r/h1">Horoscopes</a>
+<br/>
+
+<a href="r/jb">HotJobs</a>
+<br/>
+
+<a href="r/yg">Kids</a>
+<br/>
+
+<a href="r/0z">Local</a>
+<br/>
+
+<a href="r/mp">Maps</a>
+<br/>
+
+<a href="r/p1">Messenger</a>
+<br/>
+
+<a href="r/6k">Movies</a>
+<br/>
+
+</b>
+</font>
+</td>
+<td width="25%" valign="top"><font face="arial" size="-1"><b>
+<a href="r/uf">Music</a>
+<br/>
+
+<a href="r/dn">News</a>
+<br/>
+
+<a href="r/pr">Personals</a>
+<br/>
+
+<a href="r/r1">Real Estate</a>
+<br/>
+
+<a href="r/sh">Shopping</a>
+<br/>
+
+<a href="r/ys">Sports</a>
+<br/>
+
+<a href="r/h0">Tech</a>
+<br/>
+
+</b>
+</font>
+</td>
+<td width="25%" valign="top"><font face="arial" size="-1"><b>
+<a href="r/ta">Travel</a>
+<br/>
+
+<a href="r/tg">TV</a>
+<br/>
+
+<a href="r/5m">Weather</a>
+<br/>
+
+<a href="r/yp">Yellow Pages</a>
+<br/>
+
+<a href="r/wl">Y! International</a>
+<br/>
+
+</b>
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="3"><spacer type="block" width="0" height="3"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="10" height="0" bgcolor="#AFBCC6"><spacer type="block" width="10" height="0"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="10" cellspacing="0" border="0" bgcolor="#FCFDFD" width="100%"><tbody><tr><td width="100%" align="right">
+<a href="r/xy"><img src="http://us.i1.yimg.com/us.yimg.com/i/ww/tbl/allys.gif" width="138" height="20" border="0" alt="All Yahoo! Services"/>
+</a>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="0"><tbody><tr><td width="0" height="15"><spacer type="block" width="0" height="15"/>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table cellpadding="0" cellspacing="0" border="0" width="760"><tbody><tr><td bgcolor="#dde4e9" height="1"><spacer type="block" width="0" height="1"/>
+</td>
+</tr>
+<tr><td>
+<table cellpadding="10" cellspacing="0" border="0" bgcolor="#FCFDFD" width="100%"><tbody><tr><td width="100%" align="center"><font face="arial" size="-2" color="#16387c">
+<a href="r/ao">Advertise with us</a>
+ |
+<a href="r/o4">Search Marketing</a>
+ |
+<a href="r/hw">Help</a>
+ |
+<a href="r/pv">Privacy Policy</a>
+ |
+<a href="r/ts">Terms of Service</a>
+ |
+<a href="r/ad">Suggest a site</a>
+ |
+<a href="r/ep">Yahoo! Telemundo</a>
+ |
+<a href="r/1p">Send Feedback</a>
+
+<br/>
+<br/>
+
+<font color="#999999">Copyright © 2007 Yahoo! Inc. All rights reserved.</font>
+ <a href="r/cy">Copyright/IP Policy</a>
+ |
+<a href="r/cp">Company Info</a>
+ |
+<a href="r/hr">Jobs</a>
+
+</font>
+</td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</center>
+<!-- pbt 1196318799 --></body>
+</html>

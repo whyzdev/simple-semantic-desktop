@@ -1,0 +1,799 @@
+
+fering advanced transaction and data access facilities. The
+navigation structure is also subject to a similar trend. While
+initially only a few navigation facilities are needed, as the
+complexity grows, more advanced and intricate connections
+are provided. Lack of an established Web engineering prac-
+tice is often the reason for a drift in the overall organization
+of the Web site. Cumulative maintenance interventions and
+successive radical changes may result in a ìlegacyî Web
+site, that can be hardly evolved in a safe and controlled way.
+Tools and techniques are being developed to support
+understanding and restructuring of existing Web applica-
+tions [4, 8, 11]. Software clustering [1, 6] aims at gather-
+ing software components into higher level groupings, thus
+providing the user with a more abstract, overall view of the
+system under analysis. It can be similarly adapted to the
+Web context, in order to produce a high level view of the
+Web site organization, in terms of cohesive groups (clus-
+ters) of pages and of the relationships among them. Such
+a view can be exploited in the process of Web site under-
+standing, to gain knowledge about the organization of the
+entire site. More detailed information can be obtained by
+exploding each cluster of interest into subclusters, up to the
+individual pages that are the object of the change.
+Web site clustering involves several non obvious deci-
+sions that profoundly affect the final result. First of all, the
+features used to describe each Web page have to be deter-
+mined. These are the basic properties used to measure the
+similarity between pages, which in turn determines when
+two pages are clustered together. Several completely differ-
+ent choices are possible, ranging from the Web site connec-
+tivity [4], to the page structure [9], or to the content. The
+precise similarity measure, as well as the clustering algo-
+rithm in use, are other important parameters.
+After computing the clusters for a Web site, a Web devel-
+oper can access them to understand the overall organization
+of the system. However, to be meaningful, clusters should
+be properly labeled. A high level view showing just blank
+boxes (clusters) connected with each other, or, at the other
+extreme, labeled with all included pages, is by no means
+very informative and helpful. On the other side, a man-
+ual labeling process (concept assignment [4]) might be very
+difficult and time consuming. Some degree of automatic
+cluster labeling is thus another crucial feature for a practi-
+cal usage of clustering in Web site evolution.
+In this paper, we consider the page content as the basic
+feature used to cluster a Web site. Summary information
+about a page is obtained by means of keyword extraction.
+The same technique is exploited to attack the problem of
+cluster labeling. The keyword with the highest score within
+each cluster is used as cluster label. Preliminary experimen-
+tal results confirm the feasibility of the approach.
+The paper is organized as follows: the next section con-
+trasts the existing literature with our proposal. Then, a brief
+summary on clustering methods is provided to make the pa-
+Page 2
+per self-contained (Section 3). In Section 4, the Natural
+Language Processing (NLP) method of keyword extraction
+is presented. The next section describes our clustering algo-
+rithm based on the keywords associated to each Web page,
+as well as our automatic cluster labeling technique. A case
+study is commented in Section 6. Conclusions and future
+work are given in the last section.
+2 Related work
+Clustering has several uses in program understanding
+and software reengineering [1, 6, 12], and has been recently
+applied to Web applications [4, 5, 9].
+In [4] an approach to support the comprehension of Web
+applications by exploiting clustering techniques has been
+proposed. The approach is based on a conceptual model of a
+Web application and on a similarity measure between com-
+ponents that takes into account both the type and the topol-
+ogy of the links. This measure is exploited by a hierarchical
+clustering algorithm which produces a hierarchy of system
+partitions. Download and comprehension of the considered
+Web applications are conducted using the reverse engineer-
+ing tool WARE.
+Our approach introduces one major improvement over
+the technique described in [4]: automatic cluster labeling,
+and differs mainly in one respect: the basic feature exploited
+for clustering, which is the page content instead of its con-
+nectivity. In fact, content plays a very important role in Web
+applications and it can be hypothesized that it represents a
+good starting point for clustering. On the other side, the
+connectivity of a Web application suffers from a problem,
+highlighted also by the authors of [4]: purely navigational
+links (such as those leading to the home page) can hardly be
+distinguished from semantically richer ones. Labels in [4]
+(named concepts) are assigned to clusters manually. In our
+approach, labels assignment is handled in a completely au-
+tomatic way.
+In [5] an approach to identify duplicated pages (i.e.,
+clones) in a Web application is proposed. Two different
+methods based on different similarity measures have been
+defined and experimented with: one exploiting the edit
+distance and the other one based on the frequency of the
+HTML tags in a page. The underlying descriptive feature
+(the HTML structure of a page) can be used as a further
+basic feature for clustering. This feature was actually ex-
+ploited in [9], where an approach is presented for the iden-
+tification of Web pages that can be migrated to a dynamic
+version, in that they share a similar structure.
+3 Clustering
+Clustering is a general technique aimed at gathering the
+entities that compose a system into cohesive groups (clus-
+ters). Given a system consisting of entities which are char-
+acterized by a vector of properties and are connected by mu-
+tual relationships, there are two main approaches to cluster-
+ing [1]: the sibling link and the direct link approach. In the
+sibling link approach, entities are grouped together when
+they possess similar properties, while in the direct link ap-
+proach they are grouped together when the mutual relation-
+ships form a highly interconnected sub-graph.
+In the literature there exist several different clustering al-
+gorithms [12], with different properties. Hierarchical algo-
+rithms do not produce a single partition of the system. Their
+output is rather a tree, with the root consisting of one cluster
+enclosing all entities, and the leaves consisting of single-
+ton clusters. At each intermediate level, a partition of the
+system is available, with the number of clusters increasing
+while moving downward in the tree. Divisive algorithms
+start from the whole system at the tree root, and then divide
+it into smaller clusters, attached as tree children. Alterna-
+tively, agglomerative algorithms start from singleton clus-
+ters and join them together incrementally.
+3.1 Agglomerative hierarchical clustering
+The agglomerative hierarchical clustering algorithm
+builds a hierarchy of clusterings starting from the bottom
+of the hierarchy, where each entity is in a different clus-
+ter. In each following step, the two most similar clusters
+are joined. After
+∆   Ω
+steps (with
+∆
+the number of enti-
+ties), all entities are grouped into one cluster. Each level in
+the hierarchy defines a partition of clusters (i.e., a cluster-
+ing). To select the resulting clustering, a cut point has to be
+determined.
+We have adapted the agglomerative hierarchical algo-
+rithm known as Johnsonís algorithm [12] to our purposes:
+1. begin with
+∆
+clusters, each containing one Web page
+(
+∆
+is the number of Web pages in the Web site), and
+compute distance between pages (using the comple-
+ment of the similarity measure).
+2. while there are more than 1 cluster do
+(a) find the pair of clusters at least distance;
+(b) merge these clusters into a new cluster;
+(c) update the distance measures between each pair
+of clusters.
+end while
+To update the distance measure between clusters, we
+have chosen the so called complete linkage rule [1]. This
+rule states that the distance measure between the already
+existing cluster
+and a new cluster , formed by joining
+clusters
+and , is the minimum between dist(
+) and
+dist(
+). It privileges cohesion over coupling [1].
+Page 3
+4 Keyword extraction
+To the aim of clustering Web pages having similar con-
+tent, we need to characterize the content of a document in a
+way that is simple and computationally tractable. Also, the
+representation of the text content must be suitable for calcu-
+lating efficiently content similarity measures between texts.
+A list of the most relevant keywords in the document can
+be used for this purpose. This approach is used for instance
+in [10].
+The most simple approach to the extraction of the key-
+words of a text is based on finding the most frequent words
+in the text. The basic intuition underlying this approach is
+that the most important concepts in the texts are likely to
+be referred to repeatedly, or, at least, more frequently than
+minor concepts. Even if we think that this basic intuition
+is sensible, simply counting the most frequent words in a
+document is not enough to achieve our goal. The basic ap-
+proach needs to be refined in a number of ways, that will be
+analyzed in the rest of this section.
+Firstly, we need to consider lexical units that are wider
+than simple words. Not only can a concept be referred to
+with more than a word, that is a phrase, but often the con-
+cepts that characterize a text most precisely are the most
+specific ones, which are usually expressed with complex
+phrases. For this reason as a first attempt in this direction
+we considered as units both single words and bigrams, that
+is contiguous sequences of two words. Let us refer to one
+of these units (mono- or bigrams) as a term.
+Secondly a term can occur frequently in a text without
+characterizing the text in contrast with other texts. This
+happens when all the texts that we are trying to cluster are
+about the same broad topic. For instance, if all the texts we
+are processing belong to the portal of a telephone company,
+we may find out that the terms îtelephone lineî or, even
+worse, îtelephoneî are not useful to characterize the mean-
+ing of a document even if they occur repeatedly. To avoid
+this problem the frequency of a term in a document must be
+confronted with the average frequency of that term in the
+whole Web site.
+4.1 Bigrams selection
+Not all bigrams in a text should be considered as terms
+to our purposes. We are mainly interested in three classes of
+complex terms: named entities, complex lexical units, and
+recurrent free phrases. Named entities are terms referring
+to individuals, locations, organizations, and dates. Com-
+plex lexical units are the kind of multi-word expressions
+that can be found in dictionaries (for instance phrasal verbs
+such as îput onî and idiomatic expressions such as îroller
+coasterî). Finally, the notion of recurrent free phrase was
+introduced by [2] to refer to a free combination of words
+which is recurrently used to refer to a concept. They are
+characterized by either high frequency in a reference cor-
+pus (e.g. îAmerican governmentî), high degree of associa-
+tion between words (e.g. îfirst timeî), or high salience (e.g.
+îinternational summitî).
+Selecting the bigrams belonging to each of these three
+classes is a challenging and resource demanding task. How-
+ever the task can be appoximated by resorting to a combina-
+tion of simple statistical measures and elementary linguistic
+knowledge. Our strategy consists in selecting as candidate
+keywords in a document the bigrams that where found in a
+list of frequent Italian bigrams. We built the list of frequent
+Italian bigrams with the following procedure: (1) select the
+topmost frequent bigrams in a reference corpus of 32 mil-
+lion words from an Italian newspaper; (2) cut off all bigrams
+occurring less than 4 times in the reference corpus; (3) ap-
+ply a filter based on stop words. The aim of the filtering step
+is to get rid of bigrams like îwith theî or îthe onlyî which
+may occur frequently in texts but do not belong to any of
+the term classes mentioned above. To this extent we sim-
+ply reject all bigrams including at least a word taken from
+a list of stop words. Note that stop words are in the great
+majority function words, that is words belonging to closed
+classes. Thus it makes sense to compile a list of stop words
+manually. The stop word list turned out to be very usuful to
+exclude frequent but irrelevant bigrams. Note that the words
+in the stopword list where excluded also from the topmost
+frequent monograms of the document.
+4.2 Inverse document frequency
+To better characterize each Web page to be clustered, we
+rank its keywords. A simple solution could be just counting
+the number of occurrences of the terms in the page (term
+frequency in Information Retrieval jargon). However this
+might not be an appropriate choice, as terms which occur
+uniformly in all the Web pages that we are clustering are
+not useful to distinguish documents with similar content as
+opposed to relatively unrelated documents. In alternative,
+we can rank the keywords on the basis of the inverse docu-
+ment frequency [7], defined as:
+œ
+∆
+–”
+(1)
+where
+∆
+is the absolute number of occurrences of the -
+th keyword,
+is the number of documents containing it,
+and
+is the total number of documents.
+High frequency keywords that are specific to a document
+(
+small compared to ) have a high value of the inverse
+document frequency. On the contrary, unspecific keywords
+(i.e., keywords that occur uniformly in most documents) are
+given a small weight (
+–”¥
+µ
+is close to zero, since
+).
+Page 4
+5 Web site clustering and labeling
+Let
+√œ
+be the vector of all keywords determined for
+a whole Web site (union of the keywords determined for
+each page), with each keyword uniquely represented by a
+single entry. A feature vector can be built for each page
+‘
+,
+with
+∆
+, the number of occurrences of the -th keyword
+√œ
+in
+‘
+, in position . When a keyword is not present
+in a page
+‘
+, the related entry in the feature vector is 0. Al-
+ternatively, the absolute number of occurrences
+∆
+can
+be replaced by the inverse frequency in the document
+œ
+(see equation (1)).
+Given the description of each Web site page in terms of
+feature vectors, it is possible to exploit similarity or dis-
+tance measures to agglomerate entities into clusters. Simi-
+larity/distance between clusters is generalized from the sim-
+ilarity/distance between entities by means of the complete
+linkage rule (see Section 3). In this work, we preferred
+a similarity measure over a distance measure, because the
+latter is prone to the well known problem of the sparse or
+empty vectors: distances become small not only when vec-
+tors are close to each other, but also when they are very
+sparse (or empty), thus leading to the formation of inappro-
+priate clusters. The similarity measure used with the feature
+vectors described above is the normalized vector product,
+given by:
+◊—¥‘ ’µ
+Œ
+‘
+Œ
+’
+Œ
+‘
+Œ
+’
+(2)
+where
+Œ
+‘
+and
+Œ
+’
+are the feature vectors of pages
+‘
+and
+’
+respectively, angular brackets indicate the scalar product,
+which is normalized by the product of the norms, thus giv-
+ing a similarity measure which ranges from 0 to 1.
+After executing the agglomerative clustering algorithm,
+a proper cut point is manually selected. The possibility for
+the user to choose a given abstraction level (number of clus-
+ters or, equivalently, cut point), and then to adjust it toward
+the top of the hierarchy (less clusters with more pages in-
+side) or toward the bottom (more clusters containing fewer
+pages) is an important interactive facility. In fact, the right
+abstraction level, appropriate for the ongoing program un-
+derstanding task, is typically not known a priori, and can be
+determined empirically by moving upward and downward
+in the clustering hierarchy.
+Then, labels are automatically assigned to each cluster.
+The keyword with the highest number of occurrences (resp.,
+highest inverse document frequency) in a cluster
+is as-
+signed to
+as its label. It should be noted that while the
+overall number of occurrences of a keyword
+√œ
+in a
+cluster
+is just the sum of the number of occurrences in
+each contained pages, the inverse document frequency is
+computed by applying equation (1) to entire clusters:
+be-
+comes the number of clusters, and
+the number of clus-
+ters containing the keyword
+√œ
+.
+6 Case Study
+In order to illustrate the proposed technique, a small
+Web application (www.promoturpejo.it) has been
+analyzed. Www.promoturpejo.it is a bi-lingual (Ital-
+ian and English) Web application that promotes the Pejoís
+Valley, a pleasant valley in Trentino (Italy). This dynamic
+Web application has been downloaded and analyzed by
+means of the tool ReWeb [8]. It consists of 240 HTML
+pages (57183 LOC), grouped into 9 directories and con-
+nected by 7107 hyperlinks.
+The graph representation of a Web application (where
+nodes represent pages and edges represent hyperlinks
+among pages) can be abstracted by grouping pages accord-
+ing to the directory containing them. If no organization into
+directories is present, such a view (named System View in
+ReWeb), contains a single node representing the root direc-
+tory (indicated with a dot). Otherwise, a node for each di-
+rectory is added. An edge connects two nodes
+Ω
+and
+æ
+of
+the System View if, in the graph representation of the site,
+there is a page in the directory associated to
+Ω
+connected
+to a page in the directory of
+æ
+.
+Figure 1 shows the System View of www.promotur-
+pejo.it as recovered by ReWeb. The proposed clus-
+tering technique has been applied to this Web site. The
+results of clustering have been assessed by measuring the
+distance from a reference grouping (gold standard) of the
+pages in the Web site, produced manually. The gold stan-
+dard approach (expert criterion in [1]) is a general evalua-
+tion method that is used to measure the performance (for ex-
+ample, in terms of precision/recall) of an algorithm which
+approximates an ìideal solutionî to a problem. The gold
+standard is such ìidealî solution to the problem.
+To determine the gold standard, we have used the direc-
+tory structure as a starting point, since in our example it is
+quite meaningful. Actually, two gold standards have been
+determined manually at different abstraction levels. One, la-
+beled High-level, is composed of 13 groups, while the other
+(Low-level) is composed of 25 groups. The second is a spe-
+cialization of the first, in that each group of pages in the first
+gold standard is possibly divided into subgroups. For exam-
+ple the pages contained in the directory micologia (my-
+cology), a subdirectory of estate (summer) which forms
+a group in the High-level gold standard, are divided into two
+groups in the Low-level gold standard. One group contains
+mushroom cards, while the other group contains the pages
+that provide general mycology information.
+The clustering algorithm has been applied to two differ-
+ent sets of vectors: ípromotour-vectorsí and ípromotour-
+vectors-normí (obtained by computing the document in-
+Page 5
+.
+pejo
+(Pejoís Valley)
+ricettivita
+(accommodation)
+comearrivare
+(how to reach us)
+lastita
+(last minute)
+parcodellostelvio
+(Stelvio National Park)
+termeita
+(thermal baths)
+inverno
+(winter)
+estate
+(summer)
+eng
+Figure 1.
+System View of the Web application
+www.promoturpejo.it
+. The node with a dot represents the root
+directory. English translations of directory names are provided in brackets.
+verse frequency, see equation (1)). In both cases, 166 pos-
+sible partitions, starting with a partition consisting of one
+cluster enclosing all pages, at the top of the hierarchy, down
+to a partition with singleton clusters only, at the bottom of
+the hierarchy, have been obtained.
+By inspecting the steps of hierarchy formation, it is ap-
+parent that the technique works well. Pages of animals and
+pages promoting hotels/residences are respectively grouped
+together already at the cut point 20. At the cut point 60
+(using ípromotour-vectorsí), where 18 clusters are present,
+some other interesting groupings appear. In particular, the
+cluster of mushrooms cards, the cluster of hotels, the cluster
+of animals, and the cluster of flowers are emerging.
+It can be noted that the clusterings most similar to the
+gold standard (both Low-level and High-level and using
+indifferently ípromotour-vectorsí or ípromotour-vectors-
+normí) are those at a cut point between 115 and 150. With a
+cut point greater than 150, the algorithm groups too much,
+unifying clusters of pages with quite different contents. For
+example, the algorithm groups animals with countries at cut
+point 151, and sports with hotels at cut point 158.
+For each possible partition, a measure of precision and
+recall with respect to the gold standard has been computed.
+Precision and recall are defined as in [1, 3], using the notion
+of intra pair. Intra pairs are pairs of pages in a same cluster.
+Precision and recall are defined by comparing the intra pairs
+in the gold standard and those in the clustering under test:
+Ø
+Precision: Percentage of intra pairs in the test cluster-
+ing that are also in the gold standard.
+Ø
+Recall: Percentage of intra pairs in the gold standard
+that are also in the test clustering.
+For each possible partition produced by our clustering
+method, we have plotted (recall, precision) couples at in-
+creasing cut points. Both Low-level (LL) and High-level
+(HL) gold standards have been considered (resp. Figure 2
+and 3). The extremes of the curves are reached at the top
+(resp. bottom) of the clustering hierarchy. At one extreme,
+only one cluster contains all pages, so that all intra pairs of
+the gold standard are also intra pair in the only cluster (re-
+call equal to 1), but many intra pairs in such cluster are not
+intra pairs in the gold standard (low precision). At the other
+extreme, the opposite is true: no error is in the singleton
+clusters, since they do not contain any intra pair (precision
+1), but not correct intra pair is retrieved (recall 0).
+Page 6
+LL-N
+LL
+recall
+precision
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Figure 2.
+Precision/recall at increasing cut points for
+the
+Low-level
+(LL) gold standard. Line LL is based
+on feature vectors with number of occurrences, while
+LL-N exploits the inverse document frequency.
+Figure 2 contrasts the precision/recall plots obtained
+using the ípromotour-vectorsí (dotted line) and the
+ípromotour-vectors-normí (solid line), for the LL gold stan-
+dard. It is quite clear that the clustering algorithm gives
+better results with input ípromotour-vectors-normí. A good
+compromise of precision and recall in the LL-N curve is
+reached at the cut point 149 where the recall is 0.97 and
+precision is 0.72. This corresponds to the point near the top
+right corner of the figure.
+Figure 3 is similar to Figure 2, but based on the HL gold
+standard. In this figure, the improvement deriving from
+the document inverse frequency computation is less evident.
+The HL-N curve remains under HL at high recall and low
+precision values (approximately, up to 0.75 of recall), while
+the trend is inverted afterwords.
+Then, we have computed cluster labels for the cluster-
+ing number 149, judged a good trade-off between precision
+and recall with respect to the LL gold standard, based on
+ípromotour-vectors-normí. The result, restricted to the first
+7 labels extracted and disregarding clusters composed of
+only one page, is shown in Table 1. In all cases, the cluster
+labeling algorithm reports labels that are related to the con-
+tent of the respective clusters. In some cases (clusters 1, 3
+and 9) the first automatically extracted label is the same as
+the label chosen by the expert. In other cases, the expertís
+label is present, but it is not at the top of the generated list
+(clusters 2, 4 and 8). In the remaining cases (clusters 5, 6
+HL-N
+HL
+recall
+precision
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Figure 3.
+Precision/recall at increasing cut points for
+the
+High-level
+(HL) gold standard. Line HL is based
+on feature vectors with number of occurrences, while
+HL-N exploits the inverse document frequency.
+and 7), the expertís label does not appear directly in the list,
+but it is possible to find synonyms (cluster 6, treatment), or
+specific cases (cluster 7, eurorafting, canyoning) of general
+concepts (cluster 7, water sports).
+Using the keyword with the highest score (the first in
+the list of extracted labels) as cluster label, it is possible to
+automatically produce the Clustering View in Figure 4. In
+the Clustering View each node represents a cluster and is
+labeled with the first label generated by the cluster label-
+ing algorithm. An edge connects two nodes
+Ω
+and
+æ
+of
+the clustering view if, in the complete view produced by
+ReWeb (Graph View), there is a page in the cluster associ-
+ated to
+Ω
+connected to a page in the cluster
+æ
+. Not all labels
+produced automatically are completely satisfactory. A final
+manual refinement step is necessary to obtain a meaningful
+and usable view. However, even in the cases where an au-
+tomatically produced label was changed, availability of an
+ordered list of automatically extracted labels was extremely
+useful in selecting the final label.
+A comparison of the Clustering View in Figure 4 with
+the System View in Figure 1 (excluding nodes . eng,
+lastita and comearrivare) reveals that that there is a
+good agreement, although the former is more detailed than
+the latter. As noted above, the organization of this Web site
+into directories was judged a good and meaningful one, so
+that the ability of clustering to match it indicates that the
+algorithm is performing quite well. In other words, if the
+Page 7
+Cluster
+Expertís label
+Automatic labeling (ordered)
+1
+appartamenti
+appartamenti prossimitaí agenzia mt scheda cogolo situati
+(apartments)
+(apartments proximity agency mt card cogolo located)
+2
+fauna
+settore fauna vive aquila mammiferi uccelli cervo
+(fauna)
+(area fauna live eagle mammalians birds deer)
+3
+paesi, valle e tradizioni
+paese chiesa comasine cellentino strombiano valle celledizzo
+(towns, valley and traditions)
+(town church comasine cellentino strombiano valley celledizzo)
+4
+hotels e inverno
+sala camera servizi sci accesso apertura hotel
+(hotels and winter)
+(hall room services ski admittance opening hotel)
+5
+sport estivi e trekking
+cima hotel rifugio sentiero malga scheda sport
+(summer sports and trekking)
+(peak hotel refuge path alpine-hut card sport)
+6
+terapie
+azione cura malattie acque proprietaí convenzioni specializzazione
+(therapies)
+(action treatment illness waters property convention specialization)
+7
+sport díacqua
+eurorafting discesa torrentismo idrospeed sport rafting ponte
+(water sports)
+(eurorafting descent canyoning idrospeed sport rafting bridge)
+8
+funghi schede
+cappello gambo schede carne ricette funghi lamelle
+(mushrooms cards)
+(cap-of-mushroom stem cards meat recipes mushrooms lamellae)
+9
+flora
+flora fioritura fiori foglie primula specie semi
+(flora)
+(flora flowering flowers leaves primrose species seeds)
+Table 1. Labels extracted automatically for clustering 149. English translations are given under the corresponding
+Italian terms. Names of towns are in italic and not translated.
+same Web site had been organized as a flat collection of
+pages stored in one directory, clustering would be able to
+reconstruct a meaningful directory organization.
+The node estate (summer) in the System View is de-
+composed, in the Clustering View, into three different clus-
+ters (corresponding to three subdirectories of estate),
+numbered 5, 8, and 9 in Table 1. Node parcodel-
+lostelvio is decomposed into two clusters: fauna (clus-
+ter 2) and flora (cluster 9), two subdirectories of par-
+codellostelvio. The node pejo corresponds to clus-
+ter 3 and termeita to cluster 6. In one case two nodes of
+the System View correspond to one cluster in the Clustering
+View: cluster 4 groups pages of the directories inverno
+and ricettivitaí, although not all of the pages in the
+latter directory. Actually, Web pages promoting hotels and
+apartments (directory ricettivitaí) advertise winter
+sports that are contained in the directory inverno. This
+is why they are inserted into a same cluster. Some of the
+pages associated with the node ricettivitaí belong to
+cluster 1. These are the pages that deal with apartments, and
+are all contained in a subdirectory of ricettivitaí.
+7 Conclusions and future work
+A preliminary exploration on the usage of Web clus-
+tering in support to program understanding has been con-
+ducted. A static Web site, containing various touristic infor-
+mation about a valley in the Alps, has been clustered, group-
+ing together pages that are characterized by common key-
+words. Nodes in the resulting diagram (Clustering View)
+have been automatically labeled by the highest score key-
+word in each cluster.
+A reference clustering (gold standard) was defined to as-
+sess the performances of our algorithm. In the clustering
+hierarchy, a cut point was selected giving the best compro-
+mise between precision and recall. The two performance
+values for such clustering are: precision = 0.72 and recall
+= 0.97. They are pretty high, thus indicating that the algo-
+rithm gets close to the expertís decomposition of the Web
+site.
+Automatic labeling of the clusters gave also good results.
+In 3 cases the expertís label was the highest score keyword.
+In 3 cases it was among the keywords, although not the first
+one. In 3 cases it could be abstracted from the keywords.
+Although not always perfect, automatically extracted labels
+provide a remarkable support in interpreting the nodes of
+the Clustering View. While it is a very easy task to deter-
+mine meaningful cluster names out of the keyword list, the
+same is not true if the names (or the entire contents) of the
+pages inserted into a cluster have to be inspected.
+Our future work will be devoted to applying our method
+to more dynamic Web sites, trying to analyze the textual
+information that can be associated to comments and iden-
+tifiers of script portions in dynamic Web pages. Moreover,
+we will consider the problem of contrasting the proposed
+clustering method against alternative ones.
+Page 8
+1: appartamenti
+(appartaments)
+2: settore [fauna]
+(area [fauna])
+3: paese [paesi]
+(town [towns])
+4: sala [hotels/inverno]
+(hall [hotels/winter])
+5: cima [soprt estivi]
+(peak [summer sports])
+6: azione [terapie]
+(action [therapies])
+7: eurorafting [sport díacqua]
+(eurorafting [water sports])
+8: cappello [funghi]
+(cap-of-mushroom [mushrooms])
+9: flora
+(flora)
+Figure 4.
+The
+Clustering View
+of
+Promoturpejo
+. English translations are in brackets, manually refined labels in square
+brackets.
+References
+[1] N. Anquetil and T. C. Lethbridge. Experiments with clus-
+tering as a software remodularization method. In Proc.
+of the 6th Working Conference on Reverse Engineering
+(WCREí99), pages 235ñ255, Atlanta, Georgia, USA, Octo-
+ber 1999. IEEE Computer Society.
+[2] L. Bentivogli and E. Pianta. Beyond lexical units: Enriching
+wordnets with phrasets. In Proceedings of the Research Note
+Sessions of the 10th Conference of the European Chapter of
+the Association for Computational Linguistics (EACLí03),
+pages 67ñ70, Budapest, Hungary, April 2003.
+[3] J. Davey and E. Burd. Evaluating the suitability of data clus-
+tering for software remodularization. In Proc. of the Seventh
+Working Conference on Reverse Engineering (WCREí00),
+pages 268ñ277, Brisbane, Australia, November 2000. IEEE
+Computer Society.
+[4] G. A. D. Lucca, A. R. Fasolino, U. D. Carlini, F. Pace, and
+P. Tramontana. Comprehending web applications by a clus-
+tering based approach. In Proc. of the 10th International
+Workshop on Program Comprehension (IWPC), pages 261ñ
+270, Paris, France, June 2002. IEEE Computer Society.
+[5] G. A. D. Lucca, M. D. Penta, and A. R. Fasolino. An ap-
+proach to identify duplicated web pages. In Proc. of the 26th
+Annual International Computer Software and Applications
+Conference (COMPSAC), pages 481ñ486, Oxford, England,
+August 2002. IEEE Computer Society.
+[6] S. Mancoridis, B. S. Mitchell, Y. Chen, and E. R. Gansner.
+Using automatic clustering to produce high-level system or-
+ganizations of source code. In Proc. of the International
+Workshop on Program Comprehension, pages 45ñ52, Ischia,
+Italy, 1998.
+[7] C. D. Manning and H. Schtze. Foundations of Statistical
+Natural Language Processing. The Mit Press, Cambridge
+MA, 1999.
+[8] F. Ricca and P. Tonella. Analysis and testing of web appli-
+cations. In Proc. of ICSE 2001, International Conference
+on Software Engineering, Toronto, Ontario, Canada, May
+12-19, pages 25ñ34, 2001.
+[9] F. Ricca and P. Tonella. Using clustering to support the mi-
+gration from static to dynamic web pages. In Proc. of the In-
+ternational Workshop on Program Comprehension (IWPC),
+pages 207ñ216, Portland, Oregon, USA, May 2003. IEEE
+Computer Society.
+[10] J. F. Silva, J. Mexia, A. Coelho, and G. P. Lopes. Mul-
+tilingual document clustering, cluster topic extraction and
+data transformation. Lecture Notes in Artificial Intelligence
+(Progress in Artificial Intelligence), 2258:74ñ87, 2001.
+[11] P. Warren, C. Boldyreff, and M. Munro. The evolution of
+websites. In Proc. of the International Workshop on Pro-
+gram Comprehension, pages 178ñ185, Pittsburgh, PA, USA,
+May 1999.
+[12] T. Wiggerts. Using clustering algorithms in legacy systems
+remodularization. In Proc. of the 4th Working Conference
+on Reverse Engineering (WCRE), pages 33ñ43. IEEE Com-
+puter Society, 1997.

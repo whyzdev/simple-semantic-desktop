@@ -1,0 +1,203 @@
+/*
+
+Implementation notes on Frequency analysis for keyword extraction:
+data items:
+Words
+word frequencies
+word co occurrences
+word occurrence adjacencies in text
+
+chi squared measure data
+clustering data
+
+
+
+*/
+
+import java.util.*;
+import java.io.*;
+
+
+public class Document {
+    public ArrayList<String> tokens = new ArrayList<String>();//this array might turn out to be redundant
+    public ArrayList<Occurrence> occurrences = new ArrayList<Occurrence>();
+    public ArrayList<Word> words = new ArrayList<Word>();
+    public ArrayList<Sentence> sentences = new ArrayList<Sentence>();
+
+    public Word[] chiSquareTable;
+    public Word[] frequencyTable;
+    public String text;    
+    
+
+    Comparator<Word> byFreq = new WordFreqComparator();
+    Comparator<Word> byChiSquare = new ChiSquareComparator();
+    
+    public Document(File textfile) throws Exception{
+	String textcache="";
+	BufferedReader reader = new BufferedReader(new FileReader(textfile));
+	while (reader.ready())
+	    textcache+=reader.readLine();
+	StringTokenizer st = new StringTokenizer(textcache);
+	
+	
+	this.text = "";
+	String sentenceSoFar="";
+	ArrayList<Occurrence> sentenceWordsSoFar = new ArrayList<Occurrence>();
+	int sentenceBeginIndex=0;
+	Sentence currentSentence = new Sentence(this);
+
+	int wordBeginIndex=0;
+
+	while(st.hasMoreTokens()){
+	    String nextToken=st.nextToken();
+
+
+	    tokens.add(nextToken);
+	           
+	    sentenceSoFar += " " + nextToken;
+	    text += " " + nextToken;
+	    sentenceWordsSoFar.add(countWord(currentSentence,nextToken, wordBeginIndex,text.length()-1,tokens.size()-1));
+	    
+	    if (nextToken.length()>=1 && nextToken.substring(nextToken.length()-1,nextToken.length()).equals(".")){		
+		
+		nextToken = nextToken.substring(0,nextToken.length()-1);
+		
+
+		currentSentence.setParams(sentenceSoFar,sentenceWordsSoFar,sentenceBeginIndex,text.length());
+
+		Iterator j=currentSentence.words.iterator();
+		while(j.hasNext()){
+		    Word wordInSentence=((Word)j.next());
+		    Iterator k=currentSentence.words.iterator();
+		    while(k.hasNext()){
+			Word otherWordInSentence=((Word)k.next());
+			if (otherWordInSentence != wordInSentence){
+			    Integer coOccurrence=new Integer(0);
+			    if (wordInSentence.coOccurrences.containsKey(otherWordInSentence))
+				coOccurrence=((Integer)wordInSentence.coOccurrences.get(otherWordInSentence));
+			    coOccurrence = new Integer(coOccurrence.intValue() + 1 );
+			    wordInSentence.coOccurrences.put(otherWordInSentence,coOccurrence);
+			}
+		    }
+		}
+
+		sentences.add(currentSentence);	    
+		sentenceBeginIndex=text.length()+1;
+		currentSentence=new Sentence(this);
+		sentenceSoFar="";
+	    }
+	}
+			
+	
+	frequencyTable = new Word[words.size()];	
+	for (int i=0;i<frequencyTable.length;i++)
+	    frequencyTable[i]=words.get(i);
+	Arrays.sort(frequencyTable,byFreq);
+
+	Word[] temp = new Word[frequencyTable.length/3]; 
+	for (int i=0;i<(frequencyTable.length/3);i++)
+		temp[i]=frequencyTable[i];
+	frequencyTable=temp;
+	
+	Iterator i = frequencyTable.iterator();	
+	while(i.hasNext()){
+		Word nextword = ((Word)i.next());
+		nextword.probability_g=nextword.getFrequency()/tokens.size();			
+		nextword.calculateChiSquare();
+	}
+	
+	chiSquareTable = new Word[frequencyTable.length];
+	for (int i=0;i<chiSquareTable.length;i++)
+		chiSquareTable[i]=frequencyTable[i];
+	Arrays.sort(chiSquareTable,byChiSquare);
+	
+    }
+
+    public String toString(){
+	String returnstring="";
+ 	//for (int i=0;i<frequencyTable.length;i++)
+	    //returnstring += ((Word)frequencyTable[i]).text + "==" + ((Word)frequencyTable[i]).getFrequency() + "\n";
+	
+	for (int i=0;i<chiSquareTable.length;i++)
+	    returnstring += ((Word)chiSquare[i]).text + "==" + ((Word)chiSquareTable[i]).getChiSquare() + "\n";
+	
+	return returnstring;
+    }
+
+    public void printFrequencies(){
+	Iterator i = words.iterator();
+	while(i.hasNext()){
+	    Word nextword=((Word)i.next());
+	    System.out.println(nextword.text + "==" + nextword.occurrences.size() );
+	}
+    }
+	
+		
+
+
+    private Occurrence countWord(Sentence sentence, String wordtext, int beginIndex, int endIndex, int tokenIndex){
+	boolean foundWord=false;
+	Occurrence newocc= new Occurrence();
+
+
+	//if words array already has this word
+	//increment its frequency (point to occurrence)
+	Iterator i = words.iterator();
+	while(i.hasNext()){
+	    Word nextword = ((Word)i.next());	    
+	    if(nextword.text.equals(wordtext)){
+		newocc=new Occurrence(this,sentence,nextword,beginIndex,endIndex,tokenIndex);
+		nextword.occurrences.add(newocc);		
+		foundWord=true;
+	    }	    
+	}	
+	//else
+	if (!foundWord){
+	    //create a new occurrences array, i.e. set frequency =1 
+	    Word newword = new Word(this,sentence, wordtext);
+	    newocc = new Occurrence(this,sentence,newword,beginIndex,endIndex,tokenIndex);
+	    newword.occurrences.add(newocc);
+	    words.add(newword);
+	}
+
+	occurrences.add(newocc);			
+	return newocc;		
+    }
+
+    public String substr(int begin, int end){
+	return text.substring(begin,end);
+    }
+
+    public int getWordCount(){
+	return occurrences.size();
+    }
+}
+
+
+
+
+
+
+
+     class WordFreqComparator implements Comparator<Word>{
+	public int compare(Word worda, Word wordb){
+	    if(worda.getFrequency() > wordb.getFrequency())
+		return -1;
+	    else if(worda.getFrequency() < wordb.getFrequency())
+		return 1;
+	    else
+		return 0;
+	}
+    }
+    
+    
+    class ChiSquareComparator implements Comparator<Word>{
+	public int compare(Word worda, Word wordb){
+	    if(worda.getChiSquare() > wordb.getChiSquare())
+		return -1;
+	    else if(worda.getChiSquare() < wordb.getChiSquare())
+		return 1;
+	    else
+		return 0;
+	}
+    }

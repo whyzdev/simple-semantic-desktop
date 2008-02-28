@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"><title>Named Entity Recognition and An Apply on Document Clustering</title>
+
+
+<style type="text/css">
+@import "http://www.cs.dal.ca/include/dal_layout.css";
+</style>
+
+<link rel="stylesheet" type="text/css" media="print" href="def-1266_files/dal_layout_print.css"><!--[if lte IE 6]>
+<style type="text/css">
+@import "http://www.cs.dal.ca/include/dal_layout_ie.css";
+</style>
+<![endif]--></head><body>
+<div class="outer_wrapper">
+<div class="back_full">
+<div class="back_center"></div>
+</div>
+
+<div class="black_head_full">
+<div class="black_head_center">
+<a href="http://www.dal.ca/" title="Dalhousie University">
+<img class="dal_logo" src="def-1266_files/smallogo.gif" alt="Dalhousie University">
+</a>
+<div class="faculty_title"><a href="http://www.cs.dal.ca/">Faculty of Computer Science</a></div>
+</div>
+
+<div class="black_head_left"></div>
+</div>
+
+<div class="main_full">
+
+
+<div class="blue_head_filler"></div>
+<div class="water">
+<div class="water_bar"></div>
+</div>
+
+<div class="main_center">
+
+<div class="content">
+
+<div class="breadcrumb"><a href="http://www.cs.dal.ca/index.shtml">Computer Science</a> » <a href="http://www.cs.dal.ca/news/index.shtml">News/Events</a> » <a href="http://www.cs.dal.ca/news/defence-hist.shtml">Project Presentations / Thesis Defences</a> » <a href="http://www.cs.dal.ca/news/defence-hist-2004-mcsc-thesis-defence.shtml">2004 - MCSc Thesis Defence</a> » Named Entity Recognition and An Apply on Document Clustering</div>
+
+<h1>Named Entity Recognition and An Apply on Document Clustering</h1><table id="defence_table"><tbody><tr><th>When:</th><td>October 18, 2004 @ 2:00 pm</td></tr><tr><th>Where:</th><td>Dentistry 4111</td></tr><tr><th>Who:</th><td>Wei, Gang</td></tr><tr><th>Title:</th><td>Named Entity Recognition and An Apply on Document Clustering</td></tr><tr><th>Supervisor:</th><td>Dr. E. Milios - Faculty of Computer Science<br></td></tr><tr><th>Readers:</th><td>Dr. V. Keselj - Faculty of Computer Science<br>Dr. N. Zincir-Heywood - Faculty of Computer Science<br></td></tr><tr><th>Chair:</th><td>Dr. R. Abidi - Faculty of Computer Science<br></td></tr><tr><th>Abstract:</th><td>Named
+entity recognition is the task of processing a text and identifying the
+proper names. It has been studied aiming to promote research in
+Information Extraction and other Natural Language Processing
+applications. We create our own named entity recognition tool based on
+the maximum entropy principle. Maximum entropy is the statistics model
+widely used in the research of computational linguistics. We show that
+our system achieves good performance of named entity recognition, and
+it is a purely machine learning approach. The system works fast and is
+easy to build and port to other domains. The extracted named entities
+are used to define a document representation, which is tested on
+document clustering. Much research work on document clustering has been
+focused on the vector space model, where documents are represented by
+term vectors. We investigate whether the inclusion of named entities in
+the vector-space document representation helps to improve clustering
+performance. Our experiments show negative results in a small news wire
+document set: the named entities themselves are not suitable to be used
+as features in the document clustering process; named entities even
+slightly worsen the clustering results when they are used together with
+terms as features of document clustering. It appears that additional
+information needs to be used when named entities are made part of the
+document representation, such as co-reference resolution and use of
+context.</td></tr></tbody></table></div>
+
+<div class="sidebar">
+
+<div class="main_menu">
+<h4>Main Menu</h4>
+<ul>
+<li><a href="http://www.cs.dal.ca/index.shtml" title="Dalhousie University Computer Science Home">CS Home</a></li>
+<li><a href="http://www.cs.dal.ca/prospective/index.shtml" title="Dalhousie University Computer Science Prospective Students Information">Prospective Students</a></li>
+<li><a href="http://www.cs.dal.ca/cspeople/index.shtml" title="Dalhousie University Computer Science Faculty and Staff">CS People</a></li>
+<li><a href="http://www.cs.dal.ca/graduate/index.shtml" title="Dalhousie University Computer Science Graduate Degree Information">Graduate</a></li>
+<li><a href="http://www.cs.dal.ca/undergraduate/index.shtml" title="Dalhousie University Computer Science Undergraduate Degree Information">Undergraduate</a></li>
+<li><a href="http://www.cs.dal.ca/research/index.shtml" title="Dalhousie University Computer Science Research">Research</a></li>
+<li><a href="http://www.cs.dal.ca/studentservices/index.shtml" title="Dalhousie University Computer Science Services">Services</a></li>
+<li><a href="http://www.cs.dal.ca/news/index.shtml" title="Dalhousie University Computer Science News and Events" class="menu_on">News / Events</a>
+<ul><li><a href="http://www.cs.dal.ca/news/archive/index.shtml" title="Computer Science News Archive" class="secondlevel">Computer Science News Archive</a></li>
+<li><a href="http://www.cs.dal.ca/news/guest-speakers.shtml" title="Guest Lectures and Seminars" class="secondlevel">Guest Lectures and Seminars</a></li>
+<li><a href="http://www.cs.dal.ca/news/news.shtml" title="Headlines" class="secondlevel">Headlines</a></li>
+<li><a href="http://www.cs.dal.ca/news/defence-hist.shtml" title="Project Presentations / Thesis Defences" class="secondlevel">Project Presentations / Thesis Defences</a></li>
+<li><a href="http://www.cs.dal.ca/news/events.shtml" title="Today's Events" class="secondlevel">Today's Events</a></li>
+</ul></li>
+<li><a href="http://www.cs.dal.ca/links/index.shtml" title="Dalhousie University Computer Science Related Sites">Related Sites</a></li>
+<li><a href="http://www.cs.dal.ca/contact/index.shtml" title="Dalhousie University Computer Science Contact Information">Contact Us</a></li>
+<li><a href="http://www.cs.dal.ca/administration/sitemap.shtml" title="Dalhousie University Computer Science Site Map">Site Map</a></li>
+<li><a href="http://www.cs.dal.ca/multimedia.shtml" title="Halifax Webcams, Photo Gallery and Virtual Tour">Multimedia</a></li>
+</ul>
+</div>
+
+<div class="sub_menu">
+<h4 class="submenutitle">News and Events</h4><ul>
+<li><a href="http://www.cs.dal.ca/news/index.shtml">Computer Science News and Events</a>
+</li>
+<li><a href="http://www.cs.dal.ca/news/archive/index.shtml">Computer Science News Archive</a>
+</li>
+<li><a href="http://www.cs.dal.ca/news/guest-speakers.shtml">Guest Lectures and Seminars</a>
+</li>
+<li><a href="http://www.cs.dal.ca/news/news.shtml">Headlines</a>
+</li>
+<li><a href="http://www.cs.dal.ca/news/defence-hist.shtml">Project Presentations / Thesis Defences</a>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="blue_foot_center">
+<span class="blue_foot_text">
+
+<a class="aux_link" href="http://www.cs.dal.ca/disclaimer.html">View Disclaimer</a> - Please <a class="aux_link" href="mailto:webmaster@cs.dal.ca">report</a> problems to the <a class="aux_link" href="http://www.cs.dal.ca/cspeople/m_comeau.shtml">webmaster</a>
+
+
+
+
+</span>
+</div>
+
+<div class="green_foot_center"></div>
+
+
+<div class="blue_head_full">
+<div class="blue_head_center">
+<div class="blue_head_text">HALIFAX, NOVA SCOTIA | CANADA B3H 4R2 | +1 (902) 494-2093</div>
+<form method="get" action="http://www.google.com/u/dalcs">
+<div class="search_controls">
+<label for="google-q">Search Text:</label><input id="google-q" name="q" value="" size="15" type="text">&nbsp;<input value="Search CS" type="submit">
+<input name="domains" value="cs.dal.ca" type="hidden">
+<input name="sitesearch" value="cs.dal.ca" type="hidden">
+</div>
+</form>
+</div>
+
+<div class="blue_head_right"></div>
+
+</div>
+
+</div>
+
+</div>
+<script src="def-1266_files/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-746116-2";
+_udn="dal.ca";
+urchinTracker();
+</script>
+</body></html>

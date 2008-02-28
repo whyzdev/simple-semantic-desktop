@@ -1,0 +1,92 @@
+</ul>
+</div>
+
+
+
+<script language="javascript" type="text/javascript">
+window.onload=function(){
+$$('#menu a').each(function(el) { 
+		el.addEvent('mouseenter',function(){
+		p = el.innerHTML.toUpperCase();
+		el.innerHTML = p;
+		el.setStyle('background','url(bg1.jpg)');
+		myEffect = el.effect('margin-left', {duration: 100,transition: Fx.Transitions.linear, wait: true}).start('10','30');
+		})
+		
+		el.addEvent('mouseleave',function(){
+		p = el.innerHTML.toLowerCase();
+		el.innerHTML = p;
+		el.setStyle('background','url(bg.jpg)');
+		myEffect = el.effect('margin-left', {duration: 800,transition: Fx.Transitions.Bounce.easeOut, wait: true}).start('30','0');
+		})
+	
+	})
+	
+	myStretch = document.getElementsByClassName('toggler');
+	myStretcher = document.getElementsByClassName('accordion');
+	
+	// setup the accordion elements by clearing display styles	
+	myStretcher.each(function(el){
+		el.style.display = '';
+	});
+	
+	
+var ac = new Fx.Accordion(myStretch,myStretcher,
+ 
+  {
+		onActive: function(tog){
+         tog.setStyle('color', '#ACDA4E');
+		tog.setStyle('background-color', '#1d1d1d');
+		tog.setStyle('cursor', 'help');
+		
+    },
+    onBackground: function(tog){
+       
+		tog.setStyle('color', '#FFF');
+		tog.setStyle('background-color', '#2d2d2d');
+		tog.setStyle('cursor', 'help');
+		
+    },
+		alwaysHide: true,
+		start : 'all-closed',
+	
+		height: true,
+		opacity : true			
+	});
+}
+
+st = document.getElementsByClassName('toggler2');
+	stc = document.getElementsByClassName('accordion2');
+	
+	// setup the accordion elements by clearing display styles	
+	stc.each(function(el){
+		el.style.display = '';
+	});
+	
+var acc = new Fx.Accordion(st,stc,
+ 
+  {
+		onActive: function(tog){
+         tog.setStyle('color', '#ACDA4E');
+		tog.setStyle('background-color', '#1d1d1d');
+		tog.setStyle('cursor', 'help');
+		
+    },
+    onBackground: function(tog){
+       
+		tog.setStyle('color', '#FFF');
+		tog.setStyle('background-color', '#2d2d2d');
+		tog.setStyle('cursor', 'help');
+		
+    },
+		alwaysHide: true,
+		start : 'all-closed',
+		opacity : true			
+	});
+	
+
+
+
+</script>
+
+</body></html>
