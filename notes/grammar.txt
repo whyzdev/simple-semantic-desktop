@@ -1,0 +1,127 @@
+//program --> declaration-list
+//program --> program declaration  |  declaration
+program --> var-declaration rest-of-program | fun-declaration rest-of-program
+
+//rest-of-program	--> declaration rest-of-program | e
+//declaration --> var-declaration  |  fun-declaration
+rest-of-program --> var-declaration rest-of-program | fun-declaration rest-of-program | e
+
+//var-declaration --> type-specifier id ;  |  type-specifier id [ num ] ;  | type-specifier * id ;
+//type-specifier --> int  |  float  |  void
+var-declaration --> int id ;  |  int id [ num ] ;  | int * id ; |
+			float id ;  |  float id [ num ] ;  | float * id ;|
+			void id ;  |  void id [ num ] ;  | void * id ;
+//- clear /* concern : can we have void id; and void id[num]; ?*/
+
+
+//fun-declaration --> type-specifier id ( params ) compound-stmt
+fun-declaration --> int id ( params ) compound-stmt |
+		float id ( params ) compound-stmt |
+		void id ( params ) compound-stmt
+
+
+//params --> param-list  |  void
+//param-list --> param-list , param  |  param
+params --> param rest-of-params | void
+rest-of-params --> , param rest-of-params | e
+
+
+
+//param-> type-specifier  id  |  type-specifier  id [ ]  |  type-specifier * id
+param --> int id   |  int id [  ]   | int * id |
+	float id   |  float id [  ]   | float * id | void * id 
+
+
+
+
+compound-stmt --> { local-declarations statement-list }
+
+//local-declarations --> local-declarations var-declaration   |  e
+//- clear /* concern : is this transformation OK?*/
+local-declarations -->  var-declaration local-declarations   |  e
+
+
+//statement-list --> statement-list statement  | e
+//- clear /* concern : is this transformation OK?*/
+statement-list --> statement statement-list  | e
+
+
+
+
+statement --> expression-stmt  |  compound-stmt  |  if-stmt  |  while-stmt  |   for-stmt  |  return-stmt
+
+expression-stmt --> optional-expression ;
+
+//if-stmt --> if ( expression ) statement   |  if ( expression ) statement else statement
+if-stmt  -->  if-start if-remainder
+if-start  -->  if ( expression ) statement
+if-remainder  -->  e  |  else statement
+
+while-stmt --> while ( expression ) statement
+for-stmt --> for ( optional-expression ; optional-expression ; optional-expression ) statement
+
+return-stmt --> return ;  |  return expression ;
+//- clear /* concern: does return-stmt need Left Factoring just like if-stmt? */
+
+optional-expression -->  expression  |  e
+/* optional-expression is just there for convenience sake. We plan to remove this when returning our parse tree*/
+
+
+
+//expression --> or-expr  assignop  expression  |  or-expr
+//assignop --> =  |  +=  |  -=	
+expression --> or-expr  =  expression  | or-expr  +=  expression  | 
+		or-expr  -=  expression  | or-expr
+
+//- clear /* concern : does expression need left factoring like if-stmt ? */
+
+//or-expr -->  and-expr  |  or-expr  ||  and-expr
+or-expr -->  and-expr  rest-of-or-expr
+rest-of-or-expr --> || and-expr rest-of-or-expr | e
+
+//and-expr -->  relational-expr  |  and-expr && relational-expr
+and-expr -->  relational-expr rest-of-and-expr
+rest-of-and-expr -->	&& relational-expr rest-of-and-expr | e
+
+
+//relational-expr --> relational-expr relop additive-expr  |  additive-expr
+relational-expr --> additive-expr rest-of-relational-expr 
+
+
+//rest-of-relational-expr --> relop additive-expr  |  e
+//relop --> <=   |  >=  |  <  |  >  |  ==  |  !=
+rest-of-relational-expr --> <= additive-expr rest-of-relational-expr |  >= additive-expr rest-of-relational-expr |  
+			< additive-expr rest-of-relational-expr |  > additive-expr rest-of-relational-expr | 
+			 == additive-expr rest-of-relational-expr |  != additive-expr rest-of-relational-expr |  e
+
+
+
+//additive-expr --> additive-expr addop term  |  term
+additive-expr --> term rest-of-additive-expr 
+//addop --> +  |  -
+rest-of-additive-expr --> + term rest-of-additive-expr |  - term  rest-of-additive-expr |  e
+
+//term --> term mulop unary-expr  |   unary-expr
+term --> unary-expr rest-of-term 
+//rest-of-term --> mulop unary-expr  |   e
+//mulop --> *  |  /  |  %
+rest-of-term --> * unary-expr rest-of-term  |  / unary-expr  rest-of-term  |  % unary-expr rest-of-term  |   e
+
+//unaryop -->  +  |  -  |  !  |  &  |  *
+//unary-expr --> primary-expr  |  unaryop unary-expr
+unary-expr --> primary-expr  |  + unary-expr |  - unary-expr |  ! unary-expr
+	 |  &  unary-expr |  * unary-expr
+
+//call --> id ( args )
+primary-expr -->  ( expression )  | id  |  id [ expression ]  |  id ( args )  |  num  |  real
+//- clear /* concern: does primary-expr need left factoring for id and id[ expression] ? */
+
+
+//- clear /* comment : call seems to be used for removing left-factoring. 
+	do we need to remove id[expression] also in order to finish the left factoring?*/ //- true 
+
+//args --> arg-list  |  e
+//arg-list  -->  arg-list , expression  |  expression
+ 
+args  -->  expression rest-of-args 
+rest-of-args --> , expression rest-of-args  |  e

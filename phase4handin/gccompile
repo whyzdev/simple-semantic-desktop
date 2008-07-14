@@ -1,0 +1,4 @@
+#! /bin/bash
+gcc $1.c -o $1.c.gcc.out
+./$1.c.gcc.out
+echo $?

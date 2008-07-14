@@ -1,0 +1,5 @@
+//- hashtable numbering above 36: check and return correct symbolNumbers
+//- fix return-stmt (it only works for return;)
+//- fix the case where compd stmt does not have any declarations
+//- fix errorToken - say something more than err(fck). say "invalid character: fck" or something more
+//- make sure comment tokens never enter the token stream.

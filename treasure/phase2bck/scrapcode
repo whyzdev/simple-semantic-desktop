@@ -1,0 +1,45 @@
+    /*
+      private void parseProgram()
+    {
+    if (diag1)
+    System.out.println("I got here(parseProgram)");
+    
+    ProgramNode progNode = new ProgramNode();
+    Object tempNode;
+    int old_stackpointer = stack.getStackPointer();
+    boolean succ = false;
+    
+    succ = parseVarDecl();
+    if(!succ)
+    {
+    succ = parseFunDecl();
+		tempNode = stack.getNext();
+		}
+		
+		if(tempNode instanceof ErrorNode)
+		{
+		stack.pop();
+		stack.push(new ErrorNode());
+		}
+		else
+	    {
+	    stack.incStackPointer();
+	    succ = parseRestOfProgram();
+	    
+	    if( ((tempNode = stack.getNext()) instanceof ErrorNode) || !(tempNode instanceof Node))
+	    {
+	    stack.pop();
+			stack.push(new ErrorNode());
+			}
+			
+			else
+			{
+			progNode.children[1] = (Node)stack.pop();
+			stack.decStackPointer();
+			progNode.children[0] = (Node)stack.pop();
+			stack.push(progNode);
+			}
+			}
+			
+			stack.setStackPointer(old_stackpointer);			
+    } */

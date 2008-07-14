@@ -1,0 +1,53 @@
+java.util.Hashtable
+java.io.FileReader
+java.io.InputStreamReader
+
+
+hash values:
+
+
+int - 0
+float - 1
+void - 2
+if - 3
+else - 4
+while - 5
+for - 6
+return - 7
+( - 8
+) - 9
+[ - 10
+] - 11
+: - 12
+. - 13
+* - 14
+& - 15
+% - 16
+! - 17
+/ - 18
++ - 19
+- - 20
+< - 21
+> - 22
+<= - 23
+>= - 24
+== - 25
+!= - 26
++= - 27
+-= - 29
+&& - 30
+|| - 31
+
+
+Classes:
+
+Lexer
+Token (abstract)
+      - IdentifierToken
+      - KeywordToken
+      - ConstantToken
+	- IntegerToken
+	- HexToken
+	- RealToken
+      - OperatorToken
+

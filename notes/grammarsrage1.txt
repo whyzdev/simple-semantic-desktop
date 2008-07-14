@@ -1,0 +1,12 @@
+
+program --> var-declaration rest-of-program | fun-declaration rest-of-program
+
+
+rest-of-program --> var-declaration rest-of-program | fun-declaration rest-of-program | e
+
+
+var-declaration -->  int id [ num ] ;
+
+
+fun-declaration --> int id ;
+

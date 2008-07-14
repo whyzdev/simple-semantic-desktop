@@ -1,0 +1,98 @@
+
+// program --> var-declaration rest-of-program | fun-declaration rest-of-program
+// rest-of-program --> var-declaration rest-of-program | fun-declaration rest-of-program | e
+
+program --> { var-declaration | fun-declaration }*
+
+
+var-declaration --> int id ;  |  int id [ num ] ;  | int * id ; |
+			float id ;  |  float id [ num ] ;  | float * id ;|
+			void id ;  |  void id [ num ] ;  | void * id ;
+
+
+fun-declaration --> int id ( params ) compound-stmt |
+		float id ( params ) compound-stmt |
+		void id ( params ) compound-stmt
+
+
+params --> param rest-of-params | void
+rest-of-params --> , param rest-of-params | e
+
+
+param --> int id   |  int id [  ]   | int * id |
+	float id   |  float id [  ]   | float * id | void * id 
+
+
+compound-stmt --> { local-declarations statement-list }
+
+
+local-declarations -->  var-declaration local-declarations   |  e
+
+
+statement-list --> statement statement-list  | e
+
+
+statement --> expression-stmt  |  compound-stmt  |  if-stmt  |  while-stmt  |   for-stmt  |  return-stmt
+
+expression-stmt --> expression ;  |  e ;
+
+if-stmt  -->  if-start if-remainder
+if-start  -->  if ( expression ) statement
+if-remainder  -->  e  |  else statement
+
+
+while-stmt --> while ( expression ) statement
+
+
+for-stmt --> for ( optional-expression ; optional-expression ; optional-expression ) statement
+
+
+return-stmt --> return ;  |  return expression ;
+
+
+
+
+expression --> or-expr  =  expression  | or-expr  +=  expression  | 
+		or-expr  -=  expression  | or-expr
+
+
+or-expr --> and-expr (|| and-expr)*
+
+//or-expr -->  and-expr  rest-of-or-expr
+//rest-of-or-expr --> || and-expr rest-of-or-expr | e
+
+
+and-expr -->  relational-expr (&& relational-expr)*
+//and-expr -->  relational-expr rest-of-and-expr
+//rest-of-and-expr -->	&& relational-expr rest-of-and-expr | e
+
+
+
+//relational-expr --> additive-expr rest-of-relational-expr 
+
+//rest-of-relational-expr --> <= additive-expr rest-of-relational-expr |  >= additive-expr rest-of-relational-expr |  
+			< additive-expr rest-of-relational-expr |  > additive-expr rest-of-relational-expr | 
+			 == additive-expr rest-of-relational-expr |  != additive-expr rest-of-relational-expr |  e
+
+relational-expr --> additive-expr (<= additive-expr rest-of-relational-expr |  >= additive-expr rest-of-relational-expr |  
+			< additive-expr rest-of-relational-expr |  > additive-expr rest-of-relational-expr | 
+			 == additive-expr rest-of-relational-expr |  != additive-expr rest-of-relational-expr )*
+
+//additive-expr --> term rest-of-additive-expr 
+//rest-of-additive-expr --> + term rest-of-additive-expr |  - term  rest-of-additive-expr |  e
+additive-expr --> term (+ term |  - term )*
+
+
+//term --> unary-expr rest-of-term 
+//rest-of-term --> * unary-expr rest-of-term  |  / unary-expr  rest-of-term  |  % unary-expr rest-of-term  |   e
+term --> unary-expr (* unary-expr  |  / unary-expr  |  % unary-expr )*
+
+unary-expr --> primary-expr  |  + unary-expr |  - unary-expr |  ! unary-expr
+	 |  &  unary-expr |  * unary-expr
+
+primary-expr -->  ( expression )  | id  |  id [ expression ]  |  id ( args )  |  num  |  real
+
+
+//args  -->  expression rest-of-args 
+//rest-of-args --> , expression rest-of-args  |  e
+args  -->  expression (, expression )*
