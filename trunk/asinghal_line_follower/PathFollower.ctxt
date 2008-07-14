@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=world
+comment0.target=void\ addedToWorld(World)
+comment1.target=void\ act()
+comment1.text=\nAct\ -\ moves\ pathFollower\ by\ one\ grid\ \n\n\n
+comment2.params=x\ y
+comment2.target=boolean\ canMove(int,\ int)
+comment2.text=\ndetermines\ if\ a\ legal\ move\ is\ possible\n@return\ true\ or\ false\ if\ possible\ to\ move\n\n
+comment3.params=x\ y
+comment3.target=int\ getHeuristicCost(int,\ int)
+comment4.params=node
+comment4.target=boolean\ getWhiteValue(int[])
+comment5.target=void\ setGValues()
+comment6.params=x\ y
+comment6.target=boolean\ isNotInClosedList(int,\ int)
+comment7.params=x\ y
+comment7.target=void\ setLocationAndSave(int,\ int)
+comment8.params=node
+comment8.target=void\ removeFromOpenList(int[])
+numComments=9

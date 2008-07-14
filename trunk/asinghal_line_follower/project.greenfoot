@@ -1,0 +1,16 @@
+#Greenfoot properties
+#Fri Apr 13 05:35:44 EDT 2007
+class.ai_Agent.superclass=greenfoot.Actor
+simulation.speed=49
+mainWindow.width=1280
+class.PathFollower.image=car01.png
+class.PathFollower.superclass=greenfoot.Actor
+class.PathWorld.superclass=greenfoot.World
+class.Goal.superclass=greenfoot.Actor
+class.ai_World.superclass=greenfoot.World
+version=1.2.0
+class.BreadCrumb.superclass=greenfoot.Actor
+mainWindow.y=0
+mainWindow.x=0
+class.Wall.superclass=greenfoot.Actor
+mainWindow.height=977

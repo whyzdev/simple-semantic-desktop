@@ -1,0 +1,35 @@
+#Greenfoot properties
+#Mon Apr 16 00:04:01 EDT 2007
+class.Counter.superclass=greenfoot.Actor
+class.Goal.image=smiley100.png
+class.Wombat.superclass=greenfoot.Actor
+mainWindow.height=970
+class.TomatoPile.superclass=greenfoot.Actor
+class.Creature.superclass=greenfoot.Actor
+class.Ship.superclass=greenfoot.Actor
+version=1.2.0
+class.ebWorld2.superclass=greenfoot.World
+class.Paint.superclass=greenfoot.Actor
+class.Rock.superclass=greenfoot.Actor
+class.BreadCrumb.superclass=greenfoot.Actor
+class.Wall.superclass=greenfoot.Actor
+class.ai_Agent.image=camel.gif
+class.Wall.image=rock.gif
+class.BreadCrumb.image=greenfoot.png
+simulation.speed=0
+class.Timer.superclass=Counter
+class.PathFollower.superclass=
+mainWindow.y=26
+mainWindow.x=0
+class.WombatWorld.superclass=greenfoot.World
+class.Greep.superclass=Creature
+class.Leaf.superclass=greenfoot.Actor
+class.ai_World.superclass=greenfoot.World
+class.ScoreBoard.superclass=greenfoot.Actor
+class.ebAgent3.image=camel.gif
+class.ebAgent3.superclass=greenfoot.Actor
+class.PathWorld.superclass=
+mainWindow.width=1280
+class.ai_Agent.superclass=greenfoot.Actor
+class.Earth.superclass=greenfoot.World
+class.Goal.superclass=greenfoot.Actor

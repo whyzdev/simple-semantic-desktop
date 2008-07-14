@@ -1,0 +1,23 @@
+CSCI 364 Artificial Intelligence 
+The Doctor Is In
+Spring 2007
+--------------------------------
+-----------------------------------------------------------------------------
+Eliza, originally written by Joseph Weizenbaum at MIT, is an "Artifically 
+Intelligent" dialog program that pretends to be 'The doctor'.
+
+To compile Eliza type:
+	javac eliza.java 
+To run Eliza type:
+	java eliza
+
+To exit Eliza, enter a resposne with the word 'bye' in it.
+
+------------------------------------------------------------------------------
+Extra: I built Eliza using a HashMap and an array of Strings for the keywords,
+so that it can be easily extended to recognize more keywords and give more 
+responses.
+
+------------------------------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment
+-Akshat Singhal

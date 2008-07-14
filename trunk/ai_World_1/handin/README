@@ -1,0 +1,23 @@
+--------------------------------
+CSCI 364 Artificial Intelligence 
+Searching: A* and DFS
+Spring 2007
+--------------------------------
+-----------------------------------------------------------------------------
+ai_Agent.java: Searches a path to the first Goal object in the current World
+that it can find. On each act(), ai_Agent clears old BreadCrumbs and moves 
+on the path to the goal.
+
+To do an A* search: simply add an ai_Agent to the world and Run
+To do a DFS Search: add an ai_Agent to World, 
+		    right click on Agent, and select paintDFS()
+
+The web version is at:
+http://cs.oberlin.edu/~asinghal/astar/
+it runs with an Extra info flag (EXTRAINFO) set to true, which makes it
+display the different heuristic values, too.
+
+
+------------------------------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment
+-Akshat Singhal
