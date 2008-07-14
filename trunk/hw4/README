@@ -1,0 +1,16 @@
+CS 241, Assignment 4
+----------------------------------------------------------
+This assignment handin includes these files:
+
+-Makefile
+-README - this file
+-sort.c, sort.h - the sort program
+-format.c, format.h - the format program
+-format.1.dat, format.2.dat - testing data for format	
+-sort.1.dat, sort.2.dat - testing data for sort
+-debug.h - debugging library (provides dprint and dsprint)
+
+----------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment and have had a blast doing so.
+
+- Akshat Singhal

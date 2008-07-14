@@ -1,0 +1,16 @@
+CS 241, Assignment 2
+----------------------------------------------------------
+This assignment handin includes two source files:
+- rundmc.c : n-queens solver program in C
+- rundmc.java : n-queens solver program in Java
+(also includes a Makefile)
+
+Since the problem deals with queens, it naturally lead to the best hip-hop group from queens, i.e. Run DMC, and so the name of the source files. 
+
+Java Notes
+-------------------------------
+Java is much slower, as expected and takes 4 times as much time as the optimized C version to run at n=12. I also realized that my C program is slower than yours, it would be interesting to look at your code. I also added gcj compilation options as the 'make rundmc_gcj' as a Makefile target, but unfortunately gcj is not properly configured on occs or the lab machines. It would be interesting to measure performance against compiled Java.
+
+I agree that I have adhered to the honor code in this assignment and have had a blast doing so.
+
+- Akshat Singhal
