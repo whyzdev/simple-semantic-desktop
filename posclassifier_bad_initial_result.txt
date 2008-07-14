@@ -1,0 +1,209 @@
+---------------------------_
+sci.crypt:-516.0455692604779
+rec.sport.hockey:-554.8274500619026
+talk.politics.guns:-564.7472277420366
+talk.politics.mideast:-572.0859204754253
+sci.crypt:-530.1619582019383
+rec.sport.hockey:-566.7977942275194
+talk.politics.guns:-579.3438536062365
+talk.politics.mideast:-586.4968703311623
+_---------------------------_
+sci.crypt:-530.1619582019383
+rec.sport.hockey:-566.7977942275194
+talk.politics.guns:-579.3438536062365
+talk.politics.mideast:-586.4968703311623
+sci.crypt:-544.1111102736805
+rec.sport.hockey:-581.9793116255481
+talk.politics.guns:-594.103382281513
+
+mPosTexts[np]:-------------
+Susan Dart Re In-Reply-To Chad Nicholas Fri Apr
+mPosTexts[nns]:-------------
+Lines
+mPosTexts[np$]:-------------
+Hunter's
+mPosTexts[nn]:-------------
+ESPN message Organization Software Engineering Institute
+mPosTexts[:]:-------------
+: : : : : : : :
+mPosTexts[(]:-------------
+(
+mPosTexts[)]:-------------
+)
+mPosTexts[in]:-------------
+From of
+mPosTexts[,]:-------------
+,
+mPosTexts[jj]:-------------
+Subject
+mPosTexts[cd]:-------------
+23 1993 11 16 36 -0400 9
+talk.politics.mideast:-600.4690691687589
+_---------------------------_
+sci.crypt:-544.1111102736805
+rec.sport.hockey:-581.9793116255481
+talk.politics.guns:-594.103382281513
+talk.politics.mideast:-600.4690691687589
+Got best category of: sci.crypt
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=sci.crypt -544.1111102736805 0.9999999999960132 -544.1111102736805
+1=rec.sport.hockey -581.9793116255481 3.985983634357183E-12 -581.9793116255481
+2=talk.politics.guns -594.103382281513 8.929488334566097E-16 -594.103382281513
+3=talk.politics.mideast -600.4690691687589 1.08283897273059E-17 -600.4690691687589
+
+---------------
+Testing on talk.politics.mideast/54009 Reading POS tagging HMM from file=pos-en-general-brown.HiddenMarkovModel
+Removed nil set
+Document rec.sport.hockey/54009's POS wordbags:
+mPosTexts[np]:-------------
+Gerald Olchowy Re Bowman Toronto
+mPosTexts[uh]:-------------
+golchowy
+mPosTexts[nn]:-------------
+alchemy credit Organization University Chemistry Department
+mPosTexts[vbz]:-------------
+needs
+mPosTexts[(]:-------------
+(
+mPosTexts[)]:-------------
+)
+mPosTexts[.]:-------------
+.
+mPosTexts[in]:-------------
+From of
+mPosTexts[nps$]:-------------
+@
+mPosTexts[jj]:-------------
+Subject
+mPosTexts[nns]:-------------
+Lines
+mPosTexts[:]:-------------
+: : : : :
+mPosTexts[cd]:-------------
+22
+sci.crypt:-154.48159527247506
+rec.sport.hockey:-90.1777604765232
+talk.politics.guns:-140.08863696425374
+talk.politics.mideast:-161.6977216002267
+_---------------------------_
+rec.sport.hockey:-90.1777604765232
+talk.politics.guns:-140.08863696425374
+sci.crypt:-154.48159527247506
+talk.politics.mideast:-161.6977216002267
+rec.sport.hockey:-261.99471983182644
+talk.politics.guns:-304.0395510111407
+sci.crypt:-313.9353695710311
+talk.politics.mideast:-332.4238062811487
+_---------------------------_
+rec.sport.hockey:-261.99471983182644
+talk.politics.guns:-304.0395510111407
+sci.crypt:-313.9353695710311
+talk.politics.mideast:-332.4238062811487
+rec.sport.hockey:-282.34342597113664
+talk.politics.guns:-323.5879656743267
+sci.crypt:-334.2705029117613
+talk.politics.mideast:-351.5379728109358
+_---------------------------_
+rec.sport.hockey:-282.34342597113664
+talk.politics.guns:-323.5879656743267
+sci.crypt:-334.2705029117613
+talk.politics.mideast:-351.5379728109358
+rec.sport.hockey:-304.3707739775575
+talk.politics.guns:-367.1645276316186
+sci.crypt:-354.3719368839348
+talk.politics.mideast:-374.95824793255724
+_---------------------------_
+rec.sport.hockey:-304.3707739775575
+sci.crypt:-354.3719368839348
+talk.politics.guns:-367.1645276316186
+talk.politics.mideast:-374.95824793255724
+rec.sport.hockey:-326.4946574448458
+sci.crypt:-368.80519004798913
+talk.politics.guns:-392.5361677773973
+talk.politics.mideast:-402.4828938273231
+_---------------------------_
+rec.sport.hockey:-326.4946574448458
+sci.crypt:-368.80519004798913
+talk.politics.guns:-392.5361677773973
+talk.politics.mideast:-402.4828938273231
+rec.sport.hockey:-329.41136564070456
+sci.crypt:-371.7216643552218
+talk.politics.guns:-395.73438466241976
+talk.politics.mideast:-405.82058474665496
+_---------------------------_
+rec.sport.hockey:-329.41136564070456
+sci.crypt:-371.7216643552218
+talk.politics.guns:-395.73438466241976
+talk.politics.mideast:-405.82058474665496
+rec.sport.hockey:-332.3193485510332
+sci.crypt:-374.6345522509783
+talk.politics.guns:-398.899209356509
+talk.politics.mideast:-408.9384966513994
+_---------------------------_
+rec.sport.hockey:-332.3193485510332
+sci.crypt:-374.6345522509783
+talk.politics.guns:-398.899209356509
+talk.politics.mideast:-408.9384966513994
+rec.sport.hockey:-335.2530788797655
+sci.crypt:-377.81570885114917
+talk.politics.guns:-402.1802386700059
+talk.politics.mideast:-412.226183922927
+_---------------------------_
+rec.sport.hockey:-335.2530788797655
+sci.crypt:-377.81570885114917
+talk.politics.guns:-402.1802386700059
+talk.politics.mideast:-412.226183922927
+rec.sport.hockey:-338.17094210498414
+sci.crypt:-380.7393973672584
+talk.politics.guns:-405.31959212235427
+talk.politics.mideast:-415.3655373752754
+_---------------------------_
+rec.sport.hockey:-338.17094210498414
+sci.crypt:-380.7393973672584
+talk.politics.guns:-405.31959212235427
+talk.politics.mideast:-415.3655373752754
+rec.sport.hockey:-347.485545636994
+sci.crypt:-391.15417866416084
+talk.politics.guns:-416.0991753079596
+talk.politics.mideast:-425.9660710689984
+_---------------------------_
+rec.sport.hockey:-347.485545636994
+sci.crypt:-391.15417866416084
+talk.politics.guns:-416.0991753079596
+talk.politics.mideast:-425.9660710689984
+rec.sport.hockey:-359.4558898026108
+sci.crypt:-405.27056760562124
+talk.politics.guns:-430.6958011721596
+talk.politics.mideast:-440.37702092473546
+_---------------------------_
+rec.sport.hockey:-359.4558898026108
+sci.crypt:-405.27056760562124
+talk.politics.guns:-430.6958011721596
+talk.politics.mideast:-440.37702092473546
+rec.sport.hockey:-409.2337289723201
+sci.crypt:-520.3898804689412
+talk.politics.guns:-481.08964872428015
+talk.politics.mideast:-510.52307426594524
+_---------------------------_
+rec.sport.hockey:-409.2337289723201
+talk.politics.guns:-481.08964872428015
+talk.politics.mideast:-510.52307426594524
+sci.crypt:-520.3898804689412
+rec.sport.hockey:-424.4152463703488
+talk.politics.guns:-495.8491773995566
+talk.politics.mideast:-524.4952731035418
+sci.crypt:-534.3390325406834
+_---------------------------_
+rec.sport.hockey:-424.4152463703488
+talk.politics.guns:-495.8491773995566
+talk.politics.mideast:-524.4952731035418
+sci.crypt:-534.3390325406834
+Got best category of: rec.sport.hockey
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=rec.sport.hockey -424.4152463703488 1.0 -424.4152463703488
+1=talk.politics.guns -495.8491773995566 3.1350469707250067E-22 -495.8491773995566
+2=talk.politics.mideast -524.4952731035418 7.462940626022626E-31 -524.4952731035418
+3=sci.crypt -534.3390325406834 8.121628606420421E-34 -534.3390325406834
+
+---------------
+Total Accuracy: 0.23713355048859935

@@ -1,0 +1,42 @@
+CLUSTER SCORE
+Equivalence Evaluation
+  Total=676
+  True Positive=84
+  False Negative=86
+  False Positive=60
+  True Negative=446
+  Positive Reference=170
+  Positive Response=144
+  Negative Reference=506
+  Negative Response=532
+  Accuracy=0.7840236686390533
+  Recall=0.49411764705882355
+  Precision=0.5833333333333334
+  Rejection Recall=0.8814229249011858
+  Rejection Precision=0.8383458646616542
+  F(1)=0.535031847133758
+  Fowlkes-Mallows=156.46085772486356
+  Jaccard Coefficient=0.3652173913043478
+  Yule's Q=0.7578828828828829
+  Yule's Y=0.45865842405424284
+  Reference Likelihood=0.2514792899408284
+  Response Likelihood=0.21301775147928995
+  Random Accuracy=0.6426420643534889
+  Random Accuracy Unbiased=0.6433817093239032
+  kappa=0.3956302356341549
+  kappa Unbiased=0.39437674116073307
+  kappa No Prevalence=0.5680473372781065
+  chi Squared=107.04976950630471
+  phi Squared=0.15835764719867562
+  Accuracy Deviation=0.01582684389422258
+MUC Evaluation
+  MUC Precision = 0.8421052631578947
+  MUC Recall = 0.7272727272727273
+  MUC F(1) = 0.7804878048780488
+B-Cubed Evaluation
+  B3 Cluster Averaged Precision = 0.852405247813411
+  B3 Cluster Averaged Recall = 0.5022675736961452
+  B3 Cluster Averaged F(1) = 0.6320869642132746
+  B3 Element Averaged Precision = 0.6978021978021977
+  B3 Element Averaged Recall = 0.49816849816849834
+  B3 Element Averaged F(1) = 0.581323729868906
