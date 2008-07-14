@@ -1,0 +1,22 @@
+CS 241, Assignment 3
+----------------------------------------------------------
+This assignment handin includes these files:
+
+-Makefile
+-README - this file
+-game.c	- the game of Battle on Ice Plateau C			   
+-game.h - function prototypes for functions in game, and struct definitions for lobber & chomper.
+-hw03.h - parameters of game, i.e. board size, default positions, etc.
+-util.c	- utility functions 
+-util.h - function prototypes for util functions
+
+Implementation details: 
+I implemented chompers and lobbers as structs and maintained a 
+global array of pointers to chompers and lobbers to keep track of them.
+Also, color escape codes were used to make the board more visible.x
+
+
+----------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment and have had a blast doing so.
+
+- Akshat Singhal

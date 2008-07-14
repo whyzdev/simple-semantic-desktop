@@ -1,0 +1,9 @@
+CS 241, Assignment 1
+----------------------------------------------------------
+This assignment handin includes three source files:
+- hello.c : a hello world program
+- dos2unix.c  : a program to convert dos files to unix
+- diamond.c : a program to print a beautiful diamond
+(also includes a Makefile)
+
+- Akshat Singhal

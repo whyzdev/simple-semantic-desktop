@@ -1,0 +1,19 @@
+CS 241, Assignment 5
+----------------------------------------------------------
+This assignment handin includes these files:
+
+-Makefile
+-README - this file
+-additup.c, additup.h - the additup program
+
+Design Decisions:
+1. I used a typedef struct to make the code more readable.
+2. I used a short int instead of an int in BigInt
+3. isTail and isHead flags in BigInt indicate if this BigInt is the Head or Tail of the Linked List. This change was the most useful, in my opinion, because it helped me iterate though the Linked List at ease without worrying about null pointers, etc.
+
+
+----------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment and have had a blast doing so.
+
+- Akshat Singhal
+

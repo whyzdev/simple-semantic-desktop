@@ -1,0 +1,19 @@
+CS 241, Assignment 7
+----------------------------------------------------------
+This assignment handin includes these files:
+
+-Makefile
+-README - this file
+-test1.cpp, test2.cpp, test3.cpp : test cases
+-factorial.cpp : factorial program
+-BigInteger.cpp : BigInteger class implementation
+-BigInteger.h : BigInteger class header file
+-as_1000!:1000! as calculated from my program. There's a discrepancy with the actual 1000!, but I didn't have time to figure it out.
+
+
+
+----------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment and have had a blast doing so.
+
+- Akshat Singhal
+
