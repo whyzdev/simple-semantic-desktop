@@ -1,0 +1,60 @@
+CSCI 364 Artificial Intelligence 
+Classification with Perceptrons
+Spring 2007
+--------------------------------
+-----------------------------------------------------------------------------
+In order to test the Perceptron for all functions except the Odd function, type
+	make
+at the command prompt. The Makefile compiles all necessary files, generates
+necassary input, output, and config files, and then runs the training input
+against the trained perceptron to yield a file of actual outputs. It also
+runs diff between the actual and expected output files to show if the 
+perceptron is correctly trained.
+
+In order to compile and test the Perceptron for an individual function, type
+	make <function name>
+where <function name> can be in the list (or, major, nand, odd, fn4). So, for
+example, typing "make or" tests the OR function.
+
+"make clean" removes all binaries, and "make clean_data" removes all data files
+
+FN4
+-----------------------------------------------------------------------------
+The function I chose to implement was the odd number function. It returns a 1
+if the number represented by the bitstring is an odd number, otherwise returs
+a 0.
+
+
+The Odd function
+-----------------------------------------------------------------------------
+I don't think the Odd function is not solvable by a perceptron because it
+is not linearly seperable for N=2 (in fact for 2 bits it is the same as the
+XOR function which is the simplest example of a linearly inseperable function),
+and so I'm conjecturing that it is not linearly separable for N=8 bits.
+By trial, I noticed that the weights keep cycling around the same values as
+training progresses for the Odd function every few cycles.  I think the set of
+all possible weight combinations that the perceptron can reach through 
+training is limited, and no matter how many epochs we let it take, the weights
+will keep cycling around in that set.
+
+Answers
+-----------------------------------------------------------------------------
+1.) The choice of initial weights can affect how long training takes. If the
+initial weights are such that error is 0 in the first run, training will take
+only 1 epoch, whereas inoptimal sets of weights can be chosen such that 
+training takes more than 1 epoch. I noticed this when sometimes the OR function
+would get trained in 1 epoch, while other times it would take 4.
+
+2.) Yes they do. Different initial weights result in final weights that are
+closer to each other if the learning rate is set low. For example, training
+my or function using a learning rate of 0.01 resulted in weight sets that are
+much closer to each other and to the threshold value.
+
+3.) It takes a different number of epochs because weigths are initialized to a
+random value, and so some sets of such randomly selected weights might be 
+better at getting a low error value than others. 
+
+
+------------------------------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment
+-Akshat Singhal

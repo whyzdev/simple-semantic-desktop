@@ -1,0 +1,64 @@
+--------------------------------
+CSCI 364 Artificial Intelligence 
+A Simple Genetic Algorithm
+Spring 2007
+--------------------------------
+-----------------------------------------------------------------------------
+GA is a simple genetic algorithm that finds the maximum value of the function:
+(sin(x-k)*sin(y-k))/((x-k)*(y-k))
+
+GA takes arguments of the format:
+java ga SelectionMethod PopulationSize BitStringLength NumberOfGenerations
+	 ProbCrossover ProbMutation Elitism
+example: $ java ga R 20 10 100 0.7 0.01 1
+
+* SelectionMethod - [R or A] Roulette Wheel Selection (R)  or 
+Alternative Selection (A).
+* PopulationSize - [1 to 2E9] Number of Chromosomes in the population.
+* BitStringLength - [10 to 100, even numbers only] length of the 
+bitstring that represents both solutions
+* NumberOfGenerations - [1 to 2E9] number of iterations the system should 
+run through
+* ProbCrossover - [0.00 to 1.00] Probability of two selected individuals 
+to crossover
+* ProbMutation - [0.00 to 1.00] Probability of mutation in a Chromosome 
+in the population
+* Elitism - [0 or 1] Whether the overall best solution is saved or not
+
+------------------------------------------------------------------------------
+Successful Parameter sets:
+------------------------------------------------------------------------------
+
+In my experimentation, I found these two parameter sets to solve the problem
+with the most certainty:
+java ga A 200 18 100 0.8 0.01 1
+java ga R 20 30 600 0.9 0.09 1
+At a wasteful computational cost, this parameter set will almost 
+certainly solve the problem:
+java ga A 200 18 20000 0.8 0.1 1
+
+------------------------------------------------------------------------------
+Notes on the program:
+------------------------------------------------------------------------------
+- I use Tournament Selection as the alternative selection strategy, where
+  n/10 Chromosomes are selected at Random, and the fittest among them 
+  is selected. (Where n=population size).
+- I used uniform crossover instead of single point crossover because it seemed
+  more interesting, and because it makes more sense with my encoding scheme.
+- My encoding scheme:
+  There is a minimum of 5 bits required per number in the bit string because
+  the range is 0 to 20, and the rest of the bits are for extra precision,
+  with each successive bit after the 5th adding a negative power of 2 to the 
+  number like this:
++---+---+---+---+---+---+---+---+----+----+
+|1  |1  |1  |1  |1  |1  |1  |1  |1   |1   |...
++---+---+---+---+---+---+---+---+----+----+
+|16 |8  |4  |2  |1  |1/2|1/4|1/8|1/16|1/32|...
++---+---+---+---+---+---+---+---+----+----+
+- For more diagnostic output about what the GA is doing, enable the diag1 
+  to diag7 flags in ga.java:line 39 and Chromo.java:line 11, by setting them
+  to the value true.
+
+------------------------------------------------------------------------------
+I agree that I have adhered to the honor code in this assignment
+-Akshat Singhal

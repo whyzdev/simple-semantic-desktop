@@ -1,0 +1,12 @@
+java.lang.StackOverflowError
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:105)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)
+	at greenfoot.collision.BVHInsChecker$Node.getIntersections(BVHInsChecker.java:106)

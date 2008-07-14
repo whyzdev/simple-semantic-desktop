@@ -1,0 +1,24 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files\Java\jdk1.5.0_06\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-source
+1.5
+-noindex
+-notree
+-nohelp
+-nonavbar
+-d
+L:\Greenfoot\scenarios\asinghal_line_follower\doc
+-classpath
+L:\Greenfoot\lib\extensions\greenfoot.jar;L:\Greenfoot\lib\bluejcore.jar;L:\Greenfoot\lib\bluejeditor.jar;L:\Greenfoot\lib\bluejext.jar;L:\Greenfoot\lib\antlr.jar;L:\Greenfoot\lib\MRJ141Stubs.jar;L:\Greenfoot\lib\junit.jar;L:\Greenfoot\lib\bluej.jar;L:\Greenfoot\scenarios\asinghal_line_follower
+L:\Greenfoot\scenarios\asinghal_line_follower\PathFollower.java
+<---- end of javadoc command ---->
+Loading source file L:\Greenfoot\scenarios\asinghal_line_follower\PathFollower.java...
+L:\Greenfoot\scenarios\asinghal_line_follower\PathFollower.java:83: illegal start of expression
+                goto OnWhiteLine;
+                ^
+1 error

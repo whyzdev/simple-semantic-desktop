@@ -1,0 +1,3 @@
+comments on Greenfoot:
+- Greenfoot sometimes crashes at compile time (in Windows). 
+- In general, loops that run long often crash Greenfoot. Since the editing, compiling and runtime environment are the same, i.e. BlueJ, crashes get more and more frustrating. I don't think Greenfoot scales up too well. An A* pathfinder will often be computationally intensive, so this might be a concern. 

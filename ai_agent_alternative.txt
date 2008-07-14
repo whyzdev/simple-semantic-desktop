@@ -1,0 +1,455 @@
+g
+import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import java.awt.*;   // for use of Point
+import java.util.*;  // for use of ArrayList
+
+/**
+ * ai_Agent is capable of Depth First Search and A* pathfinding to reach a goal
+ * 
+ * @author Akshat Singhal
+ * @version April 13, 2007
+ */
+public class ai_Agent extends Actor
+{    
+    // directions. adding 1 mod 7 changes direction by 45 degress
+    private static final int EAST  = 0;
+    private static final int NORTH_EAST = 1;
+    private static final int NORTH = 2;
+    private static final int NORTH_WEST = 3;    
+    private static final int WEST  = 4;
+    private static final int SOUTH_WEST = 5;   
+    private static final int SOUTH = 6;    
+    private static final int SOUTH_EAST = 7;
+    // number of directions
+    private static final int DIRECTIONS = 8;     
+    private static final int NONE = -1;
+    
+    //basic global variables
+    private GreenfootImage greenfootImage;
+    private World myWorld;
+    private int   x_width;
+    private int   y_width;
+    private int   move_count;
+    
+    //special breadcrumb images
+    private GreenfootImage possiblepath1;
+    private GreenfootImage possiblepath2;
+    private GreenfootImage definitepath;
+
+
+    /**
+     * 
+     */
+    public void addedToWorld(World world) // this is the defacto contructor
+    {
+        myWorld = getWorld();
+        greenfootImage = getImage();
+
+        x_width = myWorld.getWidth();
+        y_width = myWorld.getHeight();
+
+        randomDirection();
+
+        // either run this sequence here, or
+        // comment this below and uncomment the
+        // code in act()
+        possiblepath1=new GreenfootImage(4,8);
+        possiblepath1.setColor(java.awt.Color.BLUE);
+        possiblepath1.fill();
+        possiblepath2=new GreenfootImage(4,8);
+        possiblepath2.setColor(java.awt.Color.GREEN);
+        possiblepath2.fill();
+        definitepath=new GreenfootImage(4,8);
+        definitepath.setColor(java.awt.Color.RED);
+        definitepath.fill();
+         
+        Point start = new Point();
+        Point goal = new Point();
+        
+        ArrayList path = DFS(start, goal);
+
+        ProcessPath(path);    
+    }   
+
+
+
+
+    /**
+     * Act - do whatever the ai_Agent wants to do. This method is
+     * called whenever the 'Act' or 'Run' button gets pressed in the
+     * environment.
+     */
+    public void act() 
+    {
+
+        // Add your action code here.
+
+    if (foundWall() == NONE)
+        followCrumbTrail();
+    else
+        randomDirection();
+
+    // System.out.println("move #: " + move_count);
+    }    
+
+
+
+
+    /**
+     * identify the author/creator of the agent
+     *
+     * @return a string that contains the name of the agent author
+     */
+    public String id()
+    {
+    return "Akshat Singhal";
+    }
+
+
+
+
+    /**
+     * detects a wall if present, and its direction
+     * 
+     * @return the direction where a wall was found. If
+     *    none was found, NONE is returned. Direction is defined
+     *    the constants EAST, WEST, NORTH, SOUTH
+     */
+    public int foundWall()
+    {
+    int result    = NONE;
+    int direction = getDirection();
+
+    int x_offset  = 0;
+    int y_offset  = 0;
+
+    switch(direction)
+        {
+        case EAST: x_offset++;
+        break;
+
+        case WEST: x_offset--;
+        break;
+
+        case NORTH: y_offset--;
+        break;
+
+        case SOUTH: y_offset++;
+        break;
+        
+        case NORTH_EAST: x_offset++; y_offset--;        
+        break;
+
+        case NORTH_WEST:  x_offset--; y_offset--;        
+        break;
+        
+        case SOUTH_EAST:  x_offset++; y_offset++;       
+        break;
+        
+        case SOUTH_WEST:  x_offset--; y_offset++;       
+        break;
+        
+
+        }
+    
+    Actor wall = getOneObjectAtOffset(x_offset, y_offset, Wall.class);
+    
+    
+    if (wall != null)
+        result = direction;
+
+    
+    return result;
+    }
+
+
+
+    /**
+     * only allow 4 cardinal directions as defined by
+     * constants EAST, WEST, NORTH, SOUTH
+     *
+     * @return direction as defined by constants EAST, WEST, NORTH, SOUTH
+     */
+
+    public int getDirection()
+    {
+    int direction = NORTH;
+
+        int rot = getRotation();
+
+    if (rot == 0) // east
+        direction = EAST;
+    else if (rot == 180) // west
+        direction = WEST;
+    else if (rot == 90)  // south
+        direction = SOUTH;
+    else if (rot == 45)
+        direction = SOUTH_EAST;
+    else if (rot == 135)
+        direction = SOUTH_WEST;        
+    else if (rot == -45)
+        direction = NORTH_EAST;
+    else if (rot == -135)
+        direction = NORTH_WEST;        
+    return direction;
+    }
+
+
+
+
+    /**
+     * set the agents direction
+     *
+     * @param direction as defined by constants EAST, WEST, NORTH, SOUTH
+     */
+    public void setDirection(int direction)
+    {
+    int rot = 270;
+
+    if (direction == EAST)
+        rot = 0;
+    else if (direction == WEST)
+        rot = 180;
+    else if (direction == SOUTH)
+        rot = 90;
+    else if (direction == NORTH_EAST)
+        rot = -45;
+    else if (direction == NORTH_WEST)
+        rot = -135;
+    else if (direction == SOUTH_EAST)
+        rot = 45;        
+    else if (direction == SOUTH_WEST)
+        rot = 135;    
+    setRotation(rot);
+    }
+
+
+
+    /**
+     * change direction randomly
+     */    
+    public void randomDirection()
+    {
+    // one of the directions
+    int direction = Greenfoot.getRandomNumber(DIRECTIONS); 
+    setDirection(direction);
+    }
+
+
+
+
+    /** 
+     * move the agent
+     */
+    public void move(int direction)
+    {
+        int x = getX();
+        int y = getY();
+        
+        //do not move if already on goal
+        Actor goal = getOneObjectAtOffset(x, y, Goal.class);
+        if (goal != null)
+            return;
+            
+        if (direction == NONE)
+            direction = getDirection();
+                    
+    
+    if (direction == EAST) 
+        {
+        x++;
+        }
+    else if (direction == WEST) 
+        {
+        x--;
+        }
+    else if (direction == SOUTH) 
+        {
+        y++;
+        }
+    else if (direction == NORTH)
+        {
+        y--;
+        }
+    else if (direction == NORTH_EAST)
+        {
+        y--;
+        x++;       
+        }
+    else if (direction == NORTH_WEST)
+        {
+        y--;
+        x--;
+        }
+    else if (direction == SOUTH_EAST)
+        {
+        y++;
+        x++;        
+        }        
+    else if (direction == SOUTH_WEST)
+        {
+        y++;
+        x--;
+        }        
+        
+    if (x < 0)
+        x =0;
+    if (x > x_width)
+        x = x_width -1;    
+    if (y < 0)
+        y =0;
+    if (y > y_width)
+        y = y_width -1;        
+    if (! (y>0 && y <y_width-1 && x >0 && x <x_width-1))
+        randomDirection();
+    move_count++;
+    setLocation(x, y);
+    } 
+
+
+
+
+    /**
+     * make the agent turn left
+     */
+    public void turnLeft()
+    {
+    int rot = getRotation();
+    setRotation ( (rot+90) % 361 );
+    }
+
+
+    /**
+     * reads the directions and has the agent move accordingly
+     *
+     * @param direction for the path from start to goal
+     */
+    public void ProcessPath(ArrayList path)
+    {
+    int path_len = path.size();
+    
+    for(int i = 0; i < path_len; i++)
+        {
+        int dir = (Integer) path.get(i);
+        setDirection(dir);
+
+        int x = getX();
+        int y = getY();
+        BreadCrumb bc = new BreadCrumb();
+        bc.setImage(definitepath);
+        myWorld.addObject(bc, x, y);
+        move(NONE);
+        }
+        
+    }
+
+
+
+    // ---------- SEARCH CODE HERE -----------------
+
+    /**
+     * A* search
+     *
+     * @param start - contains x/y for starting position
+     * @param goal  - contains x/y for goal position
+     *
+     * @return an array list which contains the directions from
+     *         start to goal.
+     */
+    public ArrayList A_Star(Point start, Point goal)
+    {
+    ArrayList path = new ArrayList();
+
+    path.add(EAST);
+    path.add(EAST);
+    path.add(EAST);
+    path.add(EAST);
+    path.add(NORTH);
+    path.add(NORTH);
+    path.add(NORTH);
+    path.add(WEST);
+    path.add(SOUTH);
+    
+
+    path.trimToSize();
+
+    return path;
+    }
+
+
+
+
+    // **** ADD ONE MORE SEARCH HERE
+
+    /**
+     * FS (replace with BFS or DFS)
+     *
+     * @param start - contains x/y for starting position
+     * @param goal  - contains x/y for goal position
+     *
+     * @return an array list which contains the directions from
+     *         start to goal.
+     */
+    public ArrayList DFS(Point start, Point goal)
+    {
+    ArrayList path = new ArrayList();
+        for (int i = 0; i <10; i++){
+                path.add(Greenfoot.getRandomNumber(DIRECTIONS));
+        }
+    return path;
+    }
+    
+    public void testAgent(int x, int y){
+        setLocation(x,y);
+    }
+    
+    private int seeBreadCrumbs(){
+        int x=getX();
+        int y=getY();
+        int originalx=getX();
+        int originaly=getY();
+        
+        for (int i=x-1;i<=x+1;i++)
+            for (int j=y-1;j<=y+1;j++)
+                if (getOneObjectAtOffset(x, y, BreadCrumb.class) != null)
+                    return calculateDirection(originalx,originaly,x,y);
+        return NONE;
+    }
+    
+    private int calculateDirection(int sourcex,int sourcey,int destinationx,int destinationy){
+        int vert = 0;
+        int horz = 0;
+        int direction=NONE;
+    if (destinationx == sourcex){
+        if (destinationy > sourcey)
+            direction=NORTH;
+        else if (destinationy < sourcey)
+            direction=SOUTH;
+        else 
+            direction=NONE;
+    }
+    else if (destinationx > sourcex){
+        if (destinationy > sourcey)
+            direction=NORTH_WEST;
+        else if (destinationy < sourcey)
+            direction=SOUTH_WEST;
+        else
+            direction=WEST;            
+    }
+    else{ // if(destinationx < sourcex)
+        if (destinationy > sourcey)
+            direction=NORTH_EAST;
+        else if (destinationy < sourcey)
+            direction=SOUTH_EAST;
+        else
+            direction=EAST;
+    }
+           return direction;
+    }
+    
+    private void followCrumbTrail(){
+        int bc_direction=seeBreadCrumbs();
+        move(bc_direction);
+        
+    }
+}
