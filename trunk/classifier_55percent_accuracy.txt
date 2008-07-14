@@ -1,0 +1,1655 @@
+0=talk.politics.mideast -3.9961533251846184 1.0 -6245.987647263559
+1=rec.sport.hockey -4.18593699764765 5.068814895586018E-90 -6542.619527323277
+2=sci.crypt -5.364919920594007 0.0 -8385.369835888432
+3=talk.politics.guns -5.927160811025948 0.0 -9264.152347633557
+
+---------------
+Testing on talk.politics.mideast/77177 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8699403210785834 1.0 -12701.144133779911
+1=talk.politics.guns -3.889712769986072 2.918818662674493E-20 -12766.03731109429
+2=rec.sport.hockey -4.443413419895985 0.0 -14583.282844098623
+3=sci.crypt -4.653680003120741 0.0 -15273.37777024227
+
+---------------
+Testing on talk.politics.mideast/77342 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.322202169509979 0.9989542016149126 -11350.102897133205
+1=talk.politics.guns -4.325972036219626 0.0010457983850875525 -11360.002567112737
+2=rec.sport.hockey -4.665956064570611 1.8215970024121635E-272 -12252.800625562424
+3=sci.crypt -4.768216970836343 0.0 -12521.337765416236
+
+---------------
+Testing on talk.politics.mideast/76519 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.565346966063781 1.0 -15309.599872277875
+1=talk.politics.mideast -3.618480409087725 2.08209255558861E-69 -15537.75487662269
+2=sci.crypt -3.925988913937397 0.0 -16858.196396447183
+3=rec.sport.hockey -4.0693492177897355 0.0 -17473.785541189125
+
+---------------
+Testing on talk.politics.mideast/77258 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.708219931049521 1.0 -2928.5127971128018
+1=talk.politics.guns -4.846620322803578 1.2184835684093423E-26 -3014.5978407838256
+2=rec.sport.hockey -5.044251454093062 1.2056930313816187E-63 -3137.5244044458846
+3=sci.crypt -5.186590835767244 2.68854534710338E-90 -3226.0594998472257
+
+---------------
+Testing on talk.politics.mideast/76446 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.5658389669450186 1.0 -5648.288923640909
+1=talk.politics.mideast -3.8230338907918746 2.298027874670385E-123 -6055.68568301433
+2=sci.crypt -4.045114214234491 2.927242004034203E-229 -6407.460915347434
+3=rec.sport.hockey -4.1149378305795175 1.4871610221418126E-262 -6518.061523637956
+
+---------------
+Testing on talk.politics.mideast/77288 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.613710816970664 1.0 -5192.902443986844
+1=talk.politics.guns -3.707543993236167 2.5682356730948935E-41 -5327.740718280372
+2=sci.crypt -4.016373889014873 6.545856963589764E-175 -5771.529278514372
+3=rec.sport.hockey -4.10137661747971 1.1103947791101013E-211 -5893.678199318343
+
+---------------
+Testing on talk.politics.mideast/77179 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.122077586094806 1.0 -3672.771129210472
+1=talk.politics.guns -4.242598551176746 4.72216104195124E-33 -3780.1553090984808
+2=rec.sport.hockey -4.344657623247068 1.995669185719148E-60 -3871.0899423131373
+3=sci.crypt -4.555347372245712 6.15691495717781E-117 -4058.8145086709296
+
+---------------
+Testing on talk.politics.mideast/77284 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.986386262015877 1.0 -5792.219238709069
+1=talk.politics.guns -4.301219271070457 1.963891107303275E-138 -6249.671600865374
+2=rec.sport.hockey -4.3920633192386385 3.616105440432465E-178 -6381.668002853741
+3=sci.crypt -4.431327903437894 2.4212860296670504E-195 -6438.7194436952595
+
+---------------
+Testing on talk.politics.mideast/77235 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.044928015520084 1.0 -7826.935710031364
+1=talk.politics.mideast -4.25859852172073 3.454752508784384E-125 -8240.388139529612
+2=rec.sport.hockey -4.952999652938332 0.0 -9584.054328435672
+3=sci.crypt -5.00650493144749 0.0 -9687.587042350893
+
+---------------
+Testing on talk.politics.mideast/77350 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.774322123942108 1.0 -10292.576431990128
+1=talk.politics.guns -4.485010995086109 0.0 -12230.624983599817
+2=rec.sport.hockey -4.697577002178225 0.0 -12810.292484940019
+3=sci.crypt -4.961468623485754 0.0 -13529.92493624565
+
+---------------
+Testing on talk.politics.mideast/76380 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.8122716757140425 1.0 -11291.948703464994
+1=talk.politics.mideast -3.9046333080336364 4.422545375227754E-83 -11565.52385839563
+2=rec.sport.hockey -4.178099305791424 0.0 -12375.530143754197
+3=sci.crypt -4.18093796524674 0.0 -12383.938253060845
+
+---------------
+Testing on talk.politics.mideast/77255 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.004955454965418 0.9958354542728391 -3544.385577644395
+1=talk.politics.mideast -4.013883821559945 0.004164545727160778 -3552.2871820805517
+2=rec.sport.hockey -4.188995383653019 9.285934733317582E-50 -3707.260914532922
+3=sci.crypt -4.436973111607164 8.011165591253634E-116 -3926.72120377234
+
+---------------
+Testing on talk.politics.mideast/77242 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.769001919502339 1.0 -7692.400096157274
+1=talk.politics.mideast -5.055556138939874 7.249981589072802E-140 -8154.6120521100165
+2=rec.sport.hockey -5.569882976575933 0.0 -8984.22124121698
+3=sci.crypt -5.605484837454319 0.0 -9041.647042813816
+
+---------------
+Testing on talk.politics.mideast/77250 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.097168536058932 1.0 -12684.833787638454
+1=talk.politics.guns -4.2735522687025105 4.095669755844425E-165 -13230.917823902972
+2=rec.sport.hockey -4.544539003254271 0.0 -14069.892754075223
+3=sci.crypt -4.775565783080311 0.0 -14785.151664416644
+
+---------------
+Testing on talk.politics.mideast/77325 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.8940550518390347 0.999999999990407 -5436.100852367293
+1=talk.politics.mideast -3.920273652392632 9.592924921221722E-12 -5472.702018740114
+2=rec.sport.hockey -4.226356992669987 2.2601583980979075E-140 -5899.994361767302
+3=sci.crypt -4.282457966170747 6.003230881598519E-164 -5978.311320774363
+
+---------------
+Testing on talk.politics.mideast/77246 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7120164992677998 1.0 -11900.724896652566
+1=talk.politics.mideast -3.8458389942715803 7.0407706746139055E-130 -12329.759815634687
+2=sci.crypt -4.198116542001647 0.0 -13459.16163365728
+3=rec.sport.hockey -4.234856653436575 0.0 -13576.95043091766
+
+---------------
+Testing on talk.politics.mideast/76432 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.82176345950674 1.0 -7383.6470037670215
+1=talk.politics.mideast -3.866690089912984 7.432299385630259E-27 -7470.445253711885
+2=sci.crypt -4.1779184195376375 7.3089337509661745E-208 -8071.738386546716
+3=rec.sport.hockey -4.207932546881107 2.5582274563323286E-225 -8129.725680574298
+
+---------------
+Testing on talk.politics.mideast/77366 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.464208912787033 1.0 -27367.250411017558
+1=talk.politics.guns -3.908020993216351 0.0 -30873.36584640917
+2=rec.sport.hockey -4.1671419429535295 0.0 -32920.421349332886
+3=sci.crypt -4.545793339532844 0.0 -35911.76738230947
+
+---------------
+Testing on talk.politics.mideast/76478 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9011600756401745 0.7975300834543998 -7361.48906273301
+1=talk.politics.guns -3.9022082109738094 0.2024699165456002 -7363.466894107579
+2=rec.sport.hockey -4.352583343554386 2.9761034516923236E-257 -8213.324769287126
+3=sci.crypt -4.449967307476437 1.42991557939E-312 -8397.088309208037
+
+---------------
+Testing on talk.politics.mideast/77341 Got best category of: sci.crypt
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=sci.crypt -5.783517527554625 1.0 -2602.582887399581
+1=talk.politics.guns -6.137732839422273 1.0393331797685715E-48 -2761.9797777400227
+2=talk.politics.mideast -6.396753111011849 8.491076172244953E-84 -2878.538899955332
+3=rec.sport.hockey -6.904258839238617 1.5151705187054787E-152 -3106.9164776573775
+
+---------------
+Testing on talk.politics.mideast/77243 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.088899711710703 1.0 -4755.3903647195475
+1=talk.politics.guns -4.21289514239311 3.885634743442372E-44 -4899.597050603187
+2=rec.sport.hockey -4.441329656650586 4.121180924491718E-124 -5165.266390684632
+3=sci.crypt -4.764699071387722 2.535557838320805E-237 -5541.34502002392
+
+---------------
+Testing on talk.politics.mideast/77201 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.5009031790056024 1.0 -14511.243676978222
+1=talk.politics.mideast -3.514002536885007 4.518798426216856E-17 -14565.540515388355
+2=sci.crypt -3.8771456688074584 0.0 -16070.768797206914
+3=rec.sport.hockey -3.9503391002980006 0.0 -16374.155570735213
+
+---------------
+Testing on talk.politics.mideast/77330 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.152585335763324 1.0 -6951.427852067804
+1=talk.politics.mideast -4.216304939730215 7.7651300699752E-33 -7058.094469108379
+2=rec.sport.hockey -4.637468450944731 4.525409774545255E-245 -7763.122186881479
+3=sci.crypt -4.656002585976011 2.069467002883861E-254 -7794.148328923842
+
+---------------
+Testing on talk.politics.mideast/77302 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.261717032243309 1.0 -4756.076207983533
+1=talk.politics.guns -4.446872869579654 6.266046650409642E-63 -4962.710122450894
+2=rec.sport.hockey -4.5193272420519275 2.857493286222221E-87 -5043.569202129951
+3=sci.crypt -4.849515359964726 3.384233354350843E-198 -5412.059141720634
+
+---------------
+Testing on talk.politics.mideast/76450 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.9300667829378115 1.0 -5156.247619214409
+1=talk.politics.mideast -4.094882046230268 8.053572107743167E-66 -5372.485244654112
+2=sci.crypt -4.158064347201807 8.95474481707443E-91 -5455.380423528772
+3=rec.sport.hockey -4.432006750100801 5.729677606634363E-199 -5814.7928561322515
+
+---------------
+Testing on talk.politics.mideast/77194 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.812932500275838 1.0 -9852.617580712766
+1=rec.sport.hockey -4.1147006097480405 1.8458782796522227E-235 -10632.386375588936
+2=sci.crypt -4.2005269758456825 3.200194926448693E-302 -10854.161705585244
+3=talk.politics.guns -4.286760801671458 0.0 -11076.98991151905
+
+---------------
+Testing on talk.politics.mideast/77272 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.063055049594872 1.0 -3282.9484800726564
+1=talk.politics.guns -4.515948913965732 6.944044152039542E-111 -3648.8867224843116
+2=rec.sport.hockey -4.636069598095074 4.211044426656747E-140 -3745.94423526082
+3=sci.crypt -4.766241634438477 9.1696824083707E-172 -3851.1232406262893
+
+---------------
+Testing on talk.politics.mideast/77276 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.713324798570012 1.0 -6524.311671087511
+1=talk.politics.guns -3.8426201890102334 4.1154139270414963E-69 -6751.48367209098
+2=rec.sport.hockey -4.218078716146737 1.0733853870159558E-267 -7411.164304269816
+3=sci.crypt -4.3016708604188 6.57747990841E-312 -7558.035701755831
+
+---------------
+Testing on talk.politics.mideast/77326 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.908627993801347 1.0 -8849.13377796625
+1=talk.politics.guns -3.961897737665163 4.954156361395905E-37 -8969.73647807393
+2=rec.sport.hockey -4.383008756979023 4.9E-324 -9923.131825800509
+3=sci.crypt -4.3881039171025655 0.0 -9934.667268320209
+
+---------------
+Testing on talk.politics.mideast/77222 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9712061277779003 1.0 -14232.802761955994
+1=talk.politics.guns -4.653085539045784 0.0 -16676.65857194009
+2=rec.sport.hockey -4.9532158268290365 0.0 -17752.325523355266
+3=sci.crypt -5.173111703301902 0.0 -18540.432344634017
+
+---------------
+Testing on talk.politics.mideast/76443 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.508811778983822 1.0 -2785.9965525131547
+1=talk.politics.mideast -3.8163213605572484 3.1603213267356306E-74 -3030.159160282455
+2=sci.crypt -3.8867767546266396 4.567060731349665E-91 -3086.100743173552
+3=rec.sport.hockey -4.077596162848737 1.1230484086046315E-136 -3237.6113533018975
+
+---------------
+Testing on talk.politics.mideast/76368 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.6478613258190036 1.0 -7919.506938353057
+1=talk.politics.guns -3.69592364481728 3.886319444166603E-32 -8023.850232898315
+2=rec.sport.hockey -4.0427658677862315 8.234128510037433E-259 -8776.844698963909
+3=sci.crypt -4.124183813773599 5.08216866378E-312 -8953.603059702484
+
+---------------
+Testing on talk.politics.mideast/77809 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.767071243795307 1.0 -53267.254078168764
+1=rec.sport.hockey -5.165410627615345 0.0 -57718.29835297387
+2=talk.politics.guns -5.188732983762448 0.0 -57978.902360561595
+3=sci.crypt -5.593619112885799 0.0 -62503.09996738592
+
+---------------
+Testing on talk.politics.mideast/76397 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.552993387104896 1.0 -7530.651062271499
+1=talk.politics.mideast -4.654840117500034 1.950495629494974E-51 -7699.105554345057
+2=rec.sport.hockey -4.741626840239489 1.1987322349002697E-94 -7842.650793756115
+3=sci.crypt -4.906221593112102 1.3378273682734624E-176 -8114.890515007417
+
+---------------
+Testing on talk.politics.mideast/77252 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.906594551923137 0.9999999999997968 -3523.74828583467
+1=talk.politics.guns -3.9533369593302776 2.0327231695916167E-13 -3565.9099373159106
+2=rec.sport.hockey -4.166561565830147 2.5787075961793104E-71 -3758.2385323787926
+3=sci.crypt -4.251772338211727 1.8801889942599263E-94 -3835.098649066978
+
+---------------
+Testing on talk.politics.mideast/77812 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5465618945766466 1.0 -14154.328521255396
+1=talk.politics.guns -3.887693583338931 0.0 -15515.785091105674
+2=sci.crypt -4.116118263417072 0.0 -16427.427989297536
+3=rec.sport.hockey -4.145638273125254 0.0 -16545.242348042888
+
+---------------
+Testing on talk.politics.mideast/77199 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3909824932714896 1.0 -12828.086772046045
+1=talk.politics.guns -3.4674576212178705 8.135682221951336E-88 -13117.392181067204
+2=sci.crypt -3.7695114050301006 0.0 -14260.06164522887
+3=rec.sport.hockey -3.859456512062207 0.0 -14600.32398513133
+
+---------------
+Testing on talk.politics.mideast/76551 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.476297973708977 0.9999996590399559 -34454.065503638
+1=talk.politics.guns -4.479089177228258 3.409600440000051E-7 -34475.5493971259
+2=rec.sport.hockey -4.84672948637548 0.0 -37305.276856632074
+3=sci.crypt -5.0941250436244285 0.0 -39209.480460777224
+
+---------------
+Testing on talk.politics.mideast/76546 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.702646846676076 0.9985492831871021 -2313.7022485646294
+1=sci.crypt -4.721807261106178 0.0014507168107079293 -2323.129172464239
+2=talk.politics.mideast -4.781366795469893 2.189843653448653E-12 -2352.432463371187
+3=rec.sport.hockey -4.837332598375686 1.1258991446081893E-20 -2379.9676384008376
+
+---------------
+Testing on talk.politics.mideast/76474 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.691139249153638 1.0 -22372.043079213698
+1=talk.politics.guns -4.787193479560773 1.2687891005479647E-138 -22830.125704025326
+2=rec.sport.hockey -4.906776381637973 2.68370221325787E-310 -23400.416564031493
+3=sci.crypt -5.2838206441109 0.0 -25198.540651764884
+
+---------------
+Testing on talk.politics.mideast/77335 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.192057444748672 1.0 -14965.645077752757
+1=talk.politics.guns -4.355693370148233 1.3938651788368288E-176 -15549.825331429194
+2=rec.sport.hockey -4.586046932987815 0.0 -16372.187550766499
+3=sci.crypt -4.804180280539235 0.0 -17150.923601525068
+
+---------------
+Testing on talk.politics.mideast/76552 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.009627021129846 1.0 -1872.4958188676383
+1=talk.politics.mideast -4.256852029966338 1.757353218521442E-35 -1987.9498979942798
+2=sci.crypt -4.426039025566379 2.8865606262446266E-59 -2066.960224939499
+3=rec.sport.hockey -4.455924074579309 1.8159771088939618E-63 -2080.9165428285373
+
+---------------
+Testing on talk.politics.mideast/77221 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5149224712706344 1.0 -29581.58751821366
+1=talk.politics.guns -3.7910888112158667 0.0 -31905.803435192734
+2=rec.sport.hockey -4.016167445048896 0.0 -33800.065217531504
+3=sci.crypt -4.3695073275078204 0.0 -36773.77366830582
+
+---------------
+Testing on talk.politics.mideast/76536 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8901418135188 1.0 -6126.97335629211
+1=talk.politics.guns -4.16941567196847 3.890915264049235E-133 -6566.82968335034
+2=sci.crypt -4.515268853436779 4.105495376584742E-297 -7111.548444162927
+3=rec.sport.hockey -4.544648019136662 4.831140003622E-311 -7157.820630140242
+
+---------------
+Testing on talk.politics.mideast/76563 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.680424888275476 0.9999999627207522 -5162.50865176785
+1=talk.politics.guns -4.702797555502139 3.727924790134959E-8 -5187.185703718859
+2=sci.crypt -5.036542039617133 5.704993757781957E-119 -5555.305869697699
+3=rec.sport.hockey -5.1434947944263865 1.7542083078905346E-154 -5673.274758252304
+
+---------------
+Testing on talk.politics.mideast/77238 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.581384060328158 1.0 -26717.12509004806
+1=talk.politics.guns -4.277028238563416 0.0 -31906.630659683084
+2=rec.sport.hockey -4.553794244858753 0.0 -33971.305066646295
+3=sci.crypt -4.863823908218032 0.0 -36284.12635530652
+
+---------------
+Testing on talk.politics.mideast/77240 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.005033930845516 0.999998997737912 -1533.9279955138327
+1=talk.politics.mideast -4.057066347929034 1.002186757898794E-6 -1553.85641125682
+2=rec.sport.hockey -4.092835452746784 7.533000941356663E-11 -1567.5559784020184
+3=sci.crypt -4.613826463803226 6.450241462129831E-71 -1767.0955356366353
+
+---------------
+Testing on talk.politics.mideast/76535 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9686915230438817 1.0 -3218.608825188588
+1=talk.politics.guns -4.303911509560394 1.4486355809327525E-82 -3490.4722342534797
+2=rec.sport.hockey -5.724722264421965 0.0 -4642.749756446214
+3=sci.crypt -7.1515491067636425 0.0 -5799.906325585314
+
+---------------
+Testing on talk.politics.mideast/77355 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.635558098410597 1.0 -19053.95999376994
+1=talk.politics.mideast -3.664768056150894 8.231937009420324E-47 -19207.049382286837
+2=sci.crypt -3.9979410104820072 0.0 -20953.2088359362
+3=rec.sport.hockey -4.07475608340016 0.0 -21355.796633100243
+
+---------------
+Testing on talk.politics.mideast/76403 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.143944186352457 1.0 -12174.90801950352
+1=talk.politics.mideast -4.2097902755214 5.807622258163513E-59 -12368.363829481874
+2=sci.crypt -4.518903555022367 0.0 -13276.538644655713
+3=rec.sport.hockey -4.547553345951915 0.0 -13360.711730406725
+
+---------------
+Testing on talk.politics.mideast/77850 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3140465808833386 1.0 -8507.15757312753
+1=talk.politics.guns -3.931877419541485 0.0 -10093.129335962993
+2=sci.crypt -4.229731873804651 0.0 -10857.72172005654
+3=rec.sport.hockey -4.321906226328858 0.0 -11094.33328298618
+
+---------------
+Testing on talk.politics.mideast/77192 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.4746882280280498 0.9999999665344548 -12095.389721765641
+1=talk.politics.guns -3.4818220252672436 3.346554527406198E-8 -12120.222469955275
+2=sci.crypt -3.8430781225546307 0.0 -13377.754944612669
+3=rec.sport.hockey -3.8978466873712105 0.0 -13568.404318739184
+
+---------------
+Testing on talk.politics.mideast/77357 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.4050859771999025 0.9999999999999571 -5781.835989285434
+1=talk.politics.mideast -3.431240042862977 4.2793445226327574E-14 -5826.245592781335
+2=sci.crypt -3.7628255979612404 1.386036559189241E-183 -6389.2778653381865
+3=rec.sport.hockey -3.818688071109222 3.870179976371479E-212 -6484.132344743459
+
+---------------
+Testing on talk.politics.mideast/76475 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.277959971831469 0.9999163056456227 -20504.262144988228
+1=talk.politics.mideast -4.280785840685054 8.369435437736089E-5 -20517.806534403462
+2=rec.sport.hockey -4.705231399647656 0.0 -22552.174098511216
+3=sci.crypt -4.7763273333422 0.0 -22892.936908709165
+
+---------------
+Testing on talk.politics.mideast/76386 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.837298727386279 1.0 -6665.3878894699665
+1=rec.sport.hockey -4.012103367941614 3.949648004587405E-92 -6969.0235501145835
+2=sci.crypt -5.315129135942857 0.0 -9232.379309132742
+3=talk.politics.guns -5.787463320046322 0.0 -10052.82378692046
+
+---------------
+Testing on talk.politics.mideast/76567 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.942031496561472 1.0 -2503.1900003165347
+1=talk.politics.mideast -4.083389575839559 9.524255447482917E-28 -2592.9523806581196
+2=sci.crypt -4.091995695904136 2.1564349082543914E-29 -2598.4172668991264
+3=rec.sport.hockey -4.248803396613363 2.2872293933889372E-59 -2697.9901568494856
+
+---------------
+Testing on talk.politics.mideast/76433 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7671238884234652 0.9999859100758703 -3284.9320307052617
+1=talk.politics.guns -3.7856043429001636 1.4089924129598539E-5 -3301.046987008943
+2=rec.sport.hockey -4.0053381321202925 2.945738054822307E-63 -3492.6548512088953
+3=sci.crypt -4.044099128750886 1.9701712465685408E-73 -3526.454440270772
+
+---------------
+Testing on talk.politics.mideast/76407 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.835886262553015 0.9999999999988811 -4537.853448600216
+1=talk.politics.mideast -3.8694459163071646 1.1188888661634267E-12 -4577.5545189913755
+2=rec.sport.hockey -4.1835457119686765 1.5561219301278486E-124 -4949.134577258945
+3=sci.crypt -4.405550983571704 1.3547609397792098E-203 -5211.766813565326
+
+---------------
+Testing on talk.politics.mideast/77266 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.914301115743671 1.0 -12408.334536907438
+1=talk.politics.mideast -3.981880412619024 3.246657217679668E-65 -12622.560908002306
+2=rec.sport.hockey -4.220219623321504 1.1820857427408915E-292 -13378.096205929167
+3=sci.crypt -4.312651435819606 0.0 -13671.105051548151
+
+---------------
+Testing on talk.politics.mideast/77323 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.112866668733848 1.0 -7933.719803987594
+1=talk.politics.mideast -4.176426207975994 1.2354086290467597E-37 -8056.326155185692
+2=rec.sport.hockey -4.433164148702196 1.0173293341269775E-186 -8551.573642846535
+3=sci.crypt -4.5124917387629875 8.769447930855793E-233 -8704.596564073803
+
+---------------
+Testing on talk.politics.mideast/77291 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.053810313877266 1.0 -9591.31520263361
+1=talk.politics.guns -4.164316042218906 1.966685459723425E-79 -9852.771755889931
+2=rec.sport.hockey -4.427803357499127 4.249402866883147E-267 -10476.182743842935
+3=sci.crypt -4.539364961840912 0.0 -10740.137499715598
+
+---------------
+Testing on talk.politics.mideast/77244 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.114842174193921 1.0 -3612.831428942263
+1=talk.politics.guns -4.252458088220547 4.24147775475671E-37 -3733.6582014576406
+2=rec.sport.hockey -4.420886618709301 1.2915946779136768E-81 -3881.538451226766
+3=sci.crypt -4.8466878540122735 3.715466927859526E-194 -4255.391935822776
+
+---------------
+Testing on talk.politics.mideast/76440 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8590674739186746 1.0 -11916.800359460867
+1=talk.politics.guns -3.9197016298643144 4.3217866344222054E-57 -12104.038633021002
+2=sci.crypt -4.1408732242578665 1.0935383477195846E-262 -12787.01651650829
+3=rec.sport.hockey -4.247870437256843 0.0 -13117.42391024913
+
+---------------
+Testing on talk.politics.mideast/77253 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5415611710899086 1.0 -8666.200185657006
+1=talk.politics.guns -3.610877926919662 8.70690159847325E-52 -8835.818287172413
+2=sci.crypt -3.8939597023755197 2.606472456986116E-260 -9528.519391712896
+3=rec.sport.hockey -3.988109035970204 0.0 -9758.902811019088
+
+---------------
+Testing on talk.politics.mideast/77819 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -5.296717766339143 1.0 -4523.396972453628
+1=rec.sport.hockey -5.4046450179912275 1.79516163113711E-28 -4615.5668453645085
+2=talk.politics.mideast -5.430433753298792 4.2106135104449956E-35 -4637.590425317168
+3=sci.crypt -5.581135216486121 7.622036918840756E-74 -4766.289474879148
+
+---------------
+Testing on talk.politics.mideast/77248 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.30338484686964 0.9998760968331696 -6054.862479545583
+1=talk.politics.mideast -4.312608955293464 1.2390316683047204E-4 -6067.840800097903
+2=rec.sport.hockey -4.481859659914922 2.553178653907457E-76 -6305.976541500295
+3=sci.crypt -4.846786827352698 6.957768189341152E-231 -6819.429066085246
+
+---------------
+Testing on talk.politics.mideast/76384 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.9007656690135573 1.0 -4107.506249471276
+1=talk.politics.mideast -3.987446184155099 3.338972503437251E-28 -4198.780831915319
+2=sci.crypt -4.260060677761449 1.2853476370225169E-114 -4485.843893682806
+3=rec.sport.hockey -4.461965199609888 1.283510565668948E-178 -4698.449355189212
+
+---------------
+Testing on talk.politics.mideast/76355 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.210438565081876 1.0 -5069.3680323585795
+1=rec.sport.hockey -4.415910821181188 3.3776287712373864E-75 -5316.756628702151
+2=sci.crypt -4.460749426538033 1.8936627804593743E-91 -5370.742309551792
+3=talk.politics.guns -4.565845799621492 1.535186419901393E-129 -5497.278342744276
+
+---------------
+Testing on talk.politics.mideast/76402 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.1304574323731114 1.0 -3321.4153357478713
+1=talk.politics.guns -4.572412858634138 0.0 -4851.33004301082
+2=rec.sport.hockey -4.748737379165293 0.0 -5038.410359294376
+3=sci.crypt -5.11254041863808 0.0 -5424.405384175003
+
+---------------
+Testing on talk.politics.mideast/77361 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.425898880878274 0.9996941635360943 -2717.5019128592608
+1=talk.politics.guns -4.4449127418854975 3.0583646390565557E-4 -2729.176423517695
+2=rec.sport.hockey -4.721946643318823 1.9082864972187056E-55 -2899.2752389977572
+3=sci.crypt -4.796881790037767 2.6927700339308447E-69 -2945.285419083189
+
+---------------
+Testing on talk.politics.mideast/76414 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.896809397032367 1.0 -2472.8887455013455
+1=talk.politics.mideast -5.010483868421953 5.2382962613500775E-18 -2530.2943535530862
+2=rec.sport.hockey -5.126729846106691 1.1154737306018156E-35 -2588.9985722838787
+3=sci.crypt -5.181753341707673 4.817030684795134E-44 -2616.785437562375
+
+---------------
+Testing on talk.politics.mideast/76381 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.883173801337099 1.0 -889.2468005061957
+1=sci.crypt -4.1867749047944 1.1775899800867327E-21 -958.7714531979177
+2=talk.politics.mideast -4.20714370177966 4.6435847992399493E-23 -963.435907707542
+3=rec.sport.hockey -4.429477493833766 2.188165749860898E-38 -1014.3503460879324
+
+---------------
+Testing on talk.politics.mideast/77381 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7840484130328176 1.0 -11787.310806597226
+1=talk.politics.guns -4.135526617524572 0.0 -12882.165413589042
+2=rec.sport.hockey -4.3159201351753405 0.0 -13444.091221071187
+3=sci.crypt -4.551071902414867 0.0 -14176.58897602231
+
+---------------
+Testing on talk.politics.mideast/76548 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.816931357691171 1.0 -6170.48906920239
+1=rec.sport.hockey -4.965677673725227 4.3705009859960384E-58 -6361.033100042016
+2=talk.politics.mideast -4.967972175599667 5.698056225749943E-59 -6363.9723569431735
+3=sci.crypt -5.1385330852850055 9.641107038734237E-125 -6582.460882250092
+
+---------------
+Testing on talk.politics.mideast/77236 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5881378080157575 1.0 -12310.900819302064
+1=talk.politics.guns -3.686500366773025 2.557486425145051E-102 -12648.38275839825
+2=rec.sport.hockey -4.356788758691807 0.0 -14948.14223107159
+3=sci.crypt -4.550490947014216 0.0 -15612.734439205775
+
+---------------
+Testing on talk.politics.mideast/77395 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7469665761376927 1.0 -9198.802944418036
+1=talk.politics.guns -3.8212465888121385 1.2733368333183368E-55 -9381.1603755338
+2=rec.sport.hockey -4.146639535407239 4.2681210094434965E-296 -10180.000059424772
+3=sci.crypt -4.198950016699431 0.0 -10308.422290997103
+
+---------------
+Testing on talk.politics.mideast/77337 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8481192276557765 1.0 -4633.135550097555
+1=talk.politics.guns -4.114218436192906 3.588990552247484E-97 -4953.518997176258
+2=rec.sport.hockey -4.179924604119577 5.500741926676571E-121 -5032.629223359971
+3=sci.crypt -4.393152457638616 2.871399142920085E-198 -5289.355558996893
+
+---------------
+Testing on talk.politics.mideast/77217 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.639315919819999 1.0 -18138.350544382876
+1=talk.politics.mideast -3.826521600182121 1.346004971452642E-281 -19071.38365530769
+2=rec.sport.hockey -3.966100380851282 0.0 -19767.04429816279
+3=sci.crypt -4.0811977490437625 0.0 -20340.689581234114
+
+---------------
+Testing on talk.politics.mideast/76569 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.91446828533704 1.0 -3284.2388913977766
+1=talk.politics.mideast -4.0440356443459535 1.8876783034944868E-33 -3392.9459056062547
+2=sci.crypt -4.244691046551456 3.958800350980639E-84 -3561.2957880566714
+3=rec.sport.hockey -4.427783648726124 2.2642958197735657E-130 -3714.910481281218
+
+---------------
+Testing on talk.politics.mideast/77347 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.5685120306003455 1.0 -8963.420604037878
+1=talk.politics.mideast -4.6112794662550645 5.503775839771484E-26 -9047.330312792437
+2=rec.sport.hockey -4.945174823206866 3.4284727746881034E-223 -9702.433003131871
+3=sci.crypt -5.221274385029382 0.0 -10244.140343427647
+
+---------------
+Testing on talk.politics.mideast/77810 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.27013936962044 1.0 -15389.275873433791
+1=talk.politics.guns -3.7051315564071903 0.0 -17436.349104452238
+2=rec.sport.hockey -4.008020631926919 0.0 -18861.74509384808
+3=sci.crypt -4.112700937381448 0.0 -19354.370611317096
+
+---------------
+Testing on talk.politics.mideast/77374 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.9338648680539716 1.0 -10841.731576356746
+1=talk.politics.mideast -4.0072174266642016 1.3927750444616805E-61 -11043.89122788654
+2=sci.crypt -4.222264746710227 5.398943789200857E-240 -11636.561641933386
+3=rec.sport.hockey -4.44350104858189 0.0 -12246.28888989169
+
+---------------
+Testing on talk.politics.mideast/77358 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7893714581888864 1.0 -13440.90056219598
+1=talk.politics.mideast -3.9019734045466445 5.873399415459796E-121 -13840.299665926948
+2=sci.crypt -4.030930968288237 1.185804485057804E-258 -14297.712144518377
+3=rec.sport.hockey -4.187553042434616 0.0 -14853.250641515584
+
+---------------
+Testing on talk.politics.mideast/77212 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8042601607531688 1.0 -36113.84170602983
+1=talk.politics.guns -3.895869379085044 1.623211775275959E-262 -36983.48801565432
+2=rec.sport.hockey -4.125150378416602 0.0 -39160.0525423088
+3=sci.crypt -4.2750838400369675 0.0 -40583.37089347093
+
+---------------
+Testing on talk.politics.mideast/77278 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.648105821518511 1.0 -8726.269125072278
+1=talk.politics.guns -3.82516917815456 3.184897785619782E-128 -9149.804674145707
+2=sci.crypt -4.166129730754846 0.0 -9965.382315965591
+3=rec.sport.hockey -4.201135001951592 0.0 -10049.114924668207
+
+---------------
+Testing on talk.politics.mideast/77333 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.924444834717357 1.0 -9053.694233692942
+1=talk.politics.guns -4.015448141927175 6.314936993354304E-64 -9263.638863425993
+2=rec.sport.hockey -4.388872439053789 3.0E-323 -10125.128716897092
+3=sci.crypt -4.399110612556893 0.0 -10148.748183168751
+
+---------------
+Testing on talk.politics.mideast/77251 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.442872501584942 1.0 -12573.329179485387
+1=talk.politics.mideast -4.521756507357408 6.273950367623969E-68 -12796.570915821467
+2=rec.sport.hockey -4.90133979898608 0.0 -13870.791631130607
+3=sci.crypt -4.983708686782261 0.0 -14103.8955835938
+
+---------------
+Testing on talk.politics.mideast/76408 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.242101069671463 1.0 -4513.595538130437
+1=talk.politics.mideast -4.340250106494914 3.658174401008058E-32 -4618.026113310589
+2=sci.crypt -4.524417694436141 3.759570577800185E-91 -4813.980426880054
+3=rec.sport.hockey -4.531737404190085 1.7008464432669013E-93 -4821.76859805825
+
+---------------
+Testing on talk.politics.mideast/76562 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7595324640505523 1.0 -5537.7913195464635
+1=talk.politics.mideast -3.9430677788088633 4.1427396058083666E-82 -5808.138838185456
+2=sci.crypt -4.1518058242737474 1.146176245349041E-174 -6115.60997915523
+3=rec.sport.hockey -4.218274349917841 3.854472605404015E-204 -6213.518117428979
+
+---------------
+Testing on talk.politics.mideast/76374 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.26197328988548 1.0 -4053.136598681092
+1=sci.crypt -4.387226177644013 1.3888734560988956E-36 -4172.252094939457
+2=rec.sport.hockey -4.416064629092758 7.705564677152672E-45 -4199.677462267213
+3=talk.politics.guns -4.487204896953222 3.317434190031571E-65 -4267.331857002514
+
+---------------
+Testing on talk.politics.mideast/76370 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.240190917098446 1.0 -1339.9003298031091
+1=talk.politics.guns -4.6931108822860015 8.237046743750146E-44 -1483.0230388023765
+2=rec.sport.hockey -4.7122663591996865 1.2405024339849898E-45 -1489.076169507101
+3=sci.crypt -4.743104284499143 1.4458565829884354E-48 -1498.8209539017294
+
+---------------
+Testing on talk.politics.mideast/77259 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.0676582028688735 0.9999999999999929 -2757.872261545096
+1=talk.politics.mideast -4.136959381576665 7.173724094176191E-15 -2804.8584607089792
+2=rec.sport.hockey -4.31118277939973 1.9817045054909406E-50 -2922.981924433017
+3=sci.crypt -4.54391571049265 6.260869932597672E-98 -3080.7748517140167
+
+---------------
+Testing on talk.politics.mideast/76479 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -2.9450415179033316 1.0 -156443.55047254288
+1=talk.politics.guns -3.1995947367899737 0.0 -169965.6720130202
+2=rec.sport.hockey -3.5512340034089034 0.0 -188645.10149508435
+3=sci.crypt -3.8026092078446823 0.0 -201998.40372991737
+
+---------------
+Testing on talk.politics.mideast/76447 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.6867198974715203 1.0 -10982.738574567658
+1=talk.politics.mideast -3.7734230577540204 1.7674592090363253E-78 -11241.027289049227
+2=sci.crypt -3.8956639705311646 4.222472988862497E-188 -11605.182968212339
+3=rec.sport.hockey -4.170065107342806 0.0 -12422.623954774219
+
+---------------
+Testing on talk.politics.mideast/77245 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.632698104287698 1.0 -10589.31497399864
+1=talk.politics.mideast -3.677765133158712 2.8416613545547176E-40 -10720.685363157645
+2=rec.sport.hockey -3.974278693158722 1.8289452739984237E-300 -11585.022390557675
+3=sci.crypt -4.082798817752151 0.0 -11901.35855374752
+
+---------------
+Testing on talk.politics.mideast/77225 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9464820187270404 1.0 -20640.10095794242
+1=talk.politics.guns -4.248113000129421 0.0 -22217.630990676873
+2=rec.sport.hockey -4.3171445302105615 0.0 -22578.665893001238
+3=sci.crypt -4.6984571189336775 0.0 -24572.930732023135
+
+---------------
+Testing on talk.politics.mideast/76462 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.995773201679297 1.0 -9290.172693904366
+1=talk.politics.guns -4.158196295345357 2.093780263857753E-114 -9667.806386677956
+2=rec.sport.hockey -4.359589294458495 2.3282540444367696E-255 -10136.045109616
+3=sci.crypt -4.635180709579309 0.0 -10776.795149771893
+
+---------------
+Testing on talk.politics.mideast/76420 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.8930785962492767 1.0 -9907.88502745441
+1=talk.politics.mideast -3.973995625716128 1.0179748296268922E-62 -10113.818867447546
+2=rec.sport.hockey -4.167976730356258 2.4812665395627178E-211 -10607.500778756676
+3=sci.crypt -4.200633133368604 2.3763270815749E-236 -10690.611324423098
+
+---------------
+Testing on talk.politics.mideast/77203 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.121463135256475 1.0 -6973.515624853956
+1=talk.politics.mideast -4.259122544539117 7.659096580179992E-71 -7206.435345360187
+2=rec.sport.hockey -4.517463494337091 1.9956622862407727E-202 -7643.548232418358
+3=sci.crypt -4.595821102302006 2.4502326191528564E-242 -7776.1293050949935
+
+---------------
+Testing on talk.politics.mideast/77380 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.930286357444329 1.0 -8265.392209705424
+1=talk.politics.guns -4.131845250630339 2.5113163488712233E-128 -8689.270562075602
+2=rec.sport.hockey -4.439069277869567 7.9E-323 -9335.3626913597
+3=sci.crypt -4.495187475935186 0.0 -9453.379261891696
+
+---------------
+Testing on talk.politics.mideast/77287 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.70642036630263 1.0 -7023.666594143484
+1=talk.politics.guns -3.8101539357205034 6.683351008905738E-60 -7220.241708190354
+2=sci.crypt -4.088799066451621 7.436459915615266E-219 -7748.274230925821
+3=rec.sport.hockey -4.108052258531061 7.732988412364238E-230 -7784.75902991636
+
+---------------
+Testing on talk.politics.mideast/77332 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.258628890369873 1.0 -6183.529148817055
+1=talk.politics.guns -4.362878293939697 2.7104988248447623E-46 -6334.89928280044
+2=rec.sport.hockey -4.687152079298197 4.947883441850902E-188 -6805.744819140982
+3=sci.crypt -4.699402838444041 2.1860853215028794E-193 -6823.532921420749
+
+---------------
+Testing on talk.politics.mideast/77216 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.5948936732310712 1.0 -9386.267380806326
+1=talk.politics.mideast -3.6650201817430466 7.6087506762362425E-56 -9569.367694531094
+2=sci.crypt -3.985396143422699 1.1728149997406338E-307 -10405.869330476668
+3=rec.sport.hockey -4.075401433151156 0.0 -10640.873141957669
+
+---------------
+Testing on talk.politics.mideast/77367 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.552418104855882 1.0 -47563.326005915405
+1=talk.politics.guns -4.275745357003051 0.0 -57247.95458491385
+2=rec.sport.hockey -4.518716954857955 0.0 -60501.10130859316
+3=sci.crypt -4.6411408121971425 0.0 -62140.234334507535
+
+---------------
+Testing on talk.politics.mideast/77308 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.727552015256273 1.0 -6623.859931110397
+1=talk.politics.guns -4.612688815546623 0.0 -8196.748025226349
+2=rec.sport.hockey -5.06923334624004 0.0 -9008.02765626855
+3=sci.crypt -5.177207201922203 0.0 -9199.897197815753
+
+---------------
+Testing on talk.politics.mideast/77204 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.204768366050093 1.0 -5726.8945145602265
+1=talk.politics.guns -4.267081267585854 2.828345912240626E-26 -5811.764686451933
+2=rec.sport.hockey -4.61044213039237 4.705424273031795E-167 -6279.422181594407
+3=sci.crypt -4.664551770803604 3.0724992521164883E-189 -6353.1195118345095
+
+---------------
+Testing on talk.politics.mideast/77334 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.455007000584373 1.0 -9012.479162182186
+1=talk.politics.guns -4.514857743827984 3.5634777812574608E-37 -9133.557215764013
+2=rec.sport.hockey -4.87395486807158 7.372001500136392E-256 -9860.010698108807
+3=sci.crypt -4.874096727088827 6.042206842712376E-256 -9860.297678900697
+
+---------------
+Testing on talk.politics.mideast/76451 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.323996331333364 1.0 -3593.2409513380253
+1=talk.politics.mideast -4.439805257820014 1.0708057872956233E-29 -3689.4781692484316
+2=rec.sport.hockey -4.538859911597092 1.7807462161560886E-54 -3771.792586537183
+3=sci.crypt -4.688310596761706 7.321961352489902E-92 -3895.9861059089776
+
+---------------
+Testing on talk.politics.mideast/76439 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.245872719308027 0.9999999999962463 -4623.755391326441
+1=talk.politics.mideast -4.2807256718062625 3.753592063446889E-12 -4661.71025659702
+2=rec.sport.hockey -4.592949030372236 1.6628984494429437E-114 -5001.721494075366
+3=sci.crypt -4.713478154084281 5.114552943305478E-154 -5132.977709797782
+
+---------------
+Testing on talk.politics.mideast/77351 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5565356651261952 1.0 -23473.13538983289
+1=talk.politics.guns -4.046451400679255 0.0 -26706.579244483088
+2=rec.sport.hockey -4.290347511093801 0.0 -28316.293573219085
+3=sci.crypt -4.385072920594511 0.0 -28941.481275923772
+
+---------------
+Testing on talk.politics.mideast/77394 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.440857042578468 1.0 -12972.031050520825
+1=talk.politics.guns -3.915510662791516 0.0 -14761.475198724016
+2=rec.sport.hockey -4.281425586628011 0.0 -16140.9744615876
+3=sci.crypt -4.345773008492753 0.0 -16383.564242017677
+
+---------------
+Testing on talk.politics.mideast/77306 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8733081231567277 1.0 -7711.756473205045
+1=talk.politics.guns -3.963729597124244 6.394761483793398E-55 -7891.78562787437
+2=sci.crypt -4.333718412327771 1.1291744963135273E-276 -8628.433358944592
+3=rec.sport.hockey -4.380388366730292 1.2052863085931801E-304 -8721.353238160013
+
+---------------
+Testing on talk.politics.mideast/77297 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.768549410547543 1.0 -4390.360063287888
+1=talk.politics.guns -3.8253686233077393 1.184418583878814E-20 -4456.554446153516
+2=rec.sport.hockey -4.236021919026482 1.141345186266598E-164 -4934.965535665851
+3=sci.crypt -4.267722021805237 8.713501536406053E-176 -4971.896155403101
+
+---------------
+Testing on talk.politics.mideast/76470 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.686411206863983 1.0 -14203.742380046926
+1=talk.politics.mideast -3.7304392916596876 8.574486149645953E-52 -14373.382590764777
+2=sci.crypt -4.121058085162092 0.0 -15878.436802129541
+3=rec.sport.hockey -4.163448871025555 0.0 -16041.768500061462
+
+---------------
+Testing on talk.politics.mideast/77383 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8668317641556844 1.0 -10436.578931456192
+1=talk.politics.guns -3.9279823137867393 2.0720679149281059E-50 -10601.62426491041
+2=rec.sport.hockey -4.274281097596463 0.0 -11536.284682412854
+3=sci.crypt -4.544677347074462 0.0 -12266.084159753973
+
+---------------
+Testing on talk.politics.mideast/77263 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.0964448938866465 1.0 -1872.0753165061976
+1=talk.politics.guns -4.3028675148795195 4.0021547651313295E-29 -1966.4104542999403
+2=sci.crypt -4.562752812467256 7.074397951667491E-65 -2085.178035297536
+3=rec.sport.hockey -4.565313494529884 3.1435085208554964E-65 -2086.348267000157
+
+---------------
+Testing on talk.politics.mideast/76554 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.399553357049538 1.0 -10239.454711433209
+1=talk.politics.mideast -3.4702259783093004 8.336206023609783E-65 -10452.320646667613
+2=sci.crypt -3.779003193971442 0.0 -11382.357620241983
+3=rec.sport.hockey -3.9808318960962095 0.0 -11990.265671041783
+
+---------------
+Testing on talk.politics.mideast/76372 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -5.091295959983495 0.9999999999997522 -2637.2913072714505
+1=rec.sport.hockey -5.172137300982783 2.4781278086001006E-13 -2679.1671219090817
+2=talk.politics.guns -5.24521605830051 9.969985759496812E-25 -2717.0219181996645
+3=sci.crypt -5.6041729422838795 1.0599313004425167E-80 -2902.9615841030495
+
+---------------
+Testing on talk.politics.mideast/77309 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.1353696060553706 1.0 -8691.244547985487
+1=talk.politics.guns -3.8176742220554436 0.0 -10582.59294353769
+2=rec.sport.hockey -3.987750183293591 0.0 -11054.043508089835
+3=sci.crypt -4.203464807147106 0.0 -11652.004445411778
+
+---------------
+Testing on talk.politics.mideast/77191 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.250641783929006 1.0 -4008.3552022450526
+1=talk.politics.guns -4.314916373844505 5.6792306797959385E-19 -4068.966140535368
+2=sci.crypt -4.5094625093180385 3.374643212371185E-74 -4252.42314628691
+3=rec.sport.hockey -4.576335965262414 3.5056934008382152E-93 -4315.4848152424565
+
+---------------
+Testing on talk.politics.mideast/76373 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.584636321027781 1.0 -4272.886494665115
+1=talk.politics.mideast -3.8213536909089094 1.1461399112787264E-85 -4555.05359956342
+2=sci.crypt -3.846596804081077 1.0030163476453776E-94 -4585.143390464644
+3=rec.sport.hockey -4.262483532311176 5.883111187799534E-244 -5080.880370514922
+
+---------------
+Testing on talk.politics.mideast/77210 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.320559728974027 0.7849440014414042 -3836.657039328936
+1=talk.politics.guns -4.322663194471395 0.21505599855859578 -3838.5249166905987
+2=sci.crypt -4.717174491458843 7.48010595632745E-107 -4188.850948415453
+3=rec.sport.hockey -4.795048456833983 1.1403995307713734E-127 -4258.003029668576
+
+---------------
+Testing on talk.politics.mideast/77228 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7672519994620273 1.0 -43783.00273774768
+1=talk.politics.mideast -3.7962499895348776 3.5357715210379508E-102 -44120.017378374345
+2=rec.sport.hockey -4.028548882920322 0.0 -46819.79511729999
+3=sci.crypt -4.111850537516406 0.0 -47787.92694701567
+
+---------------
+Testing on talk.politics.mideast/77805 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.985789732339612 1.0 -7357.767845898924
+1=talk.politics.mideast -4.059870602112367 6.81018686411857E-42 -7494.52113149943
+2=sci.crypt -4.310989143474694 1.933040975436075E-181 -7958.085958854284
+3=rec.sport.hockey -4.406000402721408 3.0786047959641684E-234 -8133.476743423718
+
+---------------
+Testing on talk.politics.mideast/77268 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3566443981781324 1.0 -13463.50068109249
+1=talk.politics.guns -3.909093114100563 0.0 -15679.37248065736
+2=rec.sport.hockey -4.218509139919004 0.0 -16920.440160215123
+3=sci.crypt -4.2595663741713174 0.0 -17085.120726801153
+
+---------------
+Testing on talk.politics.mideast/77301 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.616051839162894 1.0 -2626.533496483687
+1=talk.politics.guns -4.74832023630401 2.2093595314552504E-23 -2701.7942144569815
+2=rec.sport.hockey -4.862478208196983 6.1744220441343555E-43 -2766.750100464083
+3=sci.crypt -5.0871289933359165 2.0466649735939203E-81 -2894.5763972081363
+
+---------------
+Testing on talk.politics.mideast/77271 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.677873844099249 1.0 -4244.266416090533
+1=talk.politics.guns -3.8462401121235676 3.2469480411854778E-59 -4438.561089390597
+2=rec.sport.hockey -4.222480419305131 6.454700882082608E-190 -4872.742403878121
+3=sci.crypt -4.24750948958102 1.3033530230550654E-198 -4901.625950976497
+
+---------------
+Testing on talk.politics.mideast/76429 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.389315584635093 1.0 -3094.4674871677407
+1=talk.politics.mideast -4.542285976311881 3.4330741051503966E-33 -3202.311613299876
+2=sci.crypt -4.56170019992974 2.6030187939193432E-37 -3215.998640950467
+3=rec.sport.hockey -4.6076346394727965 4.645026409462182E-47 -3248.3824208283218
+
+---------------
+Testing on talk.politics.mideast/76454 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.98295080777721 1.0 -13083.993403548135
+1=talk.politics.guns -4.007252325082451 9.303141850530801E-25 -13163.823887895851
+2=sci.crypt -4.365257629840292 0.0 -14339.871314025357
+3=rec.sport.hockey -4.444886328176666 0.0 -14601.451588060347
+
+---------------
+Testing on talk.politics.mideast/77811 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8812016731927192 1.0 -107827.54488464013
+1=talk.politics.guns -4.266896295275497 0.0 -118542.91287534387
+2=sci.crypt -4.31512674639553 0.0 -119882.85126836061
+3=rec.sport.hockey -4.455164164839266 0.0 -123773.37082756449
+
+---------------
+Testing on talk.politics.mideast/76457 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.061512807594272 1.0 -3594.4388347209306
+1=talk.politics.mideast -4.2782258112036065 1.8414233033984623E-58 -3786.229842915192
+2=sci.crypt -4.486566583379449 5.764563012320599E-114 -3970.611426290812
+3=rec.sport.hockey -4.561014034987104 8.454845971923195E-134 -4036.497420963587
+
+---------------
+Testing on talk.politics.mideast/77200 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7100341970951294 0.9978786399215872 -7638.960411818872
+1=talk.politics.mideast -3.7143458683114243 0.0021213600784128405 -7647.838142853223
+2=sci.crypt -3.996468223879671 2.892818911032976E-178 -8228.728072968242
+3=rec.sport.hockey -4.119205051628915 2.434934374596306E-254 -8481.443201303937
+
+---------------
+Testing on talk.politics.mideast/76410 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.8142776927629995 1.0 -7076.988208361609
+1=talk.politics.mideast -4.9319124523097235 8.809697581837898E-53 -7249.911304895293
+2=rec.sport.hockey -5.055275483748893 2.2650664949169124E-107 -7431.254961110873
+3=sci.crypt -5.427140780135097 6.301535317949174E-272 -7977.896946798592
+
+---------------
+Testing on talk.politics.mideast/77343 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3046194000507345 1.0 -9593.310118347283
+1=talk.politics.guns -3.96396363805388 0.0 -11507.386441270413
+2=rec.sport.hockey -4.316862598215749 0.0 -12531.85212262032
+3=sci.crypt -4.492600624924251 0.0 -13042.019614155102
+
+---------------
+Testing on talk.politics.mideast/77193 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.00670496352507 1.0 -6298.54020266141
+1=rec.sport.hockey -4.310896342057869 1.1241219935365408E-144 -6776.72904971497
+2=sci.crypt -4.326584932429681 4.233231260227984E-152 -6801.3915137794575
+3=talk.politics.guns -4.628881727767811 3.7500624008542575E-295 -7276.602076050999
+
+---------------
+Testing on talk.politics.mideast/77220 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.726911925566681 0.999999999999998 -8530.901397622132
+1=talk.politics.mideast -3.748218543128937 2.0821497371115165E-15 -8579.672245222137
+2=sci.crypt -4.046299147672649 8.390504561872196E-221 -9261.978749022692
+3=rec.sport.hockey -4.0682760027225795 6.032089287103872E-236 -9312.283770231985
+
+---------------
+Testing on talk.politics.mideast/77822 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9554004385794945 0.9999759055299288 -14235.486178447602
+1=talk.politics.guns -3.959662984742861 2.4094470071220335E-5 -14250.827082089556
+2=sci.crypt -4.270643848349717 0.0 -15370.047210210632
+3=rec.sport.hockey -4.306076221761533 0.0 -15497.568322119758
+
+---------------
+Testing on talk.politics.mideast/77392 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5502847356672778 1.0 -11059.13695160357
+1=talk.politics.guns -4.118394893850891 0.0 -12828.800094345526
+2=sci.crypt -4.438635629164366 0.0 -13826.349984846998
+3=rec.sport.hockey -4.461487770038668 0.0 -13897.534403670452
+
+---------------
+Testing on talk.politics.mideast/77396 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.37477286523393 1.0 -5490.339945868582
+1=talk.politics.guns -4.641356690586925 1.934601959962563E-101 -5824.90264668659
+2=rec.sport.hockey -4.880324432906497 1.0146967944510201E-191 -6124.8071632976535
+3=sci.crypt -5.1604065141099715 1.560939738801326E-297 -6476.310175208015
+
+---------------
+Testing on talk.politics.mideast/76547 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.0130313798472095 1.0 -10666.637407633883
+1=talk.politics.mideast -4.037910605716482 1.2393464489613183E-20 -10732.76638999441
+2=rec.sport.hockey -4.3552860125442105 1.409793921829221E-274 -11576.350221342513
+3=sci.crypt -4.412537020448777 2.19E-320 -11728.52340035285
+
+---------------
+Testing on talk.politics.mideast/77371 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.4916540349917717 1.0 -27573.59191433002
+1=talk.politics.guns -3.7750556965590842 0.0 -29811.614835727087
+2=rec.sport.hockey -4.011024473862624 0.0 -31675.060270093138
+3=sci.crypt -4.38004690876784 0.0 -34589.23043853963
+
+---------------
+Testing on talk.politics.mideast/76438 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.821346237465877 1.0 -7715.298053443606
+1=talk.politics.mideast -3.883538440940218 1.587997664878642E-38 -7840.864112258299
+2=rec.sport.hockey -4.035749255981565 4.900354252207312E-131 -8148.1777478267795
+3=sci.crypt -4.066116642630962 1.7121844278338172E-149 -8209.489501471911
+
+---------------
+Testing on talk.politics.mideast/77360 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5265971356572456 1.0 -34035.18895622808
+1=talk.politics.guns -3.556063402695513 2.4740471135824252E-86 -34319.5678994144
+2=sci.crypt -3.890885268457297 0.0 -37550.933725881376
+3=rec.sport.hockey -3.8920991355531784 0.0 -37562.648757223724
+
+---------------
+Testing on talk.politics.mideast/76549 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.508393507276068 1.0 -6415.443960853845
+1=rec.sport.hockey -4.651006148218756 8.121542845828345E-62 -6618.38174891529
+2=sci.crypt -6.0296872409832964 0.0 -8580.244943919231
+3=talk.politics.guns -6.7251765582810235 0.0 -9569.926242433896
+
+---------------
+Testing on talk.politics.mideast/76476 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.718495299506478 1.0 -4540.28276069741
+1=talk.politics.guns -4.437966606744618 3.5713734658232707E-265 -5418.757226835179
+2=rec.sport.hockey -4.549770201357965 2.874561456065895E-306 -5555.269415858074
+3=sci.crypt -4.9685447350210845 0.0 -6066.593121460744
+
+---------------
+Testing on talk.politics.mideast/77823 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.816066694033221 0.9999999967137398 -2090.172945210418
+1=rec.sport.hockey -4.8809996574702685 3.286260206453603E-9 -2118.3538513420967
+2=talk.politics.mideast -4.938519904014426 1.0042763963560618E-16 -2143.317638342261
+3=sci.crypt -4.956494164267101 4.503703080051375E-19 -2151.118467291922
+
+---------------
+Testing on talk.politics.mideast/77265 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.6421248318825956 1.0 -9586.072557514992
+1=talk.politics.guns -3.6642149900751058 3.145761609432862E-18 -9644.213853877678
+2=rec.sport.hockey -3.925943241685674 1.3414253283879138E-225 -10333.082612116694
+3=sci.crypt -3.9557306969355706 3.36232412907964E-249 -10411.483194334422
+
+---------------
+Testing on talk.politics.mideast/77816 Got best category of: sci.crypt
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=sci.crypt -4.093743984894316 0.9999999999970053 -3000.7143409275336
+1=talk.politics.mideast -4.145968667455744 2.9947691979658826E-12 -3038.9950332450603
+2=talk.politics.guns -4.178618604846099 1.870647048446537E-19 -3062.9274373521903
+3=rec.sport.hockey -4.263357153754268 3.74980307104111E-38 -3125.0407937018786
+
+---------------
+Testing on talk.politics.mideast/76405 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.271638005664059 1.0 -2545.8962513757792
+1=talk.politics.guns -4.520708722191617 2.0571075449775562E-45 -2694.3423984262035
+2=rec.sport.hockey -4.666504197124992 1.4306240762995195E-71 -2781.236501486495
+3=sci.crypt -5.0728555277896845 1.7801545227807557E-144 -3023.421894562652
+
+---------------
+Testing on talk.politics.mideast/77815 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.3528033580513545 1.0 -4818.553317362849
+1=talk.politics.mideast -4.4220780541602025 8.220269452317547E-24 -4895.240405955345
+2=sci.crypt -4.6135899676599355 1.245709282435036E-87 -5107.244094199548
+3=rec.sport.hockey -4.649505810925051 1.3391021922206134E-99 -5147.002932694031
+
+---------------
+Testing on talk.politics.mideast/77817 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.539579043931712 1.0 -16459.04255428246
+1=talk.politics.guns -3.9632070230243364 0.0 -18428.912657063163
+2=sci.crypt -4.29007602246851 0.0 -19948.85350447857
+3=rec.sport.hockey -4.330820133446523 0.0 -20138.313620526333
+
+---------------
+Testing on talk.politics.mideast/77283 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.5619699668657656 1.0 -7223.675092803773
+1=talk.politics.guns -3.601547840215729 6.888907556897945E-25 -7303.939019957498
+2=sci.crypt -3.7544058944085164 3.3114294914701927E-118 -7613.9351538604715
+3=rec.sport.hockey -3.842959552499643 2.877373802338849E-172 -7793.521972469276
+
+---------------
+Testing on talk.politics.mideast/76458 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.6080495890326567 1.0 -9247.4310966907
+1=talk.politics.guns -3.6465418769118294 2.0029258499259487E-30 -9346.086830525019
+2=sci.crypt -3.954382867895268 6.166858334222328E-268 -10135.083290415572
+3=rec.sport.hockey -4.012566218949922 7.93027679377E-313 -10284.20721916865
+
+---------------
+Testing on talk.politics.mideast/77295 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.738586352696203 1.0 -15339.41980511252
+1=talk.politics.guns -3.9307874309027375 4.049833796988539E-238 -16128.020828993933
+2=rec.sport.hockey -4.2631197861943235 0.0 -17491.58048275531
+3=sci.crypt -4.2746291908394864 0.0 -17538.803570014414
+
+---------------
+Testing on talk.politics.mideast/77356 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.202709154959934 1.0 -4677.615289470406
+1=sci.crypt -4.485397416568024 1.9333915541501516E-95 -4992.247324640211
+2=talk.politics.guns -4.557112154340559 1.8136612022525168E-119 -5072.065827781043
+3=rec.sport.hockey -4.580639020723167 2.3766467009495435E-127 -5098.251230064885
+
+---------------
+Testing on talk.politics.mideast/77384 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7158433881226256 1.0 -25041.068592558375
+1=talk.politics.guns -3.9267627970735 0.0 -26462.454489478318
+2=rec.sport.hockey -4.15853339867542 0.0 -28024.356573673653
+3=sci.crypt -4.2277085676942825 0.0 -28490.52803769177
+
+---------------
+Testing on talk.politics.mideast/76411 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.084990086435538 1.0 -4873.393173117597
+1=talk.politics.mideast -4.134177563060147 2.164518445372785E-18 -4932.073832730755
+2=sci.crypt -4.403275829181349 4.947980505599923E-115 -5253.108064213349
+3=rec.sport.hockey -4.61659253817886 1.2197125552446721E-191 -5507.59489804738
+
+---------------
+Testing on talk.politics.mideast/77399 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.705183377142534 0.9999990050222091 -3501.3982913996947
+1=talk.politics.guns -3.726282669105825 9.949777909848021E-7 -3521.3371223050044
+2=sci.crypt -4.021265795065827 1.2105327970468238E-90 -3800.0961763372065
+3=rec.sport.hockey -4.045944848835269 1.154631923541248E-97 -3823.417882149329
+
+---------------
+Testing on talk.politics.mideast/77185 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.614347751721095 1.0 -6820.274207497707
+1=talk.politics.guns -3.800831591497883 1.172324853903337E-106 -7172.169213156506
+2=sci.crypt -3.8887521900643973 1.3375637451544555E-156 -7338.075382651517
+3=rec.sport.hockey -4.089473035490919 1.2826923146056463E-270 -7716.835617971363
+
+---------------
+Testing on talk.politics.mideast/77188 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.958535482273388 1.0 -12536.681872359819
+1=talk.politics.guns -3.98603201429965 6.1073292961476635E-27 -12623.763389286993
+2=rec.sport.hockey -4.286868147908424 9.5524428973E-314 -13576.511424425978
+3=sci.crypt -4.313265319670867 0.0 -13660.111267397635
+
+---------------
+Testing on talk.politics.mideast/76538 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.408550095063812 0.9999999999999984 -617.1970133089336
+1=sci.crypt -4.759375136970029 1.639681444014138E-15 -666.312519175804
+2=talk.politics.mideast -4.837436925147473 8.412167583825009E-19 -677.2411695206462
+3=rec.sport.hockey -4.857001457306741 1.2600169042103771E-19 -679.9802040229438
+
+---------------
+Testing on talk.politics.mideast/76463 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7126940628813774 1.0 -8453.804381180897
+1=talk.politics.guns -3.8452143345444485 1.460839882336308E-91 -8755.55303975771
+2=sci.crypt -4.015260634367922 4.047301882819564E-208 -9142.748464455759
+3=rec.sport.hockey -4.125837385913094 6.499066025794283E-284 -9394.531727724116
+
+---------------
+Testing on talk.politics.mideast/77232 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.739394735014595 1.0 -10219.765810794888
+1=talk.politics.guns -3.8310351872400643 4.0367081333930844E-76 -10470.219166727096
+2=sci.crypt -4.1217133768151015 2.88886312E-315 -11264.642658835674
+3=rec.sport.hockey -4.222781601740393 0.0 -11540.862117556495
+
+---------------
+Testing on talk.politics.mideast/77362 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.459020189904801 1.0 -32836.478662766276
+1=talk.politics.guns -3.8912578913661307 0.0 -36939.71116273868
+2=rec.sport.hockey -4.119803471380787 0.0 -39109.29435381781
+3=sci.crypt -4.299880296774097 0.0 -40818.763657276504
+
+---------------
+Testing on talk.politics.mideast/77312 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.575020888024898 1.0 -3124.7392665210054
+1=talk.politics.mideast -4.739271680380262 1.696150336654779E-34 -3236.922557699719
+2=rec.sport.hockey -4.874228274916033 3.033317757249902E-62 -3329.09791176765
+3=sci.crypt -4.90346763621938 2.952590817405906E-68 -3349.0683955378368
+
+---------------
+Testing on talk.politics.mideast/77400 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.554831798901341 1.0 -30176.967140873487
+1=talk.politics.mideast -3.6305712236927117 2.832494891712729E-194 -30819.919117927428
+2=rec.sport.hockey -3.9041396465038605 0.0 -33142.24145917127
+3=sci.crypt -4.042280607906095 0.0 -34314.92008051484
+
+---------------
+Testing on talk.politics.mideast/77215 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.962424488423817 1.0 -9038.290258094727
+1=talk.politics.mideast -4.044733239936667 3.039089595801163E-57 -9226.036520295536
+2=rec.sport.hockey -4.516714881797168 0.0 -10302.62664537934
+3=sci.crypt -4.562858680802617 0.0 -10407.88065091077
+
+---------------
+Testing on talk.politics.mideast/76477 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.7825360568636945 0.9999999999999882 -2042.1428962807977
+1=sci.crypt -4.890890689554164 1.1806367621414522E-14 -2088.410324439628
+2=talk.politics.mideast -4.921363947182369 1.4291888283931008E-18 -2101.422405446872
+3=rec.sport.hockey -5.025559290121359 5.778834028145279E-32 -2145.9138168818204
+
+---------------
+Testing on talk.politics.mideast/77821 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.869108398184736 0.9999999569454138 -3851.464742964126
+1=talk.politics.guns -4.900042984498279 4.305458621296015E-8 -3875.934000738139
+2=rec.sport.hockey -5.006825145929755 1.6129252763891272E-33 -3960.398690430436
+3=sci.crypt -5.367074923461475 2.672003199983235E-119 -4245.356264458027
+
+---------------
+Testing on talk.politics.mideast/77269 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3302839676672127 1.0 -10979.9462413988
+1=talk.politics.guns -4.024806789445869 0.0 -13269.787984803028
+2=rec.sport.hockey -4.31723520541826 0.0 -14233.924472264003
+3=sci.crypt -4.471350647325821 0.0 -14742.043084233232
+
+---------------
+Testing on talk.politics.mideast/76430 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.333811895309394 0.9999999995719668 -9564.72285294783
+1=talk.politics.mideast -4.347913190288133 4.2803326761597475E-10 -9595.84441096591
+2=rec.sport.hockey -4.6238672930445395 1.9722733407759109E-193 -10204.875115749299
+3=sci.crypt -4.890828406844572 0.0 -10794.058293905971
+
+---------------
+Testing on talk.politics.mideast/77375 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.424972782779587 1.0 -5593.165597433398
+1=talk.politics.mideast -4.530896686360675 4.963087066854211E-41 -5727.053411559893
+2=rec.sport.hockey -4.847022602802758 2.565874783442923E-161 -6126.636569942686
+3=sci.crypt -4.907233400409774 3.154363178331592E-184 -6202.743018117955
+
+---------------
+Testing on talk.politics.mideast/77391 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3977432396335074 1.0 -12017.817838583716
+1=talk.politics.guns -3.9320673257845193 0.0 -13907.722131299844
+2=sci.crypt -4.1588493452252955 0.0 -14709.850134061871
+3=rec.sport.hockey -4.360586351720423 0.0 -15423.393926035136
+
+---------------
+Testing on talk.politics.mideast/76550 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.4818226904517378 1.0 -12840.96208238601
+1=talk.politics.guns -3.56398400143805 6.090116440468935E-92 -13143.972997303528
+2=rec.sport.hockey -3.951056796724713 0.0 -14571.497466320743
+3=sci.crypt -4.101028631743899 0.0 -15124.593593871501
+
+---------------
+Testing on talk.politics.mideast/77340 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -5.376818708975945 0.9999999799008303 -5274.659153505402
+1=talk.politics.mideast -5.40288220458781 2.009916454801575E-8 -5300.227442700641
+2=sci.crypt -5.425198623906382 5.1630545738043315E-15 -5322.1198500521605
+3=rec.sport.hockey -5.932757735470603 6.689742296445132E-165 -5820.035338496662
+
+---------------
+Testing on talk.politics.mideast/77363 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.702062226697115 1.0 -19483.953499106916
+1=talk.politics.guns -4.253787090356209 0.0 -22387.681456544728
+2=rec.sport.hockey -4.3651644210454545 0.0 -22973.86034796223
+3=sci.crypt -4.622358766323205 0.0 -24327.474187159027
+
+---------------
+Testing on talk.politics.mideast/77190 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -5.420617017476629 1.0 -2634.4198704936416
+1=talk.politics.mideast -6.011023791562443 4.199018223773104E-87 -2921.3575626993475
+2=sci.crypt -6.191808131185899 1.493806684950201E-113 -3009.2187517563466
+3=rec.sport.hockey -6.236460636261589 4.3813414644387484E-120 -3030.9198692231325
+
+---------------
+Testing on talk.politics.mideast/77349 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.7528094928306603 1.0 -21518.609631891006
+1=talk.politics.guns -4.342791871002608 0.0 -24901.568588328955
+2=rec.sport.hockey -4.566428752996477 0.0 -26183.902469681798
+3=sci.crypt -4.82039760881084 0.0 -27640.159888921353
+
+---------------
+Testing on talk.politics.mideast/77180 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.5368674099543154 1.0 -18501.353421471023
+1=talk.politics.mideast -3.6107235409678045 5.0077612092838664E-117 -18887.694842802586
+2=sci.crypt -3.8825898410602306 0.0 -20309.827458586067
+3=rec.sport.hockey -3.990991198022581 0.0 -20876.87495685612
+
+---------------
+Testing on talk.politics.mideast/77209 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.4461000730519893 1.0 -7433.237857573141
+1=talk.politics.mideast -3.6596967150716444 2.027986927860336E-139 -7893.965814409537
+2=sci.crypt -3.9035409690862535 9.412379763718993E-298 -8419.937870319049
+3=rec.sport.hockey -3.9585027949203693 0.0 -8538.490528643237
+
+---------------
+Testing on talk.politics.mideast/76561 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.0149455101235825 1.0 -8491.609753911376
+1=talk.politics.guns -4.10930907867888 8.332019949630444E-61 -8691.18870140583
+2=rec.sport.hockey -4.422333468631209 4.2157006496626125E-260 -9353.235286155006
+3=sci.crypt -4.638640798762657 0.0 -9810.72528938302
+
+---------------
+Testing on talk.politics.mideast/77314 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3214363590679676 1.0 -18085.220975125085
+1=talk.politics.guns -3.6925045885572736 0.0 -20105.687484694354
+2=rec.sport.hockey -4.029324383481726 0.0 -21939.671268058
+3=sci.crypt -4.097440326311115 0.0 -22310.56257676402
+
+---------------
+Testing on talk.politics.mideast/77344 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.823808287260752 1.0 -7410.540460711338
+1=talk.politics.guns -4.003205494053984 2.1895937137459133E-105 -7758.212247476621
+2=rec.sport.hockey -4.3163126908810066 4.729727648943688E-288 -8365.01399492739
+3=sci.crypt -4.524812169885906 0.0 -8769.085985238886
+
+---------------
+Testing on talk.politics.mideast/77808 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.694287762220254 1.0 -8559.664745064329
+1=talk.politics.guns -4.191046500772037 0.0 -9710.65474228881
+2=rec.sport.hockey -4.398744559212584 0.0 -10191.891143695557
+3=sci.crypt -4.56859941507885 0.0 -10585.444844737696
+
+---------------
+Testing on talk.politics.mideast/77294 Got best category of: rec.sport.hockey
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=rec.sport.hockey -5.5165657339951055 0.980411144321383 -1461.8899195087029
+1=talk.politics.mideast -5.537868684407225 0.019588855635990374 -1467.5352013679146
+2=sci.crypt -5.646455972009946 4.262662278823335E-11 -1496.3108325826356
+3=talk.politics.guns -5.735896420140334 3.1242993029114674E-18 -1520.0125513371886
+
+---------------
+Testing on talk.politics.mideast/77249 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.978763074392225 1.0 -11928.33169702789
+1=talk.politics.guns -4.099433174246752 1.2493718926901292E-109 -12290.100656391762
+2=rec.sport.hockey -4.39313327568199 0.0 -13170.613560494607
+3=sci.crypt -4.534982085456483 0.0 -13595.876292198536
+
+---------------
+Testing on talk.politics.mideast/77803 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.266648367153053 0.9999999999999931 -5841.041614632529
+1=talk.politics.mideast -4.301011255682322 6.8977556685582E-15 -5888.084409029099
+2=rec.sport.hockey -4.483827686334059 3.1493204911664573E-90 -6138.360102591327
+3=sci.crypt -4.620978047050816 9.487961583113232E-147 -6326.118946412567
+
+---------------
+Testing on talk.politics.mideast/77369 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.3090720675491183 1.0 -16138.34447343705
+1=talk.politics.guns -3.9439118126488686 0.0 -19234.457910288533
+2=rec.sport.hockey -4.19876324615361 0.0 -20477.368351491157
+3=sci.crypt -4.391384021343616 0.0 -21416.779872092815
+
+---------------
+Testing on talk.politics.mideast/77282 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8735811565750264 1.0 -5682.543556695564
+1=sci.crypt -3.9692245795990244 5.7917787999306866E-43 -5822.852458271769
+2=talk.politics.guns -4.005383650765567 6.231150751888372E-59 -5875.897815673087
+3=rec.sport.hockey -4.2700704588655825 8.053066461534531E-176 -6264.1933631558095
+
+---------------
+Testing on talk.politics.mideast/76445 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.3178195395694186 1.0 -2670.844729353382
+1=talk.politics.mideast -3.4365891414110146 1.6544885062290505E-29 -2766.4542588358668
+2=sci.crypt -3.732727941193008 2.8549674091930224E-101 -3004.8459926603714
+3=rec.sport.hockey -3.746847518119999 1.081474115112709E-104 -3016.212252086599
+
+---------------
+Testing on talk.politics.mideast/76449 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -5.264971203363202 1.0 -17174.336065370764
+1=talk.politics.mideast -5.30023348106886 2.3651528880978294E-35 -17289.36161524662
+2=rec.sport.hockey -5.626879089486446 0.0 -18354.879589904787
+3=sci.crypt -5.699756842028438 0.0 -18592.606818696764
+
+---------------
+Testing on talk.politics.mideast/77183 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.2030144550466977 1.0 -13177.201468062114
+1=talk.politics.guns -3.754395513260652 0.0 -15445.583141554322
+2=rec.sport.hockey -4.101439173639013 0.0 -16873.320760350896
+3=sci.crypt -4.258664425239909 0.0 -17520.145445436985
+
+---------------
+Testing on talk.politics.mideast/77353 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.015736334904817 0.9999405928005856 -4035.815016579341
+1=talk.politics.guns -4.029705406533755 5.9407199414508244E-5 -4049.8539335664236
+2=rec.sport.hockey -4.3331023953025545 9.67357258404809E-97 -4354.767907279067
+3=sci.crypt -4.361144072040371 3.1768311956290824E-105 -4382.949792400574
+
+---------------
+Testing on talk.politics.mideast/76401 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.441614671895667 0.7614881801168472 -9867.109264324878
+1=talk.politics.guns -3.442198822882726 0.2385118198831528 -9868.784025204775
+2=sci.crypt -3.7909372880393217 2.498803958529278E-302 -10868.617204808736
+3=rec.sport.hockey -4.082017640752984 0.0 -11703.144576038805
+
+---------------
+Testing on talk.politics.mideast/77319 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.4411331227841924 1.0 -32384.503818522033
+1=talk.politics.mideast -3.4875067510118005 4.205546464786805E-132 -32820.926033772055
+2=sci.crypt -3.7843121676625544 0.0 -35614.1618098723
+3=rec.sport.hockey -3.9381056976742834 0.0 -37061.51272081268
+
+---------------
+Testing on talk.politics.mideast/77379 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7998640578099527 1.0 -14705.473903724516
+1=talk.politics.mideast -3.8314679018287956 1.5204128862420855E-37 -14827.780780077439
+2=sci.crypt -4.204142298715686 0.0 -16270.030696029706
+3=rec.sport.hockey -4.223146443427459 0.0 -16343.576736064268
+
+---------------
+Testing on talk.politics.mideast/77207 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -2.9837933765580638 1.0 -61409.451482941506
+1=talk.politics.guns -3.2831718012912634 0.0 -67570.95884237549
+2=rec.sport.hockey -3.6798904724951664 0.0 -75735.82581442302
+3=sci.crypt -3.9490639813827504 0.0 -81275.68580083839
+
+---------------
+Testing on talk.politics.mideast/77281 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.966350460509287 1.0 -11046.286032518365
+1=talk.politics.guns -4.028022787176199 1.976340005786663E-52 -11218.043462285714
+2=rec.sport.hockey -4.237908975855749 2.1571707760858623E-228 -11802.576497758262
+3=sci.crypt -4.322000026116411 6.832720701282107E-299 -12036.770072734205
+
+---------------
+Testing on talk.politics.mideast/77187 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -4.28761180139075 0.9999999999817073 -8528.059872966202
+1=talk.politics.mideast -4.305545403593115 1.8292779004286677E-11 -8563.729807746706
+2=rec.sport.hockey -4.550474337079145 4.087037577359065E-158 -9050.89345645042
+3=sci.crypt -4.658361424133714 1.0331411911022065E-222 -9265.480872601958
+
+---------------
+Testing on talk.politics.mideast/76543 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.812254793021118 1.0 -9417.582629942328
+1=talk.politics.guns -4.862322886993005 3.1922705858444436E-30 -9515.565889845311
+2=rec.sport.hockey -5.063262370473859 1.3412042578660304E-148 -9908.804459017341
+3=sci.crypt -5.210777829720365 1.674255233933122E-235 -10197.492212762754
+
+---------------
+Testing on talk.politics.mideast/77324 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -4.275158928639519 0.9999999999999907 -4292.259564354077
+1=talk.politics.guns -4.321570784028211 9.391910191949816E-15 -4338.857067164324
+2=sci.crypt -4.506308626644539 1.3761806321810726E-70 -4524.333861151117
+3=rec.sport.hockey -4.524188805254865 5.4284453696709236E-76 -4542.285560475884
+
+---------------
+Testing on talk.politics.mideast/77311 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.9266391157499845 1.0 -10515.539551978458
+1=talk.politics.guns -4.048129198652637 1.1475136266559016E-98 -10840.889993991761
+2=rec.sport.hockey -4.41535309311562 0.0 -11824.31558336363
+3=sci.crypt -4.517676194585708 0.0 -12098.336849100528
+
+---------------
+Testing on talk.politics.mideast/77230 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -3.8462425649336893 1.0 -42943.29823748464
+1=talk.politics.guns -3.8744439614376738 1.641002057042204E-95 -43258.16682945163
+2=sci.crypt -4.258988952111973 0.0 -47551.611650330175
+3=rec.sport.hockey -4.287276076601209 0.0 -47867.437395252506
+
+---------------
+Testing on talk.politics.mideast/76375 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.7614366456667088 1.0 -9095.153809222102
+1=talk.politics.mideast -3.9306785146223553 6.4631820605452965E-124 -9504.380648356855
+2=sci.crypt -4.256535106586143 0.0 -10292.301887725294
+3=rec.sport.hockey -4.3144870856733455 0.0 -10432.42977315815
+
+---------------
+Testing on talk.politics.mideast/77388 Got best category of: talk.politics.mideast
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.mideast -2.5370092448770256 1.0 -31027.623064846026
+1=talk.politics.guns -3.464287321248014 0.0 -42368.23393886321
+2=rec.sport.hockey -3.734109637610029 0.0 -45668.160867970655
+3=sci.crypt -3.9396455989574 0.0 -48181.865675249006
+
+---------------
+Testing on talk.politics.mideast/76473 Got best category of: talk.politics.guns
+Rank  Category  Score  P(Category|Input)   log2 P(Category,Input)
+0=talk.politics.guns -3.985721360090291 0.9999979491667434 -4113.26444361318
+1=talk.politics.mideast -4.004030813009547 2.0508332565137914E-6 -4132.159799025852
+2=sci.crypt -4.289983472413165 2.999383795096048E-95 -4427.262943530386
+3=rec.sport.hockey -4.35538243102775 1.445434010495972E-115 -4494.7546688206385
+
+---------------
+Total Accuracy: 0.5511400651465798

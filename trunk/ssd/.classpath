@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/usr/users/quota/students/08/asinghal/honors/lib/qtjambi/qtjambi.jar"/>
+	<classpathentry kind="lib" path="/usr/users/quota/students/08/asinghal/honors/lib/lingpipe/lingpipe-3.4.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
