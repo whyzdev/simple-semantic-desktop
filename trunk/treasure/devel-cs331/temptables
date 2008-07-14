@@ -1,0 +1,82 @@
+public Lexer(){
+	
+    hashtable = new Hashtable();
+    operatorStringTable = new Hashtable();
+
+    if(args.length == 0)
+	{
+	    reader = new BufferedReader(new InputStreamReader(System.in));
+	}
+    else 
+	{
+	    reader = new BufferedReader(new FileReader(args[0]));
+	}
+
+    int opStTblCount=8; //operatorStringTable count starts from 8, goes up to 35	
+    int hashcount=0;//hashcount starts from 0, goes up to 35	
+    operatorStringTable.put(new Integer(opStTblCount++),"leftb");//operator string table has strings for  
+    operatorStringTable.put(new Integer(opStTblCount++),"rightb");// every operator
+    operatorStringTable.put(new Integer(opStTblCount++),"leftsqb");
+    operatorStringTable.put(new Integer(opStTblCount++),"rightsqb");
+    operatorStringTable.put(new Integer(opStTblCount++),"colon");
+    operatorStringTable.put(new Integer(opStTblCount++),"dot");
+    operatorStringTable.put(new Integer(opStTblCount++),"asterisk"); /* It's not mult or 'value at' because * can do both*/
+    operatorStringTable.put(new Integer(opStTblCount++),"addressof");
+    operatorStringTable.put(new Integer(opStTblCount++),"mod");
+    operatorStringTable.put(new Integer(opStTblCount++),"NOT");
+    operatorStringTable.put(new Integer(opStTblCount++),"div");
+    operatorStringTable.put(new Integer(opStTblCount++),"plus");
+    operatorStringTable.put(new Integer(opStTblCount++),"minus");
+    operatorStringTable.put(new Integer(opStTblCount++),"less");
+    operatorStringTable.put(new Integer(opStTblCount++),"greater");
+    operatorStringTable.put(new Integer(opStTblCount++),"less-or-eq");
+    operatorStringTable.put(new Integer(opStTblCount++),"greater-or-eq");
+    operatorStringTable.put(new Integer(opStTblCount++),"equals");
+    operatorStringTable.put(new Integer(opStTblCount++),"not eq");
+    operatorStringTable.put(new Integer(opStTblCount++),"pluseq");
+    operatorStringTable.put(new Integer(opStTblCount++),"minuseq");
+    operatorStringTable.put(new Integer(opStTblCount++),"AND");
+    operatorStringTable.put(new Integer(opStTblCount++),"OR");
+    operatorStringTable.put(new Integer(opStTblCount++),"leftcurly");
+    operatorStringTable.put(new Integer(opStTblCount++),"rightcurly");
+    operatorStringTable.put(new Integer(opStTblCount++),"comma");
+    operatorStringTable.put(new Integer(opStTblCount++),"semic");
+
+	
+    hashtable.put("int",new Integer(hashcount++));
+    hashtable.put("float",new Integer(hashcount++));
+    hashtable.put("void",new Integer(hashcount++));
+    hashtable.put("if",new Integer(hashcount++));
+    hashtable.put("else",new Integer(hashcount++));
+    hashtable.put("while",new Integer(hashcount++));
+    hashtable.put("for",new Integer(hashcount++));
+    hashtable.put("return",new Integer(hashcount++));
+    hashtable.put("(",new Integer(hashcount++));
+    hashtable.put(")",new Integer(hashcount++));
+    hashtable.put("[",new Integer(hashcount++));
+    hashtable.put("]",new Integer(hashcount++));
+    hashtable.put(":",new Integer(hashcount++));
+    hashtable.put(".",new Integer(hashcount++));
+    hashtable.put("*",new Integer(hashcount++));
+    hashtable.put("&",new Integer(hashcount++));
+    hashtable.put("%",new Integer(hashcount++));
+    hashtable.put("!",new Integer(hashcount++));
+    hashtable.put("/",new Integer(hashcount++));
+    hashtable.put("+",new Integer(hashcount++));
+    hashtable.put("-",new Integer(hashcount++));
+    hashtable.put("<",new Integer(hashcount++));
+    hashtable.put(">",new Integer(hashcount++));
+    hashtable.put("<=",new Integer(hashcount++));
+    hashtable.put(">=",new Integer(hashcount++));
+    hashtable.put("==",new Integer(hashcount++));
+    hashtable.put("!=",new Integer(hashcount++));
+    hashtable.put("+=",new Integer(hashcount++));
+    hashtable.put("-=",new Integer(hashcount++));
+    hashtable.put("&&",new Integer(hashcount++));
+    hashtable.put("||",new Integer(hashcount++));
+    hashtable.put("{",new Integer(hashcount++));
+    hashtable.put("}",new Integer(hashcount++));
+    hashtable.put(",",new Integer(hashcount++));
+    hashtable.put(";",new Integer(hashcount++));
+
+}

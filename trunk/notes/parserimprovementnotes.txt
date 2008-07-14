@@ -1,0 +1,7 @@
+done 1. need to be able to parse function(void) cases, i.e. cases where a function is defnied without any arguments.
+done (sort of) 2. the child shortening method was not a stellar idea - need to make it more specific.. That's also causing the compound statements to shorten.
+done 3. looking for expression statements within for was also a bad idea - let's correct that shit up and make it like For(opt-expr;opt-expr;opt-expr)
+   - f*ck, it was a problem with return-stmt, not with forstmt
+done 4. int *b is a problem, in params. void*b in vardecls too.
+done 5. empty compound statements are a problem.apparently compuond statements liks {} are allowed in C
+done 6. a() -  implement a call() thing.

@@ -1,0 +1,15 @@
+temp = leftp should be (
+temp = rightp should be )
+stack before parseCompStmt() - [( var-declaration int id(I) ), int, id(ifunc), ( params ( param int id(A) ) ( param float id(B) leftsqb rightsqb ) ( param void asterisk id(C) ) )]
+ stackpointer: 4
+> > > entering parseCompStmt with stack: [( var-declaration int id(I) ), int, id(ifunc), ( params ( param int id(A) ) ( param float id(B) leftsqb rightsqb ) ( param void asterisk id(C) ) )] SP: 4
+parseLocalDecs successful?  true
+> > > entering parseCompStmt with stack: [( var-declaration int id(I) ), int, id(ifunc), ( params ( param int id(A) ) ( param float id(B) leftsqb rightsqb ) ( param void asterisk id(C) ) ), leftc, ( local-declarations ( var-declaration int id(D) ) ), leftc] SP: 6
+parseLocalDecs successful?  true
+### I had to fail parseStmt() because I got a }
+parseLocalStmtList successful?  false
+-)-) recognized a statement in parseStmtList :( compound-statement ( local-declarations ( var-declaration float id(E) num(45) ) ( var-declaration int asterisk id(F) ) ) )
+> > > entering parseCompStmt with stack: [( var-declaration int id(I) ), int, id(ifunc), ( params ( param int id(A) ) ( param float id(B) leftsqb rightsqb ) ( param void asterisk id(C) ) ), leftc, ( local-declarations ( var-declaration int id(D) ) ), ( compound-statement ( local-declarations ( var-declaration float id(E) num(45) ) ( var-declaration int asterisk id(F) ) ) ), return] SP: 7
+entered parseReturnstmt
+next parsed token(should be return)=return
+next parsed token(should be ;)=semic

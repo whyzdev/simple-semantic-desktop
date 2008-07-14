@@ -1,0 +1,1415 @@
+import java.util.*;
+
+/* Akshat Singhal - Chris Fry */
+/* Parser.java */
+
+public class Parser
+{
+    
+    private boolean diag1=false, diag2=false, diag3=false, diag4=false, diag12=true;
+    private boolean diag5=false, diag8=false, diag9=false, diag10=true, diag11=true;
+    private ParseStack stack;
+    private int state;
+
+  
+    public Parser(Lexer lexer){
+	stack = new ParseStack(lexer);
+    }
+
+    public Node parse()
+    {
+	state = 0; //Very Initial state.
+	
+	boolean succ=parseProgram();	
+	if (succ) {
+	    state = 1; // successfully parsed program
+	    if (diag3){
+		System.out.println("size: " + stack.getSize());
+		System.out.println("stackpointer: " + stack.getStackPointer());
+		System.out.println("top of stack is: " + stack.top());
+	    }
+	    ProgramNode progNode = (ProgramNode)stack.pop();
+	    return progNode;
+	}
+	else { 
+	    errorHandler();
+	    return new ErrorNode();
+	}
+    }
+
+
+
+
+    private boolean parseProgram()
+    {
+	ProgramNode progNode = new ProgramNode(0);
+	Object tempNode;
+	int old_stackpointer = stack.getStackPointer();
+
+	boolean succ = true;
+	int numDecs = 0;
+
+
+
+	while(succ==true)
+	    {
+		succ = parseVarDecl();
+		if(!succ){		    
+		    succ = parseFunDecl();				    
+		    //		if (!succ)
+		    //		    tempNode = stack.getNext();
+		    //		    System.out.println ("%2% looping through, I just set tempNode = " + tempNode);
+		}
+
+		if(succ)
+		    {
+			state=2; // successfully parsed a function or variable declaration
+			stack.incStackPointer();
+			numDecs++;
+			
+			if (diag5)
+			    System.out.println("-Success! numDecs:" + numDecs);
+		    }
+		
+	    }
+
+
+	
+	if(numDecs != 0){
+	    progNode = new ProgramNode(numDecs);/*so we don't need a dynamic array*/
+	    // 	    stack.decStackPointer();
+	    // 	    //UNSURE 1
+	    // 	    stack.incStackPointer(); // added an extra stack pointer increment to incrememnt for the last added item again ( I guess)
+	    // 	    // this line was added after testing on a purely VarDecl() test file	    
+	    for(int i = numDecs-1; i >= 0;i--){
+		if (diag12){
+		    System.out.println("%% numDecs: "+numDecs);
+		    System.out.println("%% stackpointer before parseProgram remove: " + stack.getStackPointer());
+		    System.out.println("%% stack before parseProgram remove: " + stack);
+
+		}
+		progNode.children[i]=(Node)stack.remove();
+	    }
+
+	}
+
+	if (diag9) {
+	    System.out.println("%% stackpointer before EOFTOken remove: " + stack.getStackPointer());
+	    System.out.println("%% stack before EOFTOken remove: " + stack);
+	    System.out.println("%% stack size before EOFTOken remove: " + stack.getSize());
+	}
+
+	if (stack.getNext() instanceof EOFToken)
+	    {//NIRVANA:reaching EOF at the end of a valid program
+		state = 4; // successfully reached EOF after an empty/valid program
+		stack.insert(progNode);
+		return true;
+	    }
+	
+	//something else but not EOF after a valid Program
+	//don't stick on the correct program parsed so far,
+	// just go to errorHandler()
+	errorHandler();
+	return false;
+	    
+	
+	// }
+    }
+    
+    private boolean errorHandler(){
+	if (state != 14)
+	    System.err.println("Oops! In the generic error handler at state: " + state);
+	return true;
+    }
+
+
+
+    private boolean parseVarDecl()
+    {
+	VarDeclNode varNode;
+	Object temp;
+	int old_stackpointer = stack.getStackPointer();
+	boolean cont = true;
+	state=11;//parsevardecl started
+	temp = stack.getNext();
+	if(temp instanceof EOFToken)
+	    {
+		stack.setStackPointer(old_stackpointer);
+		return false;
+	    }
+	state=12;//parsevardecl found a non-eof
+	if(!(temp instanceof Token)) {
+
+	    cont = errorHandler();
+	}
+
+
+	if(cont && (((Token)temp).symbolNumber == 0 || ((Token)temp).symbolNumber == 1)) {//If token is an int or float
+	    state=13;//parsevardecl found an int or float token
+	    temp=stack.getNext();
+
+	    
+	    if(cont && (temp instanceof IdentifierToken)){ //If token is an identifier 
+		state=14;//parsevardecl - found identifier
+		temp=stack.getNext();
+		
+		if(cont && (((Token)temp).symbolNumber == 34)){ //If token is a ";"
+		    state=15;//parsevardecl - found ;
+		    
+		    varNode = new VarDeclNode(2);
+		    
+		    temp=stack.remove(); //get rid of the semic
+		    temp=stack.remove(); //get the id
+		    varNode.children[1]=new IdentifierNode((Token)temp);
+		    temp=stack.remove(); //get the type
+		    String string = temp.toString();
+		    if(string.compareTo("int") == 0)
+			varNode.children[0]=new IntNode((Token)temp);
+		    else
+			varNode.children[0]=new FloatNode((Token)temp);
+		    
+		    stack.insert(varNode);
+		    return true;
+		}
+		else if(cont && (((Token)temp).symbolNumber == 10)) //If token is a "["
+		    temp=stack.getNext();
+		else
+		    cont = errorHandler();
+		
+		if(cont && (temp instanceof IntegerToken)) //if token is an integer
+		    temp=stack.getNext();
+		else
+		    cont = errorHandler();
+		
+		if(cont && (((Token)temp).symbolNumber == 11)) //if token is an "]"
+		    temp=stack.getNext();
+		else
+		    cont = errorHandler();
+		
+		if(((Token)temp).symbolNumber == 34) {//if token is a ";"
+		    
+		    varNode = new VarDeclNode(3);
+		    
+		    temp=stack.remove(); //get rid of the semic
+		    temp=stack.remove(); //get rid of the "]"
+		    temp=stack.remove(); //get the num
+		    varNode.children[2]=new NumNode((IntegerToken)temp);
+		    temp=stack.remove(); //get rid of the "["
+		    temp=stack.remove(); //get the id
+		    varNode.children[1]=new IdentifierNode((Token)temp);
+		    temp=stack.remove(); //get the type
+		    String string = temp.toString();
+		    if(string.compareTo("int") == 0)
+			varNode.children[0]=new IntNode((Token)temp);
+		    else
+			varNode.children[0]=new FloatNode((Token)temp);
+		    
+		    stack.insert(varNode);
+		    return true;
+		}					
+		else
+		    cont = errorHandler();
+	    }			  
+	    else if(cont && (((Token)temp).symbolNumber == 14)) //if token is a "*"
+		temp=stack.getNext();
+	    else
+		cont = errorHandler();
+	    
+	    if(cont && (temp instanceof IdentifierToken)) //if token is an identifier
+		temp=stack.getNext();
+	    else
+		cont = errorHandler();
+	    
+	    if(cont && (((Token)temp).symbolNumber == 34)) {//if token is a ";"
+		
+		varNode = new VarDeclNode(3);
+		
+		temp=stack.remove(); //get rid of the semic
+		temp=stack.remove(); //get the id
+		varNode.children[2]=new IdentifierNode((Token)temp);
+		temp=stack.remove(); //get the "*"
+		varNode.children[1]=new TerminalNode((Token)temp);
+		temp=stack.remove(); //get the type
+		String string = temp.toString();
+		if(string.compareTo("int") == 0)
+		    varNode.children[0]=new IntNode((Token)temp);
+		else
+		    varNode.children[0]=new FloatNode((Token)temp);
+		
+		stack.insert(varNode);
+		return true;
+	    }
+	}
+	else if(cont && (((Token)temp).symbolNumber == 2)){// void
+	    temp=stack.getNext();
+
+	    if(cont && (temp instanceof IdentifierToken))
+		temp=stack.getNext();
+	    else
+		cont = errorHandler();
+
+	    if(cont && (((Token)temp).symbolNumber == 34)){//if token is a ";"
+
+		varNode = new VarDeclNode(2);
+		
+		temp=stack.remove(); //get rid of the semic
+		temp=stack.remove(); //get the id
+		varNode.children[1]= new IdentifierNode((Token)temp);
+		temp=stack.remove(); //get the type
+		varNode.children[0]= new VoidNode((Token)temp);
+	
+		stack.insert(varNode);
+		return true;
+	    }
+	}
+	else
+	    cont = errorHandler();				
+	    
+	stack.setStackPointer(old_stackpointer);
+	return false;
+	
+    }// end of parseVarDecl()
+
+    /* 
+    //Dummy parseFunDecl() for testing
+    private boolean parseFunDecl(){
+    return false;
+    }
+    */
+
+      
+    private boolean parseFunDecl()
+    {
+	if (diag1)
+	    System.out.println("I got here(parseFunDecl)");
+
+	FunDeclNode funNode = new FunDeclNode(0);
+	Object temp;
+	boolean succ = false;
+	boolean cont = true;
+	int old_stackpointer = stack.getStackPointer();
+	
+	//System.out.println("stack size = " + stack.getSize() + "stackPointer: " + stack.getStackPointer());	
+	temp=stack.getNext();
+	state=5;//starting to parse a function
+	if(!(temp instanceof Token))
+	    cont = errorHandler();
+	
+	if ((cont) && (temp instanceof EOFToken))
+	    {
+		stack.setStackPointer(old_stackpointer);
+		return false;
+	    }
+	state=5;//parsefuncdel() - first item on stack is a valid token
+	    
+	if (cont && (((Token)temp).symbolNumber == 0 || 
+		     ((Token)temp).symbolNumber == 1 || ((Token)temp).symbolNumber == 2)) //if token is int, float, or void
+	    {
+		temp=stack.getNext();
+		state=6;//parsefuncdel() - first item on stack is a valid int/float/void
+	    }
+	else
+	    cont = errorHandler();	
+
+
+	if(cont && (temp instanceof IdentifierToken)) //If token is an identifier	
+	    {
+		//temp=stack.getNext();
+		state=6;//parsefuncdel() - next item on stack is an identifier
+		state=7;//parsefuncdel() - next item on stack is a (
+		//System.out.println("going to parseParams, stack: " + stack.toString() + " stackpointer= " + stack.getStackPointer());
+		succ = parseParams(); //try to parse next tokens as params
+		//stack.incStackPointer();
+		
+		if (diag8)
+		    System.out.println("Incrememented stack pointer to : " + stack.getStackPointer());
+	    }
+	else
+	    cont = errorHandler();
+	
+	if(cont && succ){
+	    state=8;//parsefuncdel() - parsed params successfully
+	    //	    temp=stack.getNext();
+ 	    state=9;//parsefuncdel() - next item on stack is a ")"
+	    if (diag10){
+		System.out.println("stack before parseCompStmt() - " + stack + "\n stackpointer: " + stack.getStackPointer());
+	    }
+	    succ = parseCompStmt(); //try to parse next tokens as a compd statement
+	    //	    stack.incStackPointer();
+	    if (diag10)
+		System.out.println("stack after parseCompStmt() - " + stack + "\n stackpointer: " + stack.getStackPointer());
+	    stack.incStackPointer();
+	}
+	else
+	    cont = errorHandler();
+
+	if (succ && cont){
+ 	    state=10;//parsefuncdel() - parsed a compound statement successfully
+	    funNode = new FunDeclNode(4);
+	    temp=stack.remove();
+	    if (diag10)
+		System.out.println("tried to remove a compstmtnode, removed a " + temp);
+	    funNode.children[3]= (CompStmtNode)temp;
+		    
+	    //	if(cont) {
+	    //	    temp=stack.getNext(); 
+	    //	    if(succ){
+	    //		temp=stack.remove(); // compound statement
+	
+	    //	    }
+	    //	    else
+	    //		funNode = new FunDeclNode(3);
+		
+
+	    temp=stack.remove(); // get the params
+	    funNode.children[2]= (ParamsNode)temp;
+
+	    temp=stack.remove(); // get the id
+	    funNode.children[1]= new IdentifierNode((Token)temp);
+	    temp=stack.remove(); // get the type
+	    String string = temp.toString();
+	    if(string.compareTo("int") == 0)
+		funNode.children[0]=new IntNode((Token)temp);
+	    else if(string.compareTo("float") == 0)
+		funNode.children[0]=new FloatNode((Token)temp);
+	    else
+		funNode.children[0]=new VoidNode((Token)temp);
+	    
+	    stack.insert(funNode);
+	    
+	    if (diag5)  
+		System.out.println(" created funNode:" + funNode);
+	    if(diag5)
+		System.out.println("stack is: " + stack);
+	    
+	    return true;	    
+	}
+   	    
+	//if method hasn't returned TRUE yet, it means something failed, so return false.
+	errorHandler();
+	return false;
+    
+    } // end of parseFunDecl()
+    
+    /*
+    //Dummy parseParams() for testing
+    private boolean parseParams(){
+	
+    Object temp = stack.getNext();
+    stack.remove();
+    stack.insert(new ParamsNode(0));
+    System.out.println("parseParams: " + stack.toString() + " stackpoint = " + stack.getStackPointer());
+    return true;
+    }
+    */
+      
+    private boolean parseParams(){
+	boolean succ = true;
+	boolean cont = true;
+	boolean gotOne = false;
+	int numParams = 0;
+	ParamsNode paramsNode;
+	Object temp;
+
+	temp = stack.getNext();
+	if (diag10)
+	    System.out.println("temp = " + temp + " should be (");
+	if(cont && (((Token)temp).symbolNumber == 8)) { //If token is a "("
+	    stack.remove();	    
+	    cont=true;
+	} 
+
+	while(succ==true){
+	    if (diag9) {
+		System.out.println("stackpointer before parseparam(): " + stack.getStackPointer());
+		System.out.println("stack before parseparam(): " + stack);	
+	    }
+
+	    succ = parseParam();
+	    if (diag9) {
+		System.out.println("stackpointer after parseparam(): " + stack.getStackPointer());
+		System.out.println("stack after parseparam(): " + stack);
+ 	    }
+
+	    if(succ){
+		stack.incStackPointer();
+		gotOne = true;
+		numParams++;
+
+		temp = stack.getNext();
+		if(((Token)temp).symbolNumber == 33) //if it's ","
+		    stack.remove();
+		else {
+		    succ = false;
+		    stack.decStackPointer();
+		}
+	    }
+	}
+	
+	temp = stack.getNext();
+	if (diag10)
+	    System.out.println("temp = " + temp + " should be )");
+	if(cont && (((Token)temp).symbolNumber == 9)) { //If token is a ")"
+	    stack.remove();	    
+	    cont=true;
+	} 
+
+	
+
+	if (diag9) {
+	    System.out.println("stackpointer after all parseparam()s: " + stack.getStackPointer());
+	    System.out.println("stack after all parseparam()s: " + stack);
+	}
+
+	
+		
+	if(gotOne && cont){
+   	    paramsNode = new ParamsNode(numParams);	    
+	    for(int i=numParams-1; i >= 0; i--){
+
+		if (diag9)
+		    System.out.println("%% current stackpointer before remove: " + stack.getStackPointer());
+		if (diag9)
+		    System.out.println("%% current stack before remove: " + stack);
+
+		paramsNode.children[i]=(ParamNode)stack.remove();
+	    }
+	    stack.insert(paramsNode);
+	    stack.incStackPointer();
+	    if (diag9)
+		System.out.println("%% SP at successful e.o. paramsnode(): " + stack.getStackPointer());
+	    if (diag9)
+		System.out.println("%% stack at successful e.o. paramsnode()" + stack);
+	    
+	    
+	    return true;
+	}
+
+	
+	return false;
+    } // end of parseParams()
+  
+    /*    
+    //Dummy parseParam() for testing
+    private boolean parseParam(){
+    System.out.println("in parseParam");
+    stack.incStackPointer();
+    stack.remove();
+    stack.insert(new ParamNode(0));
+    return true;
+    }
+    */
+    
+    private boolean parseParam(){
+	ParamNode paramNode = new ParamNode(0);
+	Object temp;
+	int old_stackpointer = stack.getStackPointer();
+	boolean cont = true;
+
+	temp = stack.getNext();
+
+	if(!(temp instanceof Token))
+	    cont = errorHandler(); 
+	    
+	    
+	if(cont && (((Token)temp).symbolNumber == 0 || ((Token)temp).symbolNumber == 1)){   
+	    temp=stack.getNext();
+
+
+	    if(cont && (temp instanceof IdentifierToken)){ //If token is an identifier 
+		temp=stack.getNext();
+	
+
+		if(cont && (((Token)temp).symbolNumber == 10)){ // if it's "["
+		    temp=stack.getNext();
+
+			    
+		    if(cont && (((Token)temp).symbolNumber == 11)){ // if it's "]"
+			paramNode = new ParamNode(4);
+			
+			temp=stack.remove(); //remove the "]"
+			paramNode.children[3]=new IdentifierNode((Token)temp);
+			temp=stack.remove(); //remove the "["
+			paramNode.children[2]=new IdentifierNode((Token)temp);
+			temp=stack.remove(); // get the id
+			paramNode.children[1]=new IdentifierNode((Token)temp);
+			temp=stack.remove(); //get the type
+			String string = temp.toString();
+			if(string.compareTo("int") == 0)
+			    paramNode.children[0]=new IntNode((Token)temp);
+			else 
+			    paramNode.children[0]=new FloatNode((Token)temp);
+			
+			stack.insert(paramNode);
+			return true;
+		    }
+		    else
+			cont = errorHandler();
+		}
+		else{
+		    stack.decStackPointer();
+		    paramNode = new ParamNode(2);
+		    
+		    temp=stack.remove(); //get the id
+		    paramNode.children[1]=new IdentifierNode((Token)temp);
+		    temp=stack.remove(); //get the type
+		    String string = temp.toString();
+		    if(string.compareTo("int") == 0)
+			paramNode.children[0]=new TerminalNode((Token)temp);
+		    else
+			paramNode.children[0]=new FloatNode((Token)temp);
+		    
+		    stack.insert(paramNode);
+		    return true;
+		}
+	    }
+	    else if(cont && (((Token)temp).symbolNumber == 14)){ //if it's "*"
+		    
+		if(temp instanceof IdentifierToken){
+		    paramNode = new ParamNode(3);
+			
+		    temp=stack.remove(); // get the id
+		    paramNode.children[2]=new IdentifierNode((Token)temp);
+		    temp=stack.remove(); //get the "*"
+		    paramNode.children[1]=new TerminalNode((Token)temp);
+		    temp=stack.remove(); // get the type
+		    String string = temp.toString();
+		    if(string.compareTo("int") == 0)
+			paramNode.children[0]=new TerminalNode((Token)temp);
+		    else
+			paramNode.children[0]=new FloatNode((Token)temp);
+						
+		    stack.insert(paramNode);
+		    return true;
+		}
+		else
+		    cont = errorHandler();
+	    }
+	    else
+		cont = errorHandler();
+	}
+	else if(cont && (((Token)temp).symbolNumber == 2))// void
+	    temp = stack.getNext();
+	else
+	    cont = errorHandler();
+	
+	if(((Token)temp).symbolNumber == 14)// if it's "*"
+	    temp=stack.getNext();
+	else
+	    cont = errorHandler();
+
+	if(temp instanceof IdentifierToken){
+	    paramNode = new ParamNode(3);
+
+	    temp=stack.remove(); // get the id
+	    paramNode.children[2]=new IdentifierNode((Token)temp);
+	    temp=stack.remove(); //get the "*"
+	    paramNode.children[1]=new TerminalNode((Token)temp);
+	    temp=stack.remove(); //get the type
+	    String string = temp.toString();
+	    if(string.compareTo("int") == 0)
+		paramNode.children[0]=new TerminalNode((Token)temp);
+	    else
+		paramNode.children[0]=new FloatNode((Token)temp);
+	    
+	    stack.insert(paramNode);
+	    return true;
+	}
+	else
+	    cont = errorHandler();
+		
+	stack.setStackPointer(old_stackpointer);
+	return false;
+    }// end of parseParam()
+
+    
+    //     //Dummy parseCompStmt() for testing
+    //     private boolean parseCompStmt(){
+	
+    // 	Object temp = stack.getNext();
+    // 	stack.remove();
+    // 	stack.insert(new CompStmtNode(0));
+    // 	stack.incStackPointer();
+    // 	if (diag9)
+    // 	    System.out.println("parseCompStmt: " + stack.toString() + " stackpoint = " + stack.getStackPointer());
+    // 	return true;
+    //     }
+    
+    
+    private boolean parseCompStmt(){
+	if (diag12)
+	    System.out.println("> > > entering parseCompStmt with stack: " + stack + " SP: " +stack.getStackPointer());
+	boolean succ = true;
+	boolean cont = true;
+	boolean ld = false; //does compound statement have local declarations?
+	boolean sl = false; //does compound statement have a statement list?
+	int old_stackpointer = stack.getStackPointer();
+	CompStmtNode compStmtNode = new CompStmtNode(0);
+
+	Object temp = stack.getNext();
+
+	if(!(temp instanceof Token))
+	    cont = errorHandler(); 
+	
+	if(cont && (((Token)temp).symbolNumber == 31)){ //if it's "{"
+	    succ = parseLocalDecs();
+	    if(diag10)
+		System.out.println("parseLocalDecs successful?  " + succ); 
+	}
+	else {
+	    //special intervention: will have to fail this function if something that is not a { is found
+	    //or else everything becomes mad recursive.
+	    stack.setStackPointer(old_stackpointer);
+	    cont = errorHandler();
+	    
+	    return false;
+	}
+	
+	
+	if(cont && succ){
+	    ld = true;
+	    stack.incStackPointer();
+	    succ = parseStmtList();
+	    if(diag10)
+		System.out.println("parseLocalStmtList successful?  " + succ); 
+	}
+	else if(cont)
+	    succ = parseStmtList();
+	else
+	    cont = errorHandler();
+	
+	if(cont && succ){
+	    stack.incStackPointer();
+	    temp = stack.getNext();
+	    sl = true;
+	}
+	else if(cont){
+	    temp = stack.getNext();
+	}
+	else
+	    cont = errorHandler();
+
+	if(cont && (((Token)temp).symbolNumber == 32)){ //if it's "}"
+	    compStmtNode = new CompStmtNode(2);
+
+	    if(ld && sl){
+		
+		temp=stack.remove(); // remove the "}"
+		temp=stack.remove(); //get the StmtList
+		compStmtNode.children[1]= (StmtListNode)temp;
+		temp=stack.remove(); // get the LocalDecs
+		compStmtNode.children[0]= (LocalDecsNode)temp;
+		temp=stack.remove(); //remove the "{"
+		if(diag10)
+		    System.out.println(">>>>__I inserted " + compStmtNode); 
+		stack.insert(compStmtNode);	
+		return true;
+	    }
+	    
+	    if(sl){
+		compStmtNode = new CompStmtNode(1);
+
+		temp=stack.remove(); // remove the "}"
+		temp=stack.remove(); //get the StmtList
+		compStmtNode.children[0]= (StmtListNode)temp;
+		temp=stack.remove(); // remove the "{"
+
+		stack.insert(compStmtNode);	
+		return true;
+	    } 
+	    
+	    if(ld){
+		compStmtNode = new CompStmtNode(1);
+
+		temp=stack.remove(); // remove the "}"
+		temp=stack.remove(); //get the LocalDecs
+		compStmtNode.children[0]= (LocalDecsNode)temp;
+		temp=stack.remove(); // remove the "{"
+
+		stack.insert(compStmtNode);	
+		return true;
+	    }
+	}   
+	else
+	    cont = errorHandler();
+
+	//may return false since there may be no localdecs or statementlist
+	stack.setStackPointer(old_stackpointer);
+	return false;
+
+    } // end of parseCompStmt()
+
+    
+    private boolean parseLocalDecs(){
+	LocalDecsNode localDecsNode = new LocalDecsNode(0);
+	int old_stackpointer = stack.getStackPointer();
+
+	boolean succ = true;
+	boolean cont = true;
+	int numChildren = -1;
+
+	while(succ==true)
+	    {
+		succ = parseVarDecl();
+	
+		if(succ)
+		    {
+			stack.incStackPointer();
+			numChildren++;
+		    }
+	    }
+
+	if(numChildren != -1){
+	    localDecsNode = new LocalDecsNode(numChildren+1);
+	    //stack.decStackPointer(); //can't remember why we do this...
+	    for(int i = numChildren; i >= 0;i--){
+		localDecsNode.children[i]=(VarDeclNode)stack.remove();
+	    }
+	    
+	    stack.insert(localDecsNode);
+	    //System.out.println("leaving parseLocalDecs, stack:" + stack.toString() + " stackpointer = " + stack.getStackPointer());
+	    return true;
+	}
+	else{
+	    stack.setStackPointer(old_stackpointer);
+	    return true;
+	}
+    } // end of parseLocalDecs()
+    
+    
+
+
+    private boolean parseStmtList(){
+	StmtListNode stmtListNode = new StmtListNode(0);
+	int old_stackpointer = stack.getStackPointer();
+	
+	boolean succ = true;
+	int numChildren = 0;
+	boolean cont=true;
+	Object temp=stack.getNext();
+	
+	if(cont && (((Token)temp).symbolNumber == 32)){ //if it's "}"
+	    // this case has been added to avoid recursive infinite loop at the end of a compund statement
+	    if (diag10)
+		System.out.println("### I had to fail parseStmt() because I got a }");
+	    stack.setStackPointer(old_stackpointer);
+	    return false;
+	}
+	else {
+	    stack.setStackPointer(old_stackpointer);
+	    cont = errorHandler();
+	}
+
+	while(succ==true){
+	    succ = parseStmt();
+		
+	    if(succ)
+		{
+		    if (diag11)
+			System.out.println("-)-) recognized a statement in parseStmtList :" + stack.get(stack.getStackPointer()));
+		    stack.incStackPointer();
+		    numChildren++;
+		}
+	}
+	
+	if(numChildren != 0){
+	    if (diag11)
+		System.out.println("-)-) success in parseStmtList");
+	    stmtListNode = new StmtListNode(numChildren+1);
+	    //	    stack.decStackPointer(); //can't remember why we do this...
+	    for(int i = numChildren-1; i >= 0;i--){
+		stmtListNode.children[i]=(StatementNode)stack.remove();
+	    }
+	    if (diag11)
+		System.out.println("-)-) node: " + stmtListNode);
+	    
+	    stack.insert(stmtListNode);
+	    return true;
+	}
+	else{
+	    stack.setStackPointer(old_stackpointer);
+	    return false;
+	}
+    } // end of parseStmtList()
+
+    
+    private boolean dummyparseStmt(){
+	StatementNode stmtNode;
+	int old_stackPointer = stack.getStackPointer();
+	boolean succ=true;
+	int numChildren = 0;
+	Object temp=stack.getNext();
+	boolean cont=true;
+
+
+	if (!(temp instanceof Token))
+	    cont=false; 
+
+	if (!(temp instanceof EOFToken)){
+	    cont=true; 
+	}
+
+	if (cont && (temp instanceof IdentifierToken)){
+	    cont =true;
+	    if (diag11)
+		System.out.println("* * * *successfully parsed id() for dummy parseStmt(): " + temp);
+	    temp=stack.getNext();
+	    if (diag11)
+		System.out.println("* * * * *next item: " + temp);
+
+	}
+
+	if (cont && (((Token)temp).symbolNumber == 34)){ // is it a ";"
+	    if (diag11)
+		System.out.println("* ** successfully parsed a dummy statement");
+	    stmtNode = new ExprStmtNode(1);
+	    stack.remove();//remove the ;
+	    stmtNode.children[0]=new IdentifierNode((Token)stack.remove()); // put the id() in first child
+	    if (diag11)
+		System.out.println("dummy statement:" + stmtNode);
+	    stack.insert(stmtNode);
+	    stack.setStackPointer(old_stackPointer);
+	    return true;
+	}
+	
+	stack.setStackPointer(old_stackPointer);
+	return false;
+
+    }
+
+
+
+    // might be some modifying required for the below function
+    // for now, StatementNode is an abstract class. This is the only
+    // function right now that doesn't make anything
+    private boolean parseStmt(){
+	int old_stackpointer = stack.getStackPointer();
+	boolean succ = true;
+	boolean cont=true;
+	Object temp=stack.getNext();
+	/*
+
+	  if(!succ)
+	  succ = parseCompStmt();
+	  if(!succ)
+	  succ = parseIfStmt();
+	  if(!succ)
+	  succ = parseWhileStmt();
+	  if(!succ)
+	  succ = parseForStmt();
+	*/
+		
+	if(cont && (((Token)temp).symbolNumber == 32)){ //if it's "}"
+	    // this case has been added to avoid recursive infinite loop at the end of a compund statement
+	    if (diag10)
+		System.out.println("### I had to fail parseStmt() because I got a }");
+	    stack.setStackPointer(old_stackpointer);
+	    return false;
+	}
+	
+	stack.setStackPointer(old_stackpointer);
+	
+
+	succ = parseCompStmt();
+	if(!succ)
+	    succ = parseReturnStmt();
+	if(!succ)
+	    succ = parseExprStmt();	
+	if(succ)
+	    return true;
+	else
+	    return false;
+    }
+
+
+    // dummy parseReturnStmt for testing only - works only for stmt->return;
+    private boolean parseReturnStmt(){
+	ReturnStmtNode returnStmtNode = new ReturnStmtNode(0);
+	Object temp;
+	int old_stackpointer = stack.getStackPointer();
+	boolean cont = true;
+	boolean succ = true;
+	boolean osucc = true;
+
+	if (diag12)
+	    System.out.println("entered parseReturnstmt");	
+
+	temp = stack.getNext();
+
+	if (diag12)
+	    System.out.println("next parsed token(should be return)="+ temp);
+
+	if(!(temp instanceof Token)) {
+	    cont = errorHandler();
+	    osucc=false;
+	}
+
+	if(cont && (((Token)temp).symbolNumber == 7)) // if it's "return"
+	    temp=stack.getNext();
+	else {
+	    cont = errorHandler();
+	    osucc=false;
+	}
+
+	if (diag12)
+	    System.out.println("next parsed token(should be ;)="+ temp);
+
+	if(osucc && cont && (((Token)temp).symbolNumber == 34)){ // if it's ";"
+	    returnStmtNode = new ReturnStmtNode(1);
+
+	    stack.remove(); //get rid of the semic
+	    returnStmtNode.children[0] = new ReturnNode((Token)stack.remove());
+	    if (diag12)
+		System.out.println("tried to insert returnNode "+ returnStmtNode);
+	    stack.insert(returnStmtNode);
+	    return true;
+	}
+
+	stack.setStackPointer(old_stackpointer);
+	return false;	
+    }
+  
+    private boolean parseExprStmt(){
+	ExprStmtNode exprStmtNode = new ExprStmtNode(0);
+	Object temp;
+	int old_stackpointer = stack.getStackPointer();
+	boolean cont = true;
+	boolean succ = true;
+	boolean osucc = true; // osucc = Overall Success of the function.
+	
+	succ=parseExpression();	
+	if (succ)
+	    stack.incStackPointer();
+	
+	temp=stack.getNext();
+	if(!(temp instanceof Token))
+	    cont = errorHandler();
+	
+	if( cont && ((Token)temp).symbolNumber == 34) // if it's ";"
+	    temp=stack.remove(); // get rid of ";"
+	else {
+	    cont = errorHandler();
+	    osucc=false;
+	}
+	
+	
+	
+	if(succ && cont && osucc){
+	    exprStmtNode = new ExprStmtNode(1);
+	    exprStmtNode.children[0] = (ExpressionNode)stack.remove();
+	    stack.insert(exprStmtNode);
+	    return true;
+	}	
+	
+	if(cont && osucc){ 
+	    stack.insert(exprStmtNode);
+	    return true;
+	}
+
+	stack.setStackPointer(old_stackpointer);
+	return false;	
+    }
+    
+    private boolean parseExpression(){
+	ExpressionNode exprNode = new ExpressionNode(0);
+	int old_stackpointer = stack.getStackPointer();
+	boolean cont = true;
+	boolean succ = true;
+	boolean osucc = true;
+	Object temp;
+	int numDecs=0;
+
+	temp=stack.getNext();
+	if (!(temp instanceof Token)){
+	    osucc=false;
+	    cont=errorHandler();
+	}
+
+	if (cont && osucc && (temp instanceof IdentifierToken)){	    
+	    numDecs++;
+	    osucc=true;
+	}
+	else {
+	    osucc=false;
+	    cont = errorHandler();
+	}
+
+	if (osucc){
+	    temp = stack.remove();//remove the identifier
+	    exprNode = new ExpressionNode(numDecs);
+	    exprNode.children[0] = new IdentifierNode((Token)temp);
+	    stack.insert(exprNode);
+	    stack.setStackPointer(old_stackpointer);
+	    return true;
+	}
+	
+	    stack.setStackPointer(old_stackpointer);
+	    return false;
+	
+    }
+
+
+    /*
+      private boolean parseIfStmt(){
+      IfStmtNode ifStmtNode = new IfStmtNode(0);
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+	
+      succ=parseIfStart();
+      if(succ)
+      {
+      stack.incStackPointer();
+      succ=parseIfRem();
+      }
+      else
+      cont = errorHandler();
+	    
+      if(succ && cont){
+      ifStmtNode = new IfStmtNode(2);
+      ifStmtNode.children[1] = (IfRemNode)stack.remove();
+      ifStmtNode.children[0] = (IfStartNode)stack.remove();
+	    
+      stack.insert(ifStmtNode);
+      return true;
+      }
+      else if(cont){
+      ifStmtNode = new IfStmtNode(1);
+      ifStmtNode.children[1] = (IfStartNode)stack.remove();
+	    
+      stack.insert(ifStmtNode);
+      return true;
+      }
+      else
+      return false;
+	
+      }
+    
+      private boolean parseIfStart(){
+      IfStartNode ifStartNode = new IfStartNode(0);
+      Object temp;
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+
+      temp = stack.getNext();
+
+      if(!(temp instanceof Token))
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 3)) // if it's "if"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 8)) // if it's "("
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ = parseExpression();
+
+      if(succ && cont){
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 9)) // if it's ")"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ = parseStmt();
+
+      if(succ && cont){
+      ifStartNode = new IfStartNode(3);
+      ifStartNode.children[2] = (StatementNode)stack.remove();
+      stack.remove();
+      ifStartNode.children[1] = (ExpressionNode)stack.remove();
+      stack.remove();
+      ifStartNode.children[0] = new IfNode((Token)stack.remove());
+
+      stack.insert(ifStartNode);
+      return true;
+      }
+      else{
+      stack.setStackPointer(old_stackpointer);
+      return false;
+      }
+	    
+      }
+    
+      private boolean parseIfRem(){
+      IfRemNode ifRemNode = new IfRemNode(0);
+      Object temp;
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+
+      temp = stack.getNext();
+	
+      if(!(temp instanceof Token))
+      cont = errorHandler();
+	
+      if(cont && (((Token)temp).symbolNumber == 4)) // if it's "else"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ=parseStmt();
+
+      if(cont && succ){
+      ifRemNode = new IfRemNode(2);
+      stack.remove();
+      ifRemNode.children[1] = (StatementNode)stack.remove();
+      stack.remove();
+      ifRemNode.children[0] = new ElseNode((Token)stack.remove());
+
+      stack.insert(ifRemNode);
+      return true;
+      }
+      else{
+      stack.setStackPointer(old_stackpointer);
+      return false;
+      }
+      } 
+    
+      private boolean parseWhileStmt(){
+      WhileStmtNode whileStmtNode = new WhileStmtNode(0);
+      Object temp;
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+	
+      temp = stack.getNext();
+
+      if(!(temp instanceof Token))
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 5)) // if it's "while"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 8)) // if it's "("
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ = parseExpression();
+
+      if(succ && cont){
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 9)) // if it's ")"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ = parseStmt();
+
+      if(succ && cont){
+      whileStmtNode = new WhileStmtNode(3);
+      whileStmtNode.children[2] = (StatementNode)stack.remove();
+      stack.remove();
+      whileStmtNode.children[1] = (ExpressionNode)stack.remove();
+      stack.remove();
+      whileStmtNode.children[0] = new IfNode((Token)stack.remove());
+
+      stack.insert(whileStmtNode);
+      return true;
+      }
+      else{
+      stack.setStackPointer(old_stackpointer);
+      return false;
+      }
+	
+      }
+    
+      private boolean parseForStmt(){
+      ForStmtNode forStmtNode = new ForStmtNode(0);
+      Object temp;
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+      int numChildren = 0;
+
+      boolean[] expr = new boolean[3];
+      for(int i = 2; i >= 0; i--)
+      expr[i]=false;
+	
+      temp = stack.getNext();
+
+      if(!(temp instanceof Token))
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 6)) // if it's "for"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 8)) // if it's "("
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont)
+      succ = parseOptExpr();
+
+      if(succ && cont){
+      expr[0]=true;
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+	
+      if(cont && (((Token)temp).symbolNumber == 34)) // if it's ";"
+      succ = parseOptExpr();
+      else
+      cont = errorHandler();
+
+      if(succ && cont){
+      expr[1]=true;
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+
+      if(cont && (((Token)temp).symbolNumber == 34)) // if it's ";"
+      succ = parseOptExpr();
+      else
+      cont = errorHandler();
+
+      if(succ && cont){
+      expr[2]=true;
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+
+      if(cont && (((Token)temp).symbolNumber == 9)) // if it's ")"
+      succ=parseStmt();
+      else
+      cont = errorHandler();
+
+      if(succ && cont){
+	    
+      for(int i = 2; i >= 0; i--)
+      if(expr[i]==true)
+      numChildren++;
+      forStmtNode = new ForStmtNode(numChildren+4);
+      int i = numChildren+3;
+
+      forStmtNode.children[i--] = (StatementNode)stack.remove();
+      stack.remove();
+      if(expr[2]==true)
+      forStmtNode.children[i--] = (ExpressionNode)stack.remove();
+      forStmtNode.children[i--] = new TerminalNode((Token)stack.remove());
+      if(expr[1]==true)
+      forStmtNode.children[i--] = (ExpressionNode)stack.remove();
+      forStmtNode.children[i--] = new TerminalNode((Token)stack.remove());
+      if(expr[0]==true)
+      forStmtNode.children[i--] = (ExpressionNode)stack.remove();
+      stack.remove();
+      forStmtNode.children[i--] = (ForNode)stack.remove();
+
+      stack.insert(forStmtNode);
+      return true;
+      }
+      else{
+      cont = errorHandler();
+      if(cont){
+      stack.setStackPointer(old_stackpointer);
+      return false;
+      }
+      }
+      //shouldn't get here
+      System.out.println("Something is horribly wrong!! Probably won't get a good parse...");
+      return false;
+
+      }
+    
+    
+      private boolean fullparseReturnStmt(){
+      ReturnStmtNode returnStmtNode = new ReturnStmtNode(0);
+      Object temp;
+      int old_stackpointer = stack.getStackPointer();
+      boolean cont = true;
+      boolean succ = true;
+	
+      temp = stack.getNext();
+
+      if(!(temp instanceof Token))
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 7)) // if it's "return"
+      temp=stack.getNext();
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 34)){ // if it's ";"
+      returnStmtNode = new ReturnStmtNode(1);
+
+      stack.remove(); //get rid of the semic
+      returnStmtNode.children[0] = (ReturnNode)stack.remove();
+
+      stack.insert(returnStmtNode);
+      return true;
+      }
+	
+      if(cont){
+      stack.decStackPointer();
+      succ = parseExpression();
+      }
+
+      if(succ && cont){
+      stack.incStackPointer();
+      temp=stack.getNext();
+      }
+      else
+      cont = errorHandler();
+
+      if(cont && (((Token)temp).symbolNumber == 34)){ // if it's ";"
+      returnStmtNode = new ReturnStmtNode(2);
+	    
+      stack.remove();
+      returnStmtNode.children[1]=(ExpressionNode)stack.remove();
+      returnStmtNode.children[0]=(ReturnNode)stack.remove();
+
+      stack.insert(returnStmtNode);
+      return true;
+      }
+      else{
+      cont = errorHandler();
+      if(cont){
+      stack.setStackPointer(old_stackpointer);
+      return false;
+      }
+      }
+	
+      //shouldn't get here
+      System.out.println("Something is horribly wrong!! Probably won't get a good parse...");
+      return false;
+      }
+    */
+    /*
+      private boolean parseExpression(){
+      Object temp = stack.getNext();
+      stack.remove();
+      stack.insert(new ExpressionNode(0));
+      //System.out.println("parseCompStmt: " + stack.toString() + " stackpoint = " + stack.getStackPointer());
+      return true;
+	
+      //return false;
+      }
+    */
+    
+} // end of class Parser

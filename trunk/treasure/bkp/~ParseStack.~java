@@ -1,0 +1,87 @@
+import java.util.*;
+
+public class ParseStack{
+    ArrayList stack;
+    int stackPointer;
+    int topPointer;
+    Lexer lexer;
+    
+    public String toString(){
+	return stack.toString();
+    }
+
+    public ParseStack(Lexer lexer){
+	this.lexer=lexer;
+	stack = new ArrayList();
+	stackPointer=0;
+	topPointer=-1;
+    }
+
+    public Object getNext(){
+
+	if (topPointer == -1){
+	    //System.out.println("I read " + lexer.peekNextToken());	    
+	    if (lexer.hasMoreTokens()){
+		stack.add(lexer.getNextToken());
+		stackPointer++;
+		topPointer++;		    
+		return stack.get(stackPointer-1);
+	    }
+	    return new EOFToken();
+	}
+	else if (stackPointer <= topPointer){ 	    
+	    return stack.get(stackPointer++);
+	}
+	else { 
+	    System.out.println("I read " + lexer.peekNextToken());
+	    if (lexer.hasMoreTokens()){
+		stack.add(lexer.getNextToken());
+		topPointer++;	    
+		return stack.get(stackPointer++);
+	    }
+	    return new EOFToken();
+	}	    
+    }
+
+    public void push(Object o){
+	stack.add(o);
+	topPointer++;
+    }
+
+    public Object pop(){
+	return stack.remove(topPointer--);     	
+    }
+    public Object top(){
+	return stack.get(topPointer-1);     	
+    }
+
+    public Object remove()
+    {
+	--topPointer;
+	return stack.remove(--stackPointer);
+	
+    }
+
+    public void insert(Object o)
+    {
+	stack.add(stackPointer, o);
+    }
+    
+
+    public int getStackPointer(){
+	return stackPointer;	
+    }
+    public int getTopPointer(){
+	return topPointer;	
+    }
+    public void  setStackPointer(int s){
+	stackPointer=s;
+    }
+    public void incStackPointer(){
+	stackPointer++;
+    }
+    public void decStackPointer(){
+	stackPointer--;
+    }
+
+}

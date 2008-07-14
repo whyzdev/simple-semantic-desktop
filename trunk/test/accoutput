@@ -1,0 +1,95 @@
+Program is free of errors
+got statement to code:( expression-statement ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr a leftsqb ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr num(2) ) ) ) ) ) ) ) ) rightsqb ) ) ) ) ) ) ) assign ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr num(19) ) ) ) ) ) ) ) ) ) )
+got statement to code:( return-statement ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr asterisk ( unary-expr ( primary-expr ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr a ) ) ) plus ( term ( unary-expr ( primary-expr num(2) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )
+called returnstatementCodeGen() on:( return-statement ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr asterisk ( unary-expr ( primary-expr ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr a ) ) ) plus ( term ( unary-expr ( primary-expr num(2) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )
+returnnode:( return-statement ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr asterisk ( unary-expr ( primary-expr ( expression ( or-expr ( and-expr ( rel-expr ( add-expr ( term ( unary-expr ( primary-expr a ) ) ) plus ( term ( unary-expr ( primary-expr num(2) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) ) )
+and came back too!
+---------------------------------------------------------
+---------------------------------------------------------
+ 0: %g0 : <free>
+ 1: %g1 : <free>
+ 2: %g2 : <free>
+ 3: %g3 : <free>
+---------------------------------------------------------
+ 0: %l0 : <free>
+ 1: %l1 : <free>
+ 2: %l2 : <free>
+ 3: %l3 : <free>
+ 4: %l4 : <free>
+ 5: %l5 : <free>
+ 6: %l6 : <free>
+---------------------------------------------------------
+ 0: %i0 : <free>
+ 1: %i1 : <free>
+ 2: %i2 : <free>
+ 3: %i3 : <free>
+ 4: %i4 : <free>
+ 5: %i5 : <free>
+---------------------------------------------------------
+ 0: %o0 : <free>
+ 1: %o1 : <free>
+ 2: %o2 : <free>
+ 3: %o3 : <free>
+ 4: %o4 : <free>
+ 5: %o5 : <free>
+---------------------------------------------------------
+ 0: [%sp+0] : <systemreserved>
+ 1: [%sp+4] : <systemreserved>
+ 2: [%sp+8] : <systemreserved>
+ 3: [%sp+12] : <systemreserved>
+ 4: [%sp+16] : <systemreserved>
+ 5: [%sp+20] : <systemreserved>
+ 6: [%sp+24] : <systemreserved>
+ 7: [%sp+28] : <systemreserved>
+ 8: [%sp+32] : <systemreserved>
+ 9: [%sp+36] : <systemreserved>
+ 10: [%sp+40] : <systemreserved>
+ 11: [%sp+44] : <systemreserved>
+ 12: [%sp+48] : <systemreserved>
+ 13: [%sp+52] : <systemreserved>
+ 14: [%sp+56] : <systemreserved>
+ 15: [%sp+60] : <systemreserved>
+ 16: [%sp+64] : <systemreserved>
+ 17: [%sp+68] : <callarg0>
+ 18: [%sp+72] : <callarg1>
+ 19: [%sp+76] : <callarg2>
+ 20: [%sp+80] : <callarg3>
+ 21: [%sp+84] : <callarg4>
+ 22: [%sp+88] : <callarg5>
+ 23: [%sp+92] : <temp>
+ 24: [%sp+96] : <temp>
+ 25: [%sp+100] : <temp>
+ 26: [%sp+104] : <temp>
+ 27: [%sp+108] : <temp>
+ 28: [%fp-96] : b
+ 29: [%fp-92] : c
+ 30: [%fp-88] : d
+ 31: [%fp-84] : e
+ 32: [%fp-80] : a[0]
+ 33: [%fp-76] : a[1]
+ 34: [%fp-72] : a[2]
+ 35: [%fp-68] : a[3]
+ 36: [%fp-64] : a[4]
+ 37: [%fp-60] : a[5]
+ 38: [%fp-56] : a[6]
+ 39: [%fp-52] : a[7]
+ 40: [%fp-48] : a[8]
+ 41: [%fp-44] : a[9]
+ 42: [%fp-40] : a[10]
+ 43: [%fp-36] : a[11]
+ 44: [%fp-32] : a[12]
+ 45: [%fp-28] : a[13]
+ 46: [%fp-24] : a[14]
+ 47: [%fp-20] : a[15]
+ 48: [%fp-16] : a[16]
+ 49: [%fp-12] : a[17]
+ 50: [%fp-8] : a[18]
+ 51: [%fp-4] : a[19]
+ 52: [%fp+68] : <free>
+ 53: [%fp+72] : <free>
+ 54: [%fp+76] : <free>
+ 55: [%fp+80] : <free>
+ 56: [%fp+84] : <free>
+ 57: [%fp+88] : <free>
+---------------------------------------------------------
+

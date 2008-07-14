@@ -1,0 +1,8 @@
+#! /bin/bash
+rm accoutput
+javac *.java
+java acc $1.c >> accoutput
+gcc $1.c -S
+gcc $1.c.s -o $1.c.out
+./$1.c.out
+echo $?

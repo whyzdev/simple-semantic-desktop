@@ -1,0 +1,16 @@
+1. empty statements, i.e. ; dont work // fixed
+2. empty compound statements, {} dont work //fixed
+3. params with *s in them dont work properly. void * and int * seem to be the suspects. // fixed
+4. multiple compound statemets dont go through the parser well.
+   eg.
+int f(){
+    {
+        ;	
+    }    
+    {
+       ;
+    }
+}
+FALSE ANALYSIS! multiple compound stataments work perfectly, 
+but statements like j=1.2 don't work, i.e float number assignments 
+5. a =1.2 doesn't work. a=1 does.
